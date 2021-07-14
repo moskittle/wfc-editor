@@ -11,33 +11,6 @@ using VerticalFaceDetails = ModulePrototype.VerticalFaceDetails;
 
 public class ModuleAnalysis : MonoBehaviour {
 #if UNITY_EDITOR
-    class VFaceAndCounter
-    {
-        public VerticalFaceDetails vFaceDetail;
-        public int counter;
-        public FaceType faceType;
-
-        public VFaceAndCounter(VerticalFaceDetails _vFaceDetail, int _counter, FaceType _faceType)
-        {
-            vFaceDetail = _vFaceDetail;
-            counter = _counter;
-            faceType = _faceType;
-        }
-    }
-
-
-    class HFaceAndCounter
-    {
-        public HorizontalFaceDetails hFaceDetail;
-        public int counter;
-
-        public HFaceAndCounter(HorizontalFaceDetails _vFaceDetail, int _counter)
-        {
-            hFaceDetail = _vFaceDetail;
-            counter = _counter;
-        }
-    }
-    
     public int digit = 4;
     public float vertexSize = 0.03f;
 
@@ -70,95 +43,108 @@ public class ModuleAnalysis : MonoBehaviour {
     [Button]
     public void Analysis() {
         var modulePrototypes = gameObject.transform.GetComponentsInChildren<ModulePrototype>();
-        if (modulePrototypes.Length == 0) {
+        if (modulePrototypes.Length == 0)
+        {
             Debug.LogError("No ModulePrototype Component process!");
             return;
         }
 
         // add empty horizontal/vertical faces to dictionary when initialized
-        
-        // --------------------------------------------Horizontal-------------------------------
         var hConnectorId = 0;
-        var connectorHorizontal = new Dictionary<List<Vector3>, HFaceAndCounter>();
+        var connectorHorizontal = new Dictionary<List<Vector3>, HorizontalFaceDetails>();
         var hEmptyFace = new HorizontalFaceDetails();
         hEmptyFace.Symmetric = true;
         hEmptyFace.Connector = hConnectorId;
-        HFaceAndCounter emptyHFaceAndCounter = new HFaceAndCounter(hEmptyFace, 0);
-        connectorHorizontal.Add(new List<Vector3>(), emptyHFaceAndCounter);
+        connectorHorizontal.Add(new List<Vector3>(), hEmptyFace);
         hConnectorId++;
         
         int vConnectorId = 0;
         var vEmptyFace = new VerticalFaceDetails();
         vEmptyFace.Invariant = true;
         vEmptyFace.Connector = vConnectorId;
-        VFaceAndCounter emptyVFaceAndCounter = new VFaceAndCounter(vEmptyFace, 0, FaceType.Down);
-        Dictionary<VerticalFaceDetails, int> verticalVariantCount = new Dictionary<VerticalFaceDetails, int>();
+        var connectorVertical = new Dictionary<List<Vector3>, VerticalFaceDetails>();
+        connectorVertical.Add(new List<Vector3>(), vEmptyFace); 
+        vConnectorId++;
+        
+        var hFaceTypes = new List<FaceType> {FaceType.Left, FaceType.Back, FaceType.Right, FaceType.Forward};
+        var vFaceTypes = new List<FaceType> {FaceType.Down, FaceType.Up};
 
         foreach (var mp in modulePrototypes)
         {
+            var hFaceDetailMp = new List<HorizontalFaceDetails> {mp.Left, mp.Back, mp.Right, mp.Forward};
+            var vFaceDetailMp = new List<VerticalFaceDetails> {mp.Down, mp.Up};
+
             var meshFilter = mp.GetComponent<MeshFilter>();
 
+            // process air prototype
             if (meshFilter == null)
             {
                 // empty horizontal face (air prototype)
-                foreach (var pair in connectorHorizontal)
+                foreach (var hFaceDetail in hFaceDetailMp)
                 {
-                    var emptyList = new List<Vector3>();
-                    var hFaceAndCounter = pair.Value;
-                    if (emptyList.EqualList(pair.Key))
-                    {
-                        CopyToHorizontalFaceDetail(hFaceAndCounter.hFaceDetail, mp.Forward);
-                        CopyToHorizontalFaceDetail(hFaceAndCounter.hFaceDetail, mp.Back);
-                        CopyToHorizontalFaceDetail(hFaceAndCounter.hFaceDetail, mp.Left);
-                        CopyToHorizontalFaceDetail(hFaceAndCounter.hFaceDetail, mp.Right);
-                        hFaceAndCounter.counter += 4;
-                    }
+                    CopyToHorizontalFaceDetail(hEmptyFace, hFaceDetail);
                 }
-                
+
+                // empty vertical face (air prototype)
+                foreach (var vFaceDetail in vFaceDetailMp)
+                {
+                    CopyToVerticalFaceDetail(vEmptyFace, vFaceDetail);
+                }
+
                 continue;
             }
             
             var allVerts = meshFilter.sharedMesh.vertices;
 
-            var vertsOnFace = new Dictionary<FaceType, List<Vector3>> {
+            var vertsOnHorizontalFace = new Dictionary<FaceType, List<Vector3>>
+            {
                 {FaceType.Left, new List<Vector3>()},
-                {FaceType.Down, new List<Vector3>()},
-                {FaceType.Back, new List<Vector3>()},
                 {FaceType.Right, new List<Vector3>()},
-                {FaceType.Up, new List<Vector3>()},
+                {FaceType.Back, new List<Vector3>()},
                 {FaceType.Forward, new List<Vector3>()},
+            };
+
+            var vertsOnVerticalFaces = new Dictionary<FaceType, List<Vector3>>
+            {
+                {FaceType.Down, new List<Vector3>()},
+                {FaceType.Up, new List<Vector3>()},
             };
             
             foreach (var vertex in allVerts)
             {
                 var vertexFixed = vertex.FixedVector3(digit);
 
-                RoundVertexOnFace(vertex.x, -AbstractMap.BLOCK_SIZE / 2, FaceType.Left, vertexFixed, vertsOnFace);
-                RoundVertexOnFace(vertex.z, -AbstractMap.BLOCK_SIZE / 2, FaceType.Back, vertexFixed, vertsOnFace);
-                RoundVertexOnFace(vertex.x, AbstractMap.BLOCK_SIZE / 2, FaceType.Right, vertexFixed, vertsOnFace);
-                RoundVertexOnFace(vertex.z, AbstractMap.BLOCK_SIZE / 2, FaceType.Forward, vertexFixed, vertsOnFace);
+                RoundVertexOnFace(vertex.x, -AbstractMap.BLOCK_SIZE / 2, FaceType.Left, vertexFixed, vertsOnHorizontalFace);
+                RoundVertexOnFace(vertex.x, AbstractMap.BLOCK_SIZE / 2, FaceType.Right, vertexFixed, vertsOnHorizontalFace);
+                RoundVertexOnFace(vertex.z, -AbstractMap.BLOCK_SIZE / 2, FaceType.Back, vertexFixed, vertsOnHorizontalFace);
+                RoundVertexOnFace(vertex.z, AbstractMap.BLOCK_SIZE / 2, FaceType.Forward, vertexFixed, vertsOnHorizontalFace);
+                
+                RoundVertexOnFace(vertex.y, -AbstractMap.BLOCK_SIZE / 2, FaceType.Down, vertexFixed, vertsOnVerticalFaces);
+                RoundVertexOnFace(vertex.y, AbstractMap.BLOCK_SIZE / 2, FaceType.Up, vertexFixed, vertsOnVerticalFaces);
             }
 
-            var hFaceDetail = new List<HorizontalFaceDetails> {mp.Left, mp.Back, mp.Right, mp.Forward};
-            var hFaceType = new List<FaceType> {FaceType.Left, FaceType.Back, FaceType.Right, FaceType.Forward};
+            // --------------------------------------------Horizontal-------------------------------
+            ProcessHorizontalFaces(hFaceTypes, connectorHorizontal, vertsOnHorizontalFace, hFaceDetailMp, ref hConnectorId, hEmptyFace);
+            
+            // --------------------------------------------Vertical-------------------------------
+            ProcessVerticalFaces(vFaceTypes, connectorVertical, vertsOnVerticalFaces, vFaceDetailMp, ref vConnectorId, vEmptyFace);
+        }
+    }
+
+    private void ProcessHorizontalFaces(List<FaceType> hFaceTypes, Dictionary<List<Vector3>, HorizontalFaceDetails> connectorHorizontal, 
+        Dictionary<FaceType, List<Vector3>> vertsOnFace, List<HorizontalFaceDetails> hFaceDetailMp, ref int hConnectorId, HorizontalFaceDetails hEmptyFace)
+    {
             var hRotToFront = new Dictionary<FaceType, float> { {FaceType.Forward, 0}, {FaceType.Left, 90}, {FaceType.Back, 180}, {FaceType.Right, 270} };
 
-            for (int i = 0; i < hFaceType.Count; ++i)
+            // horizontal faces: 0, 1, 2, 3
+            for (int i = 0; i < 4; ++i)
             {
-                var verts = vertsOnFace[hFaceType[i]];
+                var verts = vertsOnFace[hFaceTypes[i]];
 
+                // empty horizontal face
                 if (verts.Count == 0)
                 {
-                    // empty face
-                    foreach (var pair in connectorHorizontal)
-                    {
-                        if (verts.EqualList(pair.Key))
-                        {
-                            var hFaceAndCounter = pair.Value;
-                            CopyToHorizontalFaceDetail(hFaceAndCounter.hFaceDetail, hFaceDetail[i]);
-                            hFaceAndCounter.counter++;
-                        }
-                    }
+                    CopyToHorizontalFaceDetail(hEmptyFace, hFaceDetailMp[i]);
                 }
                 else
                 {
@@ -166,7 +152,7 @@ public class ModuleAnalysis : MonoBehaviour {
                     
                     // rotate each horizontal faces to FrontView Coordinate (正视图)
                     verts = verts.Select(v => {
-                        var r = Matrix4x4.TRS(Vector3.zero, Quaternion.Euler(0, hRotToFront[hFaceType[i]], 0), Vector3.one) * new Vector4(v.x, v.y, v.z, 1);
+                        var r = Matrix4x4.TRS(Vector3.zero, Quaternion.Euler(0, hRotToFront[hFaceTypes[i]], 0), Vector3.one) * new Vector4(v.x, v.y, v.z, 1);
                         return new Vector3(r.x, r.y, r.z).FixedVector3(digit);
                     }).ToList();
 
@@ -175,9 +161,8 @@ public class ModuleAnalysis : MonoBehaviour {
                     {
                         if (verts.EqualList(hConnector.Key))
                         {
-                            var hFaceAndCounter = hConnector.Value;
-                            CopyToHorizontalFaceDetail(hFaceAndCounter.hFaceDetail, hFaceDetail[i]);
-                            hFaceAndCounter.counter++;
+                            var hFaceDetail = hConnector.Value;
+                            CopyToHorizontalFaceDetail(hFaceDetail, hFaceDetailMp[i]);
                             connectorFound = true;
                             break;
                         }
@@ -199,305 +184,135 @@ public class ModuleAnalysis : MonoBehaviour {
                             var newSymmetricFaceDetail = new HorizontalFaceDetails();
                             newSymmetricFaceDetail.Symmetric = true;
                             newSymmetricFaceDetail.Connector = hConnectorId;
-                            HFaceAndCounter newHFaceAndCounter = new HFaceAndCounter(newSymmetricFaceDetail, 0);
-                            connectorHorizontal.Add(verts, newHFaceAndCounter);
+                            connectorHorizontal.Add(verts, newSymmetricFaceDetail);
 
-                            var hFaceAndCounter = connectorHorizontal[verts];
-                            CopyToHorizontalFaceDetail(hFaceAndCounter.hFaceDetail, hFaceDetail[i]);
-                            hFaceAndCounter.counter++;
+                            var hFaceDetail = connectorHorizontal[verts];
+                            CopyToHorizontalFaceDetail(hFaceDetail, hFaceDetailMp[i]);
                         }
                         else
                         {
                             // 添加当前面作为新的connector
                             var newFaceDetail = new HorizontalFaceDetails();
                             newFaceDetail.Connector = hConnectorId;
-                            var newHFaceAndCounter = new HFaceAndCounter(newFaceDetail, 0);
-                            connectorHorizontal.Add(verts, newHFaceAndCounter);
+                            connectorHorizontal.Add(verts, newFaceDetail);
                             
                             // 添加当前面的flip后作为新的connector
                             var newFlippedFaceDetail = new HorizontalFaceDetails();
                             newFlippedFaceDetail.Flipped = true;
                             newFlippedFaceDetail.Connector = hConnectorId;
-                            var newHFaceAndCoutnerFlipped = new HFaceAndCounter(newFlippedFaceDetail, 0);
-                            connectorHorizontal.Add(flippedVerts, newHFaceAndCoutnerFlipped);
+                            connectorHorizontal.Add(flippedVerts, newFlippedFaceDetail);
 
-                            var hFaceAndCounter = connectorHorizontal[verts];
-                            CopyToHorizontalFaceDetail(hFaceAndCounter.hFaceDetail, hFaceDetail[i]);
-                            hFaceAndCounter.counter++;
+                            var hFaceDetail = connectorHorizontal[verts];
+                            CopyToHorizontalFaceDetail(hFaceDetail, hFaceDetailMp[i]);
                         }
                         hConnectorId++;
                     }
                 }
             }
-
-        }
-
-        // --------------------------------------------Vertical-------------------------------
-        var connectorVertical = new Dictionary<List<Vector3>, VFaceAndCounter>();
-
-
-        emptyVFaceAndCounter.counter++;
-        connectorVertical.Add(new List<Vector3>(), emptyVFaceAndCounter); 
-        vConnectorId++;
-
-        foreach (var mp in modulePrototypes)
+    }
+    
+    void ProcessVerticalFaces(List<FaceType> vFaceTypes,Dictionary<List<Vector3>, VerticalFaceDetails> connectorVertical,
+        Dictionary<FaceType, List<Vector3>> vertsOnFace, List<VerticalFaceDetails> vFaceDetailMp, ref int vConnectorId, VerticalFaceDetails vEmptyFace)
+    {
+        // vertical faces: 4, 5
+        for (int faceIndex = 0; faceIndex < vFaceTypes.Count; ++faceIndex)
         {
-            var meshFilter = mp.GetComponent<MeshFilter>();
+            var verts = vertsOnFace[vFaceTypes[faceIndex]];
 
-            // set empty vertical face
-            if (meshFilter == null)
+            // move top face to bottom for matching
+            if (vFaceTypes[faceIndex] == FaceType.Up)
             {
+                verts = verts.Select(v =>
+                {
+                    v.y -= 2;
+                    return v;
+                }).ToList();
+            }
+
+            // calculate verts for 4 rotations
+            List<List<Vector3>> vertRotList = new List<List<Vector3>>();
+            for (int j = 0; j < 4; ++j)
+            {
+                List<Vector3> newVertRot = verts.Select(v =>
+                {
+                    var r = Matrix4x4.TRS(Vector3.zero, Quaternion.Euler(0, 90 * j, 0), Vector3.one) * new Vector4(v.x, v.y, v.z, 1);
+                    return new Vector3(r.x, r.y, r.z).FixedVector3(digit);
+                }).ToList();
+                        
+                vertRotList.Add(newVertRot);
+            }
+
+            // empty vertical face
+            if (verts.Count == 0)
+            {
+                CopyToVerticalFaceDetail(vEmptyFace, vFaceDetailMp[faceIndex]);
+            }
+            else
+            {
+                bool connectorFound = false;
+
+                // 1.check existance
                 var keys = connectorVertical.Keys.ToList();
-                for (int i = 0; i < keys.Count; i++)
-                {
-                    var faceAndCounter = connectorVertical[keys[i]];
-                    var emptyList = new List<Vector3>();
-                    if (emptyList.EqualList(keys[i]))
-                    {
-                        CopyToVerticalFaceDetail(faceAndCounter.vFaceDetail, mp.Up);
-                        CopyToVerticalFaceDetail(faceAndCounter.vFaceDetail, mp.Down);
-                        faceAndCounter.counter += 2;
-                    }
-                }
-
-                continue;
-            }
-
-            var allVerts = meshFilter.sharedMesh.vertices;
-            var vertsOnFace = new Dictionary<FaceType, List<Vector3>>
-            {
-                {FaceType.Down, new List<Vector3>()}, 
-                {FaceType.Up, new List<Vector3>()},
-            };
-
-            foreach (var vertex in allVerts)
-            {
-                var vertexFixed = vertex.FixedVector3(digit);
                 
-                RoundVertexOnFace(vertex.y, AbstractMap.BLOCK_SIZE / 2, FaceType.Up, vertexFixed, vertsOnFace);
-                RoundVertexOnFace(vertex.y, -AbstractMap.BLOCK_SIZE / 2, FaceType.Down, vertexFixed, vertsOnFace);
-            }
-
-            var vFaceDetail = new List<VerticalFaceDetails> {mp.Down, mp.Up};
-            var vFaceType = new List<FaceType> {FaceType.Down, FaceType.Up};
-
-            for (int i = 0; i < vFaceType.Count; ++i)
-            {
-                var verts = vertsOnFace[vFaceType[i]];
-
-                
-                // move top face to bottom for matching
-                if (vFaceType[i] == FaceType.Up)
-                {
-                    verts = verts.Select(v =>
-                    {
-                        v.y -= 2;
-                        return v;
-                    }).ToList();
-                }
-
-                List<List<Vector3>> vertRotList = new List<List<Vector3>>();
                 for (int j = 0; j < 4; ++j)
                 {
-                    List<Vector3> newVertRot = verts.Select(v =>
+                    for (int k = 0; k < keys.Count; ++k)
                     {
-                        var r = Matrix4x4.TRS(Vector3.zero, Quaternion.Euler(0, 90 * j, 0), Vector3.one) * new Vector4(v.x, v.y, v.z, 1);
-                        return new Vector3(r.x, r.y, r.z).FixedVector3(digit);
-                    }).ToList();
-                            
-                    vertRotList.Add(newVertRot);
-                }
-
-                if (verts.Count == 0)
-                {
-                    var keys = connectorVertical.Keys.ToList();
-                    
-                    // empty face
-                    for (int j = 0; j < keys.Count; ++j)
-                    {
-                        var faceAndCounter = connectorVertical[keys[j]];
-                        if (verts.EqualList(keys[j]))
+                        var vFaceDetail = connectorVertical[keys[k]];
+                        if (vertRotList[j].EqualList(keys[k]))
                         {
-                            CopyToVerticalFaceDetail(faceAndCounter.vFaceDetail, vFaceDetail[i]);
-                            faceAndCounter.counter++;
-                        }
-                    }
-                }
-                else
-                {
-                    bool connectorFound = false;
-
-                    // 1.check existance
-                    var keys = connectorVertical.Keys.ToList();
-
-                    for (int j = 0; j < 4; ++j)
-                    {
-                        for (int k = 0; k < keys.Count; ++k)
-                        {
-                            var faceAndCounter = connectorVertical[keys[k]];
-                            if (vertRotList[j].EqualList(keys[k]))
-                            {
-                                CopyToVerticalFaceDetail(faceAndCounter.vFaceDetail, vFaceDetail[i]);
-                                faceAndCounter.vFaceDetail.Rotation = j;
-                                faceAndCounter.counter++;
-                                connectorFound = true;
-                                break;
-                            }
-                        }
-
-                        if (connectorFound)
-                        {
+                            CopyToVerticalFaceDetail(vFaceDetail, vFaceDetailMp[faceIndex]);
+                            connectorFound = true;
                             break;
                         }
                     }
 
+                    if (connectorFound)
+                    {
+                        break;
+                    }
+                }
 
-                    // 2. check invariant if it has not appeared before
-                    if (connectorFound == false)
-                    { 
-                        // 2.1 the face is invariant if rotated verts is the same as original verts,
-                        if (vertRotList[0].EqualList(vertRotList[1]))
-                        {
-                            VerticalFaceDetails newVFaceDetail = new VerticalFaceDetails();
-                            newVFaceDetail.Invariant = true;
-                            newVFaceDetail.Rotation = 0;
-                            newVFaceDetail.Connector = vConnectorId;
-                            
-                            VFaceAndCounter newFaceAndCounter = new VFaceAndCounter(newVFaceDetail, 0, vFaceType[i]);
-                            CopyToVerticalFaceDetail(newVFaceDetail, vFaceDetail[i]);
-                            newFaceAndCounter.counter++;
-                            connectorVertical.Add(verts, newFaceAndCounter);
-                        }
-                        else
-                        {
-                            // 2.2 if this new face detail is not invariant, add it and its three other variants to vConnector list
+                // 2. check invariant if it has not appeared before
+                if (connectorFound == false)
+                { 
+                    // 2.1 the face is invariant if rotated verts is the same as original verts,
+                    if (vertRotList[0].EqualList(vertRotList[1]))
+                    {
+                        VerticalFaceDetails newVFaceDetail = new VerticalFaceDetails();
+                        newVFaceDetail.Invariant = true;
+                        newVFaceDetail.Rotation = 0;
+                        newVFaceDetail.Connector = vConnectorId;
+                        connectorVertical.Add(vertRotList[0], newVFaceDetail);
+                        
+                        CopyToVerticalFaceDetail(newVFaceDetail, vFaceDetailMp[faceIndex]);
+                    }
+                    else
+                    {
+                        // 2.2 if this new face detail is not invariant, add it and its three other variants to vConnector list
 
+                        // add all variants to the ConnectorVertical
+                        for (int rotIndex = 0; rotIndex < 4; ++rotIndex)
+                        {
                             VerticalFaceDetails newVFaceDetail = new VerticalFaceDetails();
                             newVFaceDetail.Invariant = false;
-                            newVFaceDetail.Rotation = 0;
+                            newVFaceDetail.Rotation = rotIndex;
                             newVFaceDetail.Connector = vConnectorId;
+                            connectorVertical.Add(vertRotList[rotIndex], newVFaceDetail);
 
-                            VFaceAndCounter newVFaceAndCounter = new VFaceAndCounter(newVFaceDetail, 0, vFaceType[i]);
-                            
-                            connectorVertical.Add(verts, newVFaceAndCounter);
-                            CopyToVerticalFaceDetail(newVFaceAndCounter.vFaceDetail, vFaceDetail[i]);
-                            newVFaceAndCounter.counter++;
-                        }
-
-                        connectorFound = true;
-                        vConnectorId++;
-                    }
-                }
-            }
-        }
-
-
-        /* 替换无法连接的connector id 为空气
-         {
-            // 把没有别的面可以连接的水平面重设为 0s, 垂直面重设为 0i，使其可以与空气连接
-            Dictionary<Tuple<int, FaceType>, int> vFaceVariantDict = CreateVerticalVariantInfoDict(connectorVertical); // Tuple<connectorId, count>
-
-            foreach (var mp in modulePrototypes)
-            {
-                var meshFilter = mp.GetComponent<MeshFilter>();
-                if (meshFilter == null)
-                {
-                    continue;
-                }
-
-                var allVerts = meshFilter.sharedMesh.vertices;
-                var vertsOnFace = new Dictionary<FaceType, List<Vector3>>
-                {
-                    {FaceType.Down, new List<Vector3>()},
-                    {FaceType.Up, new List<Vector3>()},
-                    {FaceType.Forward, new List<Vector3>()},
-                    {FaceType.Back, new List<Vector3>()},
-                    {FaceType.Left, new List<Vector3>()},
-                    {FaceType.Right, new List<Vector3>()},
-                };
-
-                foreach (var vertex in allVerts)
-                {
-                    var vertexFixed = vertex.FixedVector3(digit);
-
-                    RoundVertexOnFace(vertex.y, AbstractMap.BLOCK_SIZE / 2, FaceType.Up, vertexFixed, vertsOnFace);
-                    RoundVertexOnFace(vertex.y, -AbstractMap.BLOCK_SIZE / 2, FaceType.Down, vertexFixed, vertsOnFace);
-                    RoundVertexOnFace(vertex.x, -AbstractMap.BLOCK_SIZE / 2, FaceType.Left, vertexFixed, vertsOnFace);
-                    RoundVertexOnFace(vertex.z, -AbstractMap.BLOCK_SIZE / 2, FaceType.Back, vertexFixed, vertsOnFace);
-                    RoundVertexOnFace(vertex.x, AbstractMap.BLOCK_SIZE / 2, FaceType.Right, vertexFixed, vertsOnFace);
-                    RoundVertexOnFace(vertex.z, AbstractMap.BLOCK_SIZE / 2, FaceType.Forward, vertexFixed, vertsOnFace);
-                }
-
-                var vFaceDetail = new List<VerticalFaceDetails> {mp.Down, mp.Up};
-                var vFaceType = new List<FaceType> {FaceType.Down, FaceType.Up};
-                var hFaceDetails = new List<HorizontalFaceDetails>() {mp.Left, mp.Right, mp.Forward, mp.Back};
-                var hFaceTypes = new List<FaceType>() {FaceType.Left, FaceType.Right, FaceType.Forward, FaceType.Back};
-
-                for (int i = 0; i < 2; ++i)
-                {
-                    foreach (var vConnector in connectorVertical)
-                    {
-                        var verts = vertsOnFace[vFaceType[i]];
-
-                        // move top face to bottom for matching
-                        if (vFaceType[i] == FaceType.Up)
-                        {
-                            verts = verts.Select(v =>
+                            // assign the first variant to current face
+                            if (rotIndex == 0)
                             {
-                                v.y -= 2;
-                                return v;
-                            }).ToList();
-                        }
-
-                        if (verts.EqualList(vConnector.Key))
-                        {
-                            var currFaceInfo = vConnector.Value;
-                            if (currFaceInfo.vFaceDetail.Invariant == false)
-                            {
-                                var otherFaceType = currFaceInfo.faceType == FaceType.Up ? FaceType.Down : FaceType.Up;
-                                var faceInfoKey = new Tuple<int, FaceType>(currFaceInfo.vFaceDetail.Connector, otherFaceType);
-
-                                if (!vFaceVariantDict.ContainsKey(faceInfoKey))
-                                {
-                                    //CopyToVerticalFaceDetail(emptyVFaceAndCounter.vFaceDetail, vFaceDetail[i]);
-                                }
+                                CopyToVerticalFaceDetail(newVFaceDetail, vFaceDetailMp[faceIndex]);
                             }
                         }
                     }
-                }
 
-                var hKeyList = connectorHorizontal.Keys.ToList();
-                var hRotToFront = new Dictionary<FaceType, float> {{FaceType.Forward, 0}, {FaceType.Left, 90}, {FaceType.Back, 180}, {FaceType.Right, 270}};
-                for (int i = 0; i < 4; ++i)
-                {
-                    for (int j = 0; j < hKeyList.Count; ++j)
-                    {
-                        // rotate each horizontal faces to FrontView Coordinate (正视图)
-                        var verts = vertsOnFace[hFaceTypes[i]].Select(v =>
-                        {
-                            var r = Matrix4x4.TRS(Vector3.zero, Quaternion.Euler(0, hRotToFront[hFaceTypes[i]], 0), Vector3.one) *
-                                    new Vector4(v.x, v.y, v.z, 1);
-                            return new Vector3(r.x, r.y, r.z).FixedVector3(digit);
-                        }).ToList();
-
-                        if (verts.EqualList(hKeyList[j]))
-                        {
-                            var hFaceAndCounter = connectorHorizontal[hKeyList[j]];
-                            bool isUnflipped = hFaceAndCounter.hFaceDetail.Flipped == false;
-                            bool isAsymmetric = hFaceAndCounter.hFaceDetail.Symmetric == false;
-                            if (isUnflipped && isAsymmetric)
-                            {
-                                if (connectorHorizontal[hKeyList[j + 1]].counter == 0)
-                                {
-                                    //CopyToHorizontalFaceDetail(emptyHFaceAndCounter.hFaceDetail, hFaceDetails[i]);
-                                }
-                            }
-                        }
-                    }
+                    connectorFound = true;
+                    vConnectorId++;
                 }
             }
         }
-        */
     }
 
     [Button("Reset All Face Details")]
@@ -530,35 +345,6 @@ public class ModuleAnalysis : MonoBehaviour {
         dest.Connector = source.Connector;
     }
 
-    private Dictionary<Tuple<int, FaceType>, int> CreateVerticalVariantInfoDict(Dictionary<List<Vector3>, VFaceAndCounter> connectorVertical)
-    {
-        Dictionary<Tuple<int, FaceType>, int> vFaceVariantDict = new Dictionary<Tuple<int, FaceType>, int>();
-        
-        foreach (var vConnector in connectorVertical)
-        {
-            var faceDetail = vConnector.Value.vFaceDetail;
-            var faceType = vConnector.Value.faceType;
-            
-            if (faceDetail.Invariant == true) 
-            {
-                continue;
-            }
-            
-            Tuple<int, FaceType> newElement = new Tuple<int, FaceType>(faceDetail.Connector, faceType);
-
-            if (vFaceVariantDict.ContainsKey(newElement))
-            {
-                vFaceVariantDict[newElement]++;
-            }
-            else
-            {
-                vFaceVariantDict.Add(newElement, 1);
-            }
-        }
-
-        return vFaceVariantDict;
-    }
-
     public bool InDeviation(float axis, float target) {
         return Util.Round(axis) == target;
     }
@@ -571,7 +357,6 @@ public class ModuleAnalysis : MonoBehaviour {
                 vertsOnFace[faceType].Add(vertexFixed);
             }
         }
-
     }
 
     public void ResetPrototype(ModulePrototype mp) {

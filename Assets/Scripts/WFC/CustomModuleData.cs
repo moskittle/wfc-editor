@@ -184,6 +184,7 @@ public class CustomModuleData : ScriptableObject, ISerializationCallbackReceiver
             // {
             //     neighborsIndexOnFace.neighborIndexOnOneFace = new List<int> { 0 };    // add air
             // }
+            
             neighbors.Add(neighborsIndexOnFace);
         }
 
@@ -197,21 +198,9 @@ public class CustomModuleData : ScriptableObject, ISerializationCallbackReceiver
             bool symmetricMatch = currentFace.Symmetric && otherFace.Symmetric;
             bool asymmetricMatch = (currentFace.Flipped && !otherFace.Flipped) || (!currentFace.Flipped && otherFace.Flipped);
             bool invariantMatch = currentFace.Invariant && otherFace.Invariant;
-            bool variantMatch = currentFace.Rotation == otherFace.Rotation;
+            bool variantMatch = (!currentFace.Invariant && !otherFace.Invariant) && currentFace.Rotation == otherFace.Rotation;
             
-            if (symmetricMatch)
-            {
-                return true;
-            }
-            else if (asymmetricMatch)
-            {
-                return true;
-            }
-            else if (invariantMatch)
-            {
-                return true;
-            }
-            else if (variantMatch)
+            if (symmetricMatch || asymmetricMatch || invariantMatch || variantMatch)
             {
                 return true;
             }
@@ -237,7 +226,8 @@ public class CustomModuleData : ScriptableObject, ISerializationCallbackReceiver
         // }
         // else if (currentFace.Connector == otherFace.Connector)
         // {
-        //     if ((currentFace.Symmetric && otherFace.Symmetric) || (currentFace.Invariant == otherFace.Invariant))
+        //     if ((currentFace.Symmetric && otherFace.Symmetric) || (currentFace.Invariant && otherFace.Invariant)
+        //                                                        || (!currentFace.Invariant && !otherFace.Invariant && currentFace.Rotation == otherFace.Rotation))
         //     {
         //         return true;
         //     }

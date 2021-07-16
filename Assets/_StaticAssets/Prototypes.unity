@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 685440475}
   - component: {fileID: 685440474}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: WfcGenerator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -151,14 +151,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 685440473}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77bfc290fa970e040b42200be417eb42, type: 3}
+  m_Script: {fileID: 11500000, guid: 7fa837a6286434a4abf069301f9d4497, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _keys: 030000000400000005000000
-  _values:
-  - I
-  - Love
-  - Unity
+  size: {x: 8, y: 3, z: 8}
+  moduleData: {fileID: 11400000, guid: 34b5ab6780eb3a44ba6e810c2b7bf359, type: 2}
 --- !u!4 &685440475
 Transform:
   m_ObjectHideFlags: 0

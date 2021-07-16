@@ -106,12 +106,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Down:
     Walkable: 0
     Connector: 0
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 1
     Rotation: 0
   Back:
@@ -122,6 +126,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Right:
     Walkable: 0
     Connector: 3
@@ -130,12 +136,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Up:
     Walkable: 0
     Connector: 0
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 1
     Rotation: 0
   Forward:
@@ -146,6 +156,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 1
+    Invariant: 0
+    Rotation: 0
 --- !u!1 &281386130255364056
 GameObject:
   m_ObjectHideFlags: 0
@@ -252,12 +264,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Down:
     Walkable: 0
     Connector: 0
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 1
     Rotation: 0
   Back:
@@ -268,6 +284,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 1
+    Invariant: 0
+    Rotation: 0
   Right:
     Walkable: 0
     Connector: 15
@@ -276,12 +294,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Up:
     Walkable: 0
     Connector: 1
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 0
     Rotation: 2
   Forward:
@@ -292,6 +314,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
 --- !u!1 &431321862472007751
 GameObject:
   m_ObjectHideFlags: 0
@@ -398,12 +422,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Down:
     Walkable: 0
     Connector: 0
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 1
     Rotation: 0
   Back:
@@ -414,6 +442,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Right:
     Walkable: 0
     Connector: 11
@@ -422,12 +452,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Up:
     Walkable: 0
     Connector: 7
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 0
     Rotation: 0
   Forward:
@@ -438,6 +472,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
 --- !u!1 &443327847319714397
 GameObject:
   m_ObjectHideFlags: 0
@@ -544,12 +580,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Down:
     Walkable: 0
     Connector: 2
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 0
     Rotation: 0
   Back:
@@ -560,6 +600,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 1
+    Invariant: 0
+    Rotation: 0
   Right:
     Walkable: 0
     Connector: 1
@@ -568,12 +610,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Up:
     Walkable: 0
     Connector: 0
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 1
     Rotation: 0
   Forward:
@@ -584,6 +630,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
 --- !u!1 &577648919735374418
 GameObject:
   m_ObjectHideFlags: 0
@@ -690,12 +738,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 1
+    Invariant: 0
+    Rotation: 0
   Down:
     Walkable: 0
     Connector: 6
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 0
     Rotation: 0
   Back:
@@ -706,6 +758,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Right:
     Walkable: 0
     Connector: 9
@@ -714,12 +768,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Up:
     Walkable: 0
     Connector: 0
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 1
     Rotation: 0
   Forward:
@@ -730,6 +788,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
 --- !u!1 &601978476784867303
 GameObject:
   m_ObjectHideFlags: 0
@@ -837,12 +897,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Down:
     Walkable: 0
     Connector: 0
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 1
     Rotation: 0
   Back:
@@ -853,6 +917,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Right:
     Walkable: 0
     Connector: 1
@@ -861,12 +927,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Up:
     Walkable: 0
     Connector: 0
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 1
     Rotation: 0
   Forward:
@@ -877,6 +947,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
 --- !u!1 &1985358247315080886
 GameObject:
   m_ObjectHideFlags: 0
@@ -983,12 +1055,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Down:
     Walkable: 0
     Connector: 0
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 1
     Rotation: 0
   Back:
@@ -999,6 +1075,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Right:
     Walkable: 0
     Connector: 15
@@ -1007,12 +1085,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 1
+    Invariant: 0
+    Rotation: 0
   Up:
     Walkable: 0
     Connector: 2
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 0
     Rotation: 3
   Forward:
@@ -1023,6 +1105,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
 --- !u!1 &2118584088275858371
 GameObject:
   m_ObjectHideFlags: 0
@@ -1129,12 +1213,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 1
+    Invariant: 0
+    Rotation: 0
   Down:
     Walkable: 0
     Connector: 0
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 1
     Rotation: 0
   Back:
@@ -1145,6 +1233,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Right:
     Walkable: 0
     Connector: 18
@@ -1153,12 +1243,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Up:
     Walkable: 0
     Connector: 11
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 0
     Rotation: 0
   Forward:
@@ -1169,6 +1263,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 1
+    Invariant: 0
+    Rotation: 0
 --- !u!1 &2140773137586990596
 GameObject:
   m_ObjectHideFlags: 0
@@ -1196,7 +1292,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2140773137586990596}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.04, y: 0, z: 20.01}
+  m_LocalPosition: {x: 0, y: 0, z: 20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3091103608858966209}
@@ -1274,12 +1370,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Down:
     Walkable: 0
     Connector: 0
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 1
     Rotation: 0
   Back:
@@ -1290,6 +1390,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Right:
     Walkable: 0
     Connector: 1
@@ -1298,12 +1400,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Up:
     Walkable: 0
     Connector: 0
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 1
     Rotation: 0
   Forward:
@@ -1314,6 +1420,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
 --- !u!1 &2224573619322153064
 GameObject:
   m_ObjectHideFlags: 0
@@ -1419,12 +1527,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 1
+    Invariant: 0
+    Rotation: 0
   Down:
     Walkable: 0
     Connector: 4
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 0
     Rotation: 0
   Back:
@@ -1435,6 +1547,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Right:
     Walkable: 0
     Connector: 5
@@ -1443,12 +1557,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Up:
     Walkable: 0
     Connector: 0
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 1
     Rotation: 0
   Forward:
@@ -1459,6 +1577,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
 --- !u!1 &2393752592493708799
 GameObject:
   m_ObjectHideFlags: 0
@@ -1565,12 +1685,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 1
+    Invariant: 0
+    Rotation: 0
   Down:
     Walkable: 0
     Connector: 0
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 1
     Rotation: 0
   Back:
@@ -1581,6 +1705,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Right:
     Walkable: 0
     Connector: 18
@@ -1589,12 +1715,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Up:
     Walkable: 0
     Connector: 11
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 0
     Rotation: 0
   Forward:
@@ -1605,6 +1735,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 1
+    Invariant: 0
+    Rotation: 0
 --- !u!1 &2426911292238799483
 GameObject:
   m_ObjectHideFlags: 0
@@ -1798,12 +1930,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 1
+    Invariant: 0
+    Rotation: 0
   Down:
     Walkable: 0
     Connector: 6
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 0
     Rotation: 0
   Back:
@@ -1814,6 +1950,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Right:
     Walkable: 0
     Connector: 9
@@ -1822,12 +1960,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Up:
     Walkable: 0
     Connector: 0
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 1
     Rotation: 0
   Forward:
@@ -1838,6 +1980,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
 --- !u!1 &2567659197668549437
 GameObject:
   m_ObjectHideFlags: 0
@@ -1943,12 +2087,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 1
+    Invariant: 0
+    Rotation: 0
   Down:
     Walkable: 0
     Connector: 0
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 1
     Rotation: 0
   Back:
@@ -1959,6 +2107,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Right:
     Walkable: 0
     Connector: 14
@@ -1967,12 +2117,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Up:
     Walkable: 0
     Connector: 4
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 0
     Rotation: 2
   Forward:
@@ -1983,6 +2137,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
 --- !u!1 &3047440193682339225
 GameObject:
   m_ObjectHideFlags: 0
@@ -2089,12 +2245,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Down:
     Walkable: 0
     Connector: 9
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 0
     Rotation: 0
   Back:
@@ -2105,6 +2265,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 1
+    Invariant: 0
+    Rotation: 0
   Right:
     Walkable: 0
     Connector: 1
@@ -2113,12 +2275,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Up:
     Walkable: 0
     Connector: 0
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 1
     Rotation: 0
   Forward:
@@ -2129,6 +2295,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
 --- !u!1 &3079049301530872944
 GameObject:
   m_ObjectHideFlags: 0
@@ -2235,12 +2403,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 1
+    Invariant: 0
+    Rotation: 0
   Down:
     Walkable: 0
     Connector: 6
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 0
     Rotation: 0
   Back:
@@ -2251,6 +2423,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Right:
     Walkable: 0
     Connector: 9
@@ -2259,12 +2433,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Up:
     Walkable: 0
     Connector: 0
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 1
     Rotation: 0
   Forward:
@@ -2275,6 +2453,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
 --- !u!1 &3138599758876640522
 GameObject:
   m_ObjectHideFlags: 0
@@ -2381,12 +2561,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 1
+    Invariant: 0
+    Rotation: 0
   Down:
     Walkable: 0
     Connector: 5
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 0
     Rotation: 0
   Back:
@@ -2397,6 +2581,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Right:
     Walkable: 0
     Connector: 4
@@ -2405,12 +2591,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 1
+    Invariant: 0
+    Rotation: 0
   Up:
     Walkable: 0
     Connector: 0
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 1
     Rotation: 0
   Forward:
@@ -2421,6 +2611,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
 --- !u!1 &3501126639629104974
 GameObject:
   m_ObjectHideFlags: 0
@@ -2527,12 +2719,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Down:
     Walkable: 0
     Connector: 0
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 1
     Rotation: 0
   Back:
@@ -2543,6 +2739,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 1
+    Invariant: 0
+    Rotation: 0
   Right:
     Walkable: 0
     Connector: 0
@@ -2551,12 +2749,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Up:
     Walkable: 0
     Connector: 9
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 0
     Rotation: 0
   Forward:
@@ -2567,6 +2769,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
 --- !u!1 &3526141223222199469
 GameObject:
   m_ObjectHideFlags: 0
@@ -2673,12 +2877,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Down:
     Walkable: 0
     Connector: 0
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 1
     Rotation: 0
   Back:
@@ -2689,6 +2897,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 1
+    Invariant: 0
+    Rotation: 0
   Right:
     Walkable: 0
     Connector: 0
@@ -2697,12 +2907,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Up:
     Walkable: 0
     Connector: 2
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 0
     Rotation: 0
   Forward:
@@ -2713,6 +2927,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
 --- !u!1 &3788709414276901326
 GameObject:
   m_ObjectHideFlags: 0
@@ -2819,12 +3035,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 1
+    Invariant: 0
+    Rotation: 0
   Down:
     Walkable: 0
     Connector: 0
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 1
     Rotation: 0
   Back:
@@ -2835,6 +3055,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Right:
     Walkable: 0
     Connector: 15
@@ -2843,12 +3065,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Up:
     Walkable: 0
     Connector: 13
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 0
     Rotation: 0
   Forward:
@@ -2859,6 +3085,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
 --- !u!1 &3812342709554007745
 GameObject:
   m_ObjectHideFlags: 0
@@ -2965,12 +3193,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Down:
     Walkable: 0
     Connector: 0
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 1
     Rotation: 0
   Back:
@@ -2981,6 +3213,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Right:
     Walkable: 0
     Connector: 1
@@ -2989,12 +3223,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Up:
     Walkable: 0
     Connector: 0
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 1
     Rotation: 0
   Forward:
@@ -3005,6 +3243,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 1
+    Invariant: 0
+    Rotation: 0
 --- !u!1 &3943049107719260919
 GameObject:
   m_ObjectHideFlags: 0
@@ -3112,12 +3352,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 1
+    Invariant: 0
+    Rotation: 0
   Down:
     Walkable: 0
     Connector: 0
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 1
     Rotation: 0
   Back:
@@ -3128,6 +3372,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Right:
     Walkable: 0
     Connector: 15
@@ -3136,12 +3382,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 1
+    Invariant: 0
+    Rotation: 0
   Up:
     Walkable: 0
     Connector: 1
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 0
     Rotation: 1
   Forward:
@@ -3152,6 +3402,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
 --- !u!1 &4018251983022303094
 GameObject:
   m_ObjectHideFlags: 0
@@ -3258,12 +3510,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 1
+    Invariant: 0
+    Rotation: 0
   Down:
     Walkable: 0
     Connector: 0
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 1
     Rotation: 0
   Back:
@@ -3274,6 +3530,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Right:
     Walkable: 0
     Connector: 1
@@ -3282,12 +3540,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Up:
     Walkable: 0
     Connector: 0
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 1
     Rotation: 0
   Forward:
@@ -3298,6 +3560,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
 --- !u!1 &4085003654513866024
 GameObject:
   m_ObjectHideFlags: 0
@@ -3404,12 +3668,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 1
+    Invariant: 0
+    Rotation: 0
   Down:
     Walkable: 0
     Connector: 0
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 1
     Rotation: 0
   Back:
@@ -3420,6 +3688,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Right:
     Walkable: 0
     Connector: 12
@@ -3428,12 +3698,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 1
+    Invariant: 0
+    Rotation: 0
   Up:
     Walkable: 0
     Connector: 12
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 0
     Rotation: 0
   Forward:
@@ -3444,6 +3718,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
 --- !u!1 &4543714323382567187
 GameObject:
   m_ObjectHideFlags: 0
@@ -3550,12 +3826,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Down:
     Walkable: 0
     Connector: 2
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 0
     Rotation: 3
   Back:
@@ -3566,6 +3846,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Right:
     Walkable: 0
     Connector: 2
@@ -3574,12 +3856,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 1
+    Invariant: 0
+    Rotation: 0
   Up:
     Walkable: 0
     Connector: 1
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 0
     Rotation: 0
   Forward:
@@ -3590,6 +3876,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 1
+    Invariant: 0
+    Rotation: 0
 --- !u!1 &4651028682450536497
 GameObject:
   m_ObjectHideFlags: 0
@@ -3696,12 +3984,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 1
+    Invariant: 0
+    Rotation: 0
   Down:
     Walkable: 0
     Connector: 10
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 0
     Rotation: 0
   Back:
@@ -3712,6 +4004,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Right:
     Walkable: 0
     Connector: 2
@@ -3720,12 +4014,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Up:
     Walkable: 0
     Connector: 0
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 1
     Rotation: 0
   Forward:
@@ -3736,6 +4034,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
 --- !u!1 &4723009420194118483
 GameObject:
   m_ObjectHideFlags: 0
@@ -3842,12 +4142,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Down:
     Walkable: 0
     Connector: 1
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 0
     Rotation: 1
   Back:
@@ -3858,6 +4162,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Right:
     Walkable: 0
     Connector: 2
@@ -3866,12 +4172,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 1
+    Invariant: 0
+    Rotation: 0
   Up:
     Walkable: 0
     Connector: 0
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 1
     Rotation: 0
   Forward:
@@ -3882,6 +4192,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
 --- !u!1 &5022464884155166376
 GameObject:
   m_ObjectHideFlags: 0
@@ -3936,12 +4248,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Down:
     Walkable: 0
     Connector: 0
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 1
     Rotation: 0
   Back:
@@ -3952,6 +4268,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Right:
     Walkable: 0
     Connector: 0
@@ -3960,12 +4278,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Up:
     Walkable: 0
     Connector: 0
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 1
     Rotation: 0
   Forward:
@@ -3976,6 +4298,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
 --- !u!1 &5036824337699640055
 GameObject:
   m_ObjectHideFlags: 0
@@ -4082,12 +4406,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Down:
     Walkable: 0
     Connector: 2
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 0
     Rotation: 0
   Back:
@@ -4098,6 +4426,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Right:
     Walkable: 0
     Connector: 15
@@ -4106,12 +4436,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Up:
     Walkable: 0
     Connector: 1
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 0
     Rotation: 2
   Forward:
@@ -4122,6 +4456,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
 --- !u!1 &5633281078243726686
 GameObject:
   m_ObjectHideFlags: 0
@@ -4228,12 +4564,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Down:
     Walkable: 0
     Connector: 0
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 1
     Rotation: 0
   Back:
@@ -4244,6 +4584,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 1
+    Invariant: 0
+    Rotation: 0
   Right:
     Walkable: 0
     Connector: 0
@@ -4252,12 +4594,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Up:
     Walkable: 0
     Connector: 9
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 0
     Rotation: 0
   Forward:
@@ -4268,6 +4614,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
 --- !u!1 &5640290045742393737
 GameObject:
   m_ObjectHideFlags: 0
@@ -4374,12 +4722,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Down:
     Walkable: 0
     Connector: 1
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 0
     Rotation: 0
   Back:
@@ -4390,6 +4742,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Right:
     Walkable: 0
     Connector: 0
@@ -4398,12 +4752,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Up:
     Walkable: 0
     Connector: 0
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 1
     Rotation: 0
   Forward:
@@ -4414,6 +4772,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 1
+    Invariant: 0
+    Rotation: 0
 --- !u!1 &6129282477806719061
 GameObject:
   m_ObjectHideFlags: 0
@@ -4520,12 +4880,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 1
+    Invariant: 0
+    Rotation: 0
   Down:
     Walkable: 0
     Connector: 0
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 1
     Rotation: 0
   Back:
@@ -4536,6 +4900,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Right:
     Walkable: 0
     Connector: 18
@@ -4544,12 +4910,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Up:
     Walkable: 0
     Connector: 11
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 0
     Rotation: 0
   Forward:
@@ -4560,6 +4930,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 1
+    Invariant: 0
+    Rotation: 0
 --- !u!1 &6131637552759886827
 GameObject:
   m_ObjectHideFlags: 0
@@ -4665,12 +5037,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Down:
     Walkable: 0
     Connector: 1
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 0
     Rotation: 1
   Back:
@@ -4681,6 +5057,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Right:
     Walkable: 0
     Connector: 16
@@ -4689,12 +5067,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Up:
     Walkable: 0
     Connector: 1
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 0
     Rotation: 1
   Forward:
@@ -4705,6 +5087,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
 --- !u!1 &6329312317237941114
 GameObject:
   m_ObjectHideFlags: 0
@@ -4812,12 +5196,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 1
+    Invariant: 0
+    Rotation: 0
   Down:
     Walkable: 0
     Connector: 0
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 1
     Rotation: 0
   Back:
@@ -4828,6 +5216,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Right:
     Walkable: 0
     Connector: 21
@@ -4836,12 +5226,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 1
+    Invariant: 0
+    Rotation: 0
   Up:
     Walkable: 0
     Connector: 1
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 0
     Rotation: 1
   Forward:
@@ -4852,6 +5246,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
 --- !u!1 &6630038666292657627
 GameObject:
   m_ObjectHideFlags: 0
@@ -4957,12 +5353,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Down:
     Walkable: 0
     Connector: 2
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 0
     Rotation: 0
   Back:
@@ -4973,6 +5373,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Right:
     Walkable: 0
     Connector: 0
@@ -4981,12 +5383,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Up:
     Walkable: 0
     Connector: 2
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 0
     Rotation: 0
   Forward:
@@ -4997,6 +5403,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
 --- !u!1 &6723827973746613425
 GameObject:
   m_ObjectHideFlags: 0
@@ -5104,12 +5512,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Down:
     Walkable: 0
     Connector: 0
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 1
     Rotation: 0
   Back:
@@ -5120,6 +5532,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Right:
     Walkable: 0
     Connector: 15
@@ -5128,12 +5542,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 1
+    Invariant: 0
+    Rotation: 0
   Up:
     Walkable: 0
     Connector: 1
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 0
     Rotation: 1
   Forward:
@@ -5144,6 +5562,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
 --- !u!1 &6835524600322283640
 GameObject:
   m_ObjectHideFlags: 0
@@ -5249,12 +5669,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Down:
     Walkable: 0
     Connector: 0
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 1
     Rotation: 0
   Back:
@@ -5265,6 +5689,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Right:
     Walkable: 0
     Connector: 1
@@ -5273,12 +5699,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Up:
     Walkable: 0
     Connector: 0
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 1
     Rotation: 0
   Forward:
@@ -5289,6 +5719,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
 --- !u!1 &7310945826411000745
 GameObject:
   m_ObjectHideFlags: 0
@@ -5395,12 +5827,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Down:
     Walkable: 0
     Connector: 0
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 1
     Rotation: 0
   Back:
@@ -5411,6 +5847,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Right:
     Walkable: 0
     Connector: 14
@@ -5419,12 +5857,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Up:
     Walkable: 0
     Connector: 8
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 0
     Rotation: 0
   Forward:
@@ -5435,6 +5877,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
 --- !u!1 &7486685839372656688
 GameObject:
   m_ObjectHideFlags: 0
@@ -5541,12 +5985,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Down:
     Walkable: 0
     Connector: 0
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 1
     Rotation: 0
   Back:
@@ -5557,6 +6005,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Right:
     Walkable: 0
     Connector: 21
@@ -5565,12 +6015,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 1
+    Invariant: 0
+    Rotation: 0
   Up:
     Walkable: 0
     Connector: 2
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 0
     Rotation: 3
   Forward:
@@ -5581,6 +6035,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
 --- !u!1 &7576874992359170124
 GameObject:
   m_ObjectHideFlags: 0
@@ -5687,12 +6143,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Down:
     Walkable: 0
     Connector: 3
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 0
     Rotation: 0
   Back:
@@ -5703,6 +6163,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Right:
     Walkable: 0
     Connector: 5
@@ -5711,12 +6173,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Up:
     Walkable: 0
     Connector: 0
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 1
     Rotation: 0
   Forward:
@@ -5727,6 +6193,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
 --- !u!1 &7978024359035086869
 GameObject:
   m_ObjectHideFlags: 0
@@ -5833,12 +6301,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Down:
     Walkable: 0
     Connector: 1
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 0
     Rotation: 2
   Back:
@@ -5849,6 +6321,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 1
+    Invariant: 0
+    Rotation: 0
   Right:
     Walkable: 0
     Connector: 2
@@ -5857,12 +6331,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Up:
     Walkable: 0
     Connector: 0
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 1
     Rotation: 0
   Forward:
@@ -5873,6 +6351,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
 --- !u!1 &8168110929263364646
 GameObject:
   m_ObjectHideFlags: 0
@@ -5980,12 +6460,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 1
+    Invariant: 0
+    Rotation: 0
   Down:
     Walkable: 0
     Connector: 0
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 1
     Rotation: 0
   Back:
@@ -5996,6 +6480,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 1
+    Invariant: 0
+    Rotation: 0
   Right:
     Walkable: 0
     Connector: 20
@@ -6004,12 +6490,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Up:
     Walkable: 0
     Connector: 7
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 0
     Rotation: 1
   Forward:
@@ -6020,6 +6510,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 1
+    Invariant: 0
+    Rotation: 0
 --- !u!1 &8723365217470373495
 GameObject:
   m_ObjectHideFlags: 0
@@ -6126,12 +6618,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Down:
     Walkable: 0
     Connector: 0
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 1
     Rotation: 0
   Back:
@@ -6142,6 +6638,8 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Right:
     Walkable: 0
     Connector: 1
@@ -6150,12 +6648,16 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
+    Invariant: 0
+    Rotation: 0
   Up:
     Walkable: 0
     Connector: 2
     ExcludedNeighbours: []
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
+    Symmetric: 0
+    Flipped: 0
     Invariant: 0
     Rotation: 2
   Forward:
@@ -6166,3 +6668,5 @@ MonoBehaviour:
     IsOcclusionPortal: 0
     Symmetric: 0
     Flipped: 1
+    Invariant: 0
+    Rotation: 0

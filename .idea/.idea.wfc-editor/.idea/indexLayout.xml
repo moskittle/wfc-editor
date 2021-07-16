@@ -10,6 +10,7 @@
       <Path>Library/PackageCache/com.unity.test-framework@1.1.24</Path>
       <Path>Packages</Path>
       <Path>ProjectSettings</Path>
+      <Path>F:/ChromeDownload/Unity.Mathematics-master/Unity.Mathematics-master/src</Path>
     </explicitIncludes>
     <explicitExcludes>
       <Path>.git</Path>

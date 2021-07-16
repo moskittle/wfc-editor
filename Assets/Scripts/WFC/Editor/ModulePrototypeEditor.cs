@@ -27,9 +27,12 @@ public class ModulePrototypeEditor : Editor {
 		}
 
 		if (GUILayout.Button("Reset connectors")) {
-			foreach (var face in modulePrototype.Faces) {
-				face.ResetConnector();
-			}
+			modulePrototype.Forward.ResetConnector();
+			modulePrototype.Back.ResetConnector();
+			modulePrototype.Right.ResetConnector();
+			modulePrototype.Left.ResetConnector();
+			modulePrototype.Up.ResetConnector();
+			modulePrototype.Down.ResetConnector();
 		}
 
 		if (GUILayout.Button("Reset exlusion rules in all prototypes")) {

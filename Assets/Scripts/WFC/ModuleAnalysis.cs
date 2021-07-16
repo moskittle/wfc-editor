@@ -322,6 +322,7 @@ public class ModuleAnalysis : MonoBehaviour {
 
         foreach (var mp in modulePrototypes)
         {
+            // not virtual functions, need to be called individually
             mp.Forward.ResetConnector();
             mp.Back.ResetConnector();
             mp.Right.ResetConnector();

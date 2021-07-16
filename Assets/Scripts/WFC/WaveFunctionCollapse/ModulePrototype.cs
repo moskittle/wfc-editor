@@ -7,33 +7,69 @@ using System;
 
 public class ModulePrototype : MonoBehaviour {
 	[System.Serializable]
-	public abstract class FaceDetails {
+	public  class FaceDetails {
 		public bool Walkable;
 
 		public int Connector;
-
-		public virtual void ResetConnector() {
-			this.Connector = 0;
-		}
 
 		public ModulePrototype[] ExcludedNeighbours;
 
 		public bool EnforceWalkableNeighbor = false;
 
 		public bool IsOcclusionPortal = false;
+		
+		public bool Symmetric;
+		public bool Flipped;
+		public bool Invariant;
+		public int Rotation;
+
+		public FaceDetails() {}
+		public FaceDetails(FaceDetails other)
+		{
+			Walkable = other.Walkable;
+			Connector = other.Connector;
+			ExcludedNeighbours = new List<ModulePrototype>(other.ExcludedNeighbours).ToArray();
+
+			EnforceWalkableNeighbor = other.EnforceWalkableNeighbor;
+			IsOcclusionPortal = other.IsOcclusionPortal;
+
+			Symmetric = other.Symmetric;
+			Flipped = other.Flipped;
+			Invariant = other.Invariant;
+			Rotation = other.Rotation;
+		}
+		
 	}
 
 	[System.Serializable]
 	public class HorizontalFaceDetails : FaceDetails {
-		public bool Symmetric;
-		public bool Flipped;
+		// public bool Symmetric;
+		// public bool Flipped;
 
+		public HorizontalFaceDetails(){}
+
+		public HorizontalFaceDetails(HorizontalFaceDetails other)
+		{
+			Walkable = other.Walkable;
+			Connector = other.Connector;
+			ExcludedNeighbours = new List<ModulePrototype>(other.ExcludedNeighbours).ToArray();
+
+			EnforceWalkableNeighbor = other.EnforceWalkableNeighbor;
+			IsOcclusionPortal = other.IsOcclusionPortal;
+
+			Symmetric = other.Symmetric;
+			Flipped = other.Flipped;
+			Invariant = other.Invariant;
+			Rotation = other.Rotation;
+		}
+		
 		public override string ToString() {
 			return this.Connector.ToString() + (this.Symmetric ? "s" : (this.Flipped ? "F" : ""));
 		}
 
-		public override void ResetConnector() {
-			base.ResetConnector();
+		public void ResetConnector()
+		{
+			this.Connector = 0;
 			this.Symmetric = false;
 			this.Flipped = false;
 		}
@@ -41,15 +77,32 @@ public class ModulePrototype : MonoBehaviour {
 
 	[System.Serializable]
 	public class VerticalFaceDetails : FaceDetails {
-		public bool Invariant;
-		public int Rotation;
+		// public bool Invariant;
+		// public int Rotation;
+		
+		public VerticalFaceDetails(){}
+
+		public VerticalFaceDetails(VerticalFaceDetails other)
+		{
+			Walkable = other.Walkable;
+			Connector = other.Connector;
+			ExcludedNeighbours = new List<ModulePrototype>(other.ExcludedNeighbours).ToArray();
+
+			EnforceWalkableNeighbor = other.EnforceWalkableNeighbor;
+			IsOcclusionPortal = other.IsOcclusionPortal;
+
+			Symmetric = other.Symmetric;
+			Flipped = other.Flipped;
+			Invariant = other.Invariant;
+			Rotation = other.Rotation;
+		}
 
 		public override string ToString() {
 			return this.Connector.ToString() + (this.Invariant ? "i" : (this.Rotation != 0 ? "_bcd".ElementAt(this.Rotation).ToString() : ""));
 		}
 
-		public override void ResetConnector() {
-			base.ResetConnector();
+		public void ResetConnector() {
+			this.Connector = 0;
 			this.Invariant = false;
 			this.Rotation = 0;
 		}
@@ -77,6 +130,21 @@ public class ModulePrototype : MonoBehaviour {
 				this.Forward
 			};
 		}
+	}
+
+	public ModulePrototype() {}
+	
+	public ModulePrototype(ModulePrototype other)
+	{
+		Probability = other.Probability;
+		Spawn = other.Spawn;
+		IsInterior = other.IsInterior;
+		Left = new HorizontalFaceDetails(other.Left); 
+		Right = new HorizontalFaceDetails(other.Right); 
+		Down = new VerticalFaceDetails(other.Down); 
+		Back = new HorizontalFaceDetails(other.Back); 
+		Up = new VerticalFaceDetails(other.Up); 
+		Forward = new HorizontalFaceDetails(other.Forward);
 	}
 
 	public Mesh GetMesh(bool createEmptyFallbackMesh = true) {

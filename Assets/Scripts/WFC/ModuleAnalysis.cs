@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using NaughtyAttributes;
 using UnityEditor;
 using UnityEngine;
+using NaughtyAttributes;
 
 using HorizontalFaceDetails = ModulePrototype.HorizontalFaceDetails;
 using VerticalFaceDetails = ModulePrototype.VerticalFaceDetails;
@@ -45,7 +45,7 @@ public class ModuleAnalysis : MonoBehaviour {
         var modulePrototypes = gameObject.transform.GetComponentsInChildren<ModulePrototype>();
         if (modulePrototypes.Length == 0)
         {
-            Debug.LogError("No ModulePrototype Component process!");
+            Debug.LogError("No module prototype component processed!");
             return;
         }
 

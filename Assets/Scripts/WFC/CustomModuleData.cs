@@ -54,6 +54,19 @@ public class CustomModuleData : ScriptableObject, ISerializationCallbackReceiver
             constraintFrom = _constraintFrom;
             weight = _weight;
         }
+
+        public PrototypeInfo(PrototypeInfo other)
+        {
+            name = other.name;
+            index = other.index;
+            mesh = other.mesh;
+            rotation = other.rotation;
+            faceDetails = other.faceDetails;
+            neighbors = other.neighbors;
+            constraintTo = other.constraintTo;
+            constraintFrom = other.constraintFrom;
+            weight = other.weight;
+        }
     }
     
     public GameObject prototypes;

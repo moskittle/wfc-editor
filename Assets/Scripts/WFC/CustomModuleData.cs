@@ -19,6 +19,12 @@ public class CustomModuleData : ScriptableObject, ISerializationCallbackReceiver
     {
         public List<int> neighborIndexOnOneFace = new List<int>();
 
+        public NeighborIndexListWrapper() {}
+        public NeighborIndexListWrapper(NeighborIndexListWrapper other)
+        {
+            neighborIndexOnOneFace = other.neighborIndexOnOneFace.ToList();
+        }
+
         public void Add(int index)
         {
             neighborIndexOnOneFace.Add(index);
@@ -40,8 +46,8 @@ public class CustomModuleData : ScriptableObject, ISerializationCallbackReceiver
 
         // Constructors
         public PrototypeInfo(){}
-        public PrototypeInfo(string _name, int _index, Mesh _mesh, int _rotation, List<FaceDetails> _faceDetails,
-            NeighborsIndexOnAllFaces _neighbors, List<FaceDetails> _constraintTo = null,
+        public PrototypeInfo(string _name, int _index, Mesh _mesh, int _rotation, List<FaceDetails> _faceDetails = null,
+            NeighborsIndexOnAllFaces _neighbors = null, List<FaceDetails> _constraintTo = null,
             List<FaceDetails> _constraintFrom = null, int _weight = 1)
         {
             name = _name;
@@ -61,10 +67,10 @@ public class CustomModuleData : ScriptableObject, ISerializationCallbackReceiver
             index = other.index;
             mesh = other.mesh;
             rotation = other.rotation;
-            faceDetails = other.faceDetails;
-            neighbors = other.neighbors;
-            constraintTo = other.constraintTo;
-            constraintFrom = other.constraintFrom;
+            faceDetails = other.faceDetails.Select(otherFaceDetail => new FaceDetails(otherFaceDetail)).ToList();
+            neighbors = other.neighbors.Select(otherNeighbor => new NeighborIndexListWrapper(otherNeighbor)).ToList();
+            constraintTo = other.constraintTo.Select(otherConstraintTo => new FaceDetails(otherConstraintTo)).ToList();
+            constraintFrom = other.constraintFrom.Select(otherConstraintFrom => new FaceDetails(otherConstraintFrom)).ToList();
             weight = other.weight;
         }
     }
@@ -100,7 +106,6 @@ public class CustomModuleData : ScriptableObject, ISerializationCallbackReceiver
             Mesh mesh = meshFilter ? meshFilter.sharedMesh : null;
             int weight = 1;
 
-            var faceDetails = new List<FaceDetails> { mp.Left, mp.Back, mp.Right, mp.Forward, mp.Down, mp.Up};    // order is important
 
             // add prototypes with rotation variants to array
             for (int rotation = 0; rotation < 4; rotation++)
@@ -108,7 +113,10 @@ public class CustomModuleData : ScriptableObject, ISerializationCallbackReceiver
                 if (rotation == 0 || !mp.CompareRotatedVariants(0, rotation))
                 {
                     var name = mp.gameObject.name + "_" + rotation;
+                    
+                    var faceDetails = new List<FaceDetails> { mp.Left, mp.Back, mp.Right, mp.Forward, mp.Down, mp.Up};    // order is important
 
+                    // temp initilization
                     var newFaceDetails = new List<FaceDetails>();
                     for (int i = 0; i < faceDetails.Count; ++i)
                     {
@@ -127,8 +135,7 @@ public class CustomModuleData : ScriptableObject, ISerializationCallbackReceiver
                         newFaceDetails[5].Rotation = (faceDetails[5].Rotation + rotation) % 4;
                     }
                     
-                    // var neighbors = new NeighborsIndexOnAllFaces();
-                    var neighbors = CreateNeighborsOnAllFaces(newFaceDetails, allPrototypes);
+                    var neighbors = new NeighborsIndexOnAllFaces();
 
                     // TODO: implement extra constraints
                     List<FaceDetails> constraintsTo = new List<FaceDetails>();
@@ -138,9 +145,13 @@ public class CustomModuleData : ScriptableObject, ISerializationCallbackReceiver
 
                     prototypeMetaData.Add(prototypeInfo);
                 }
-
-
             }
+        }
+        
+        // seperate loop to add face details and neighbor details (after all variants are added to modules)
+        foreach (var prototypeInfo in prototypeMetaData)
+        {
+            prototypeInfo.neighbors =  CreateNeighborsOnAllFaces(prototypeInfo.faceDetails, prototypeMetaData);;
         }
         
         this.modules = prototypeMetaData;
@@ -148,7 +159,7 @@ public class CustomModuleData : ScriptableObject, ISerializationCallbackReceiver
         AssetDatabase.SaveAssets();
     }
 
-    public NeighborsIndexOnAllFaces CreateNeighborsOnAllFaces(List<FaceDetails> faceDetails, List<ModulePrototype> allPrototypes)
+    public NeighborsIndexOnAllFaces CreateNeighborsOnAllFaces(List<FaceDetails> faceDetails, List<PrototypeInfo> prototypeMetaData)
     {
         NeighborsIndexOnAllFaces neighbors = new NeighborsIndexOnAllFaces(6);
 
@@ -157,17 +168,17 @@ public class CustomModuleData : ScriptableObject, ISerializationCallbackReceiver
             var currentFace = faceDetails[i];
             var neighborsIndexOnFace = new NeighborIndexListWrapper();
 
-            for (int otherProtoIndex = 0; otherProtoIndex < allPrototypes.Count; ++otherProtoIndex)
+            for (int otherProtoIndex = 0; otherProtoIndex < prototypeMetaData.Count; ++otherProtoIndex)
             {
-                var otherPrototype =  allPrototypes[otherProtoIndex];
+                var otherPrototype =  prototypeMetaData[otherProtoIndex];
                 List<FaceDetails> otherFaceDetails = new List<FaceDetails>
                 { 
-                    new FaceDetails(otherPrototype.Left), 
-                    new FaceDetails(otherPrototype.Back), 
-                    new FaceDetails(otherPrototype.Right), 
-                    new FaceDetails(otherPrototype.Forward), 
-                    new FaceDetails(otherPrototype.Down), 
-                    new FaceDetails(otherPrototype.Up), 
+                    new FaceDetails(otherPrototype.faceDetails[0]),
+                    new FaceDetails(otherPrototype.faceDetails[1]),
+                    new FaceDetails(otherPrototype.faceDetails[2]),
+                    new FaceDetails(otherPrototype.faceDetails[3]),
+                    new FaceDetails(otherPrototype.faceDetails[4]),
+                    new FaceDetails(otherPrototype.faceDetails[5]),
                 };
 
                 FaceDetails otherFace = new FaceDetails();

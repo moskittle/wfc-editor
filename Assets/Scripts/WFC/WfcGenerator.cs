@@ -5,16 +5,32 @@ using UnityEngine;
 
 using PrototypeInfo = CustomModuleData.PrototypeInfo;
 
+// a 3D list which represents grid3D[x][y][z] = List<Possible Prototypes>
+using Grid3D = System.Collections.Generic.List<System.Collections.Generic.List<System.Collections.Generic.List<
+    System.Collections.Generic.List<CustomModuleData.PrototypeInfo>>>>;
+
 public class WfcGenerator : MonoBehaviour
 {
-    public Vector3 size = new Vector3(8, 3, 8);
+    public Vector3Int size = new Vector3Int(8, 3, 8);
+    public Material material;
     public CustomModuleData moduleData;
 
-    private Dictionary<Vector3, List<PrototypeInfo>> wfc = new Dictionary<Vector3, List<PrototypeInfo>>();
+    private Grid3D wfc;
+    private PrototypeInfo airPrototype;
+    private const float blockSize = 2f;
+    private readonly Dictionary<Vector3Int, int> directionToIndex = new Dictionary<Vector3Int, int>
+    {
+        {Vector3Int.left, 0},      // FaceType.Left
+        {Vector3Int.back, 1},      // FaceType.Back
+        {Vector3Int.right, 2},     // FaceType.Right
+        {Vector3Int.forward, 3},   // FaceType.Forward
+        {Vector3Int.down, 4},      // FaceType.Down
+        {Vector3Int.up, 5}         // FaceType.Up
+    };
 
     public void Start()
     {
-        Init(size, moduleData);
+        Init();
     }
 
     private void Update()
@@ -22,46 +38,102 @@ public class WfcGenerator : MonoBehaviour
         
     }
 
-    private void Init(Vector3 size, CustomModuleData moduleData)
+    private void Init()
     {
-        if (moduleData == null || size.Equals(Vector3.zero))
+        bool zeroSize = size.x == 0 || size.y == 0 || size.z == 0;
+        if (moduleData == null || zeroSize)
         {
-            Debug.Log("No terrain generated. Module data is missing.");
+            Debug.Log("No terrain generated. Module data is missing, or size is 0.");
         }
 
-        for (int y = 0; y < size.y; ++y)
+        InitGird3D();
+    }
+
+    public void InitGird3D()
+    {
+        wfc = new Grid3D(new List<List<List<PrototypeInfo>>>[size.x]);
+        for (int x = 0; x < size.x; ++x)
         {
-            for (int z = 0; z < size.z; ++z)
+            wfc[x] = new List<List<List<PrototypeInfo>>>(new List<List<PrototypeInfo>>[size.y]);
+            for (int y = 0; y < size.y; ++y)
             {
-                for (int x = 0; x < size.x; ++x)
+                wfc[x][y] = new List<List<PrototypeInfo>>(new List<PrototypeInfo>[size.z]);
+                for (int z = 0; z < size.z; ++z)
                 {
-                    var pos = new Vector3(x, y, z);
-                    var allPrototypesCopy = Instantiate(moduleData);
+                    wfc[x][y][z] = new List<PrototypeInfo>(new PrototypeInfo[1]);
                     
-                    wfc.Add(pos, allPrototypesCopy.modules);
+                    var allPrototypesCopy = Instantiate(moduleData);
+                    wfc[x][y][z] = allPrototypesCopy.modules;
+
+                    if (airPrototype == null)
+                    {
+                        airPrototype = new PrototypeInfo(allPrototypesCopy.modules[0]);
+                    }
                 }
             }
         }
     }
-
+    
+    static int a = 0;
     [Button("Generate WFC Terrain")]
     public void GenerateTerrain()
     {
+        ResetGeneration();
+        
+        InitGird3D();
+
+        a = 0;
         while(IsCollapsed() == false)
         {
+            if (a++ > 10000) { Debug.Log("Manual break"); break; }
+            
             Iterate();
         }
+
+        bool isCollapsed = IsCollapsed();
+
+        // Debug
+        var sum = 0;
+        for (int x = 0; x < size.x; ++x)
+        {
+            for (int y = 0; y < size.y; ++y)
+            {
+                for (int z = 0; z < size.z; ++z)
+                {
+                    sum += wfc[x][y][z].Count;
+                }
+            }
+        }
+
+        Debug.Log("is collapsed: " + isCollapsed + ", iterations: " + a + ", count; " + sum);
+
+        // Create game objects on each grid
+        for (int x = 0; x < size.x; ++x)
+        {
+            for (int y = 0; y < size.y; ++y)
+            {
+                for (int z = 0; z < size.z; ++z)
+                {
+                    CreateGridElement(x, y, z);
+                }
+            }
+        }
+
     }
 
     private bool IsCollapsed()
     {
-        var keys = wfc.Keys.ToList();
-
-        foreach(var key in keys)
+        for (int x = 0; x < size.z; ++x)
         {
-            if(wfc[key].Count > 1)
+            for (int y = 0; y < size.y; ++y)
             {
-                return false;
+                for (int z = 0; z < size.z; ++z)
+                {
+                    if (wfc[x][y][z].Count > 1)
+                    {
+                        return false;
+                    }
+                }
             }
         }
 
@@ -75,63 +147,219 @@ public class WfcGenerator : MonoBehaviour
         PropagateAt(coord);
     }
 
-    private Vector3 GetMinEntropyCoord()
+    private Vector3Int GetMinEntropyCoord()
     {
         // exception check
         if (wfc.Count == 0)
         {
             Debug.LogError("Min entropy coord not found!");
-            return new Vector3(-1, -1, -1);
+            return new Vector3Int(-1, -1, -1);
         }
+        
+        int minEntropy = int.MaxValue;
+        var minEntropyCoordList = new List<Vector3Int>();
 
-        int min = int.MaxValue;
-        var minEntropyCoordList = new List<Vector3>();
-
-        var coords = wfc.Keys.ToList();
-        foreach(var coord in coords)
+        for (int x = 0; x < size.x; ++x)
         {
-            var currEntropy = wfc[coord].Count;
+            for (int y = 0; y < size.y; ++y)
+            {
+                for (int z = 0; z < size.z; ++z)
+                {
+                    var currEntropy = wfc[x][y][z].Count;
 
-            if (currEntropy < min)
-            {
-                minEntropyCoordList.Clear();
-                minEntropyCoordList.Add(coord);
-                min = currEntropy;
-            }
-            else if(currEntropy == min)
-            {
-                minEntropyCoordList.Add(coord);
+                    if (currEntropy > 1)
+                    {
+                        // new min entropy
+                        if (currEntropy < minEntropy)
+                        {
+                            minEntropyCoordList.Clear();
+                            minEntropyCoordList.Add(new Vector3Int(x, y, z));
+                            minEntropy = currEntropy;
+                        }
+                        // equal min entropy (tied)
+                        else if (currEntropy == minEntropy)
+                        {
+                            minEntropyCoordList.Add(new Vector3Int(x, y, z));
+                        }
+                    }
+                }
             }
         }
 
         // randomly choose one to collapse if there is a tie
         var selection = Random.Range(0, minEntropyCoordList.Count);
         var minEntropyCoord = minEntropyCoordList[selection];
-
+        
         return minEntropyCoord;
     }
 
-    private void CollapseAt(Vector3 coord)
+    private void CollapseAt(Vector3Int coord)
     {
-        var possiblePrototypes = wfc[coord];
-
+        var possiblePrototypes = wfc[coord.x][coord.y][coord.z];
+        
         // narrow possible prototypes down to 1
         var selection = Random.Range(0, possiblePrototypes.Count);  // TODO: weighted selection
-        var chosenPrototype = new PrototypeInfo(possiblePrototypes[selection]);
+        var chosenPrototype = new PrototypeInfo(possiblePrototypes[selection]); // TODO: real deep copy 
         possiblePrototypes.Clear();
         possiblePrototypes.Add(chosenPrototype);
     }
 
-    private void PropagateAt(Vector3 coord)
+    private void PropagateAt(Vector3Int coord)
     {
-        Stack<Vector3> changedCoords = new Stack<Vector3>();
+        Stack<Vector3Int> changedCoords = new Stack<Vector3Int>();
         changedCoords.Push(coord);
 
         while(changedCoords.Count > 0)
         {
             var currentCoord = changedCoords.Pop();
+            var currentPrototypes = wfc[currentCoord.x][currentCoord.y][currentCoord.z];
 
-            // for valid directions
+            var validDirections = GetValidDirections(currentCoord);
+
+            foreach (var dir in validDirections)
+            {
+                var otherCoord = currentCoord + dir;
+                var otherPrototype = wfc[otherCoord.x][otherCoord.y][otherCoord.z];
+                var possibleOtherIndice = GetPrototypeIndice(otherPrototype);
+                
+                var neighborDirIndex = GetNeighborDirectionIndex(dir);
+                var possibleNeighborIndice = GetAllPossibleNeighbors(currentPrototypes, neighborDirIndex);
+
+                var originalCount = possibleOtherIndice.Count;
+                possibleOtherIndice.RemoveAll(item => !possibleNeighborIndice.Contains(item));  // compare neighbor prototypes and current coord's possible neighbor
+                otherPrototype.RemoveAll(item => possibleOtherIndice.Contains(item.index) == false);  // update grid data
+                
+                // add empty prototype(air) if there is not possible prototype
+                if (otherPrototype.Count == 0)
+                {
+                    otherPrototype.Add(airPrototype);
+                }
+
+                // add 'otherCoord' to the stack, if otherCoord changes and the propagation stack does not have this coord 
+                bool hasChanged = possibleOtherIndice.Count < originalCount;
+                if (hasChanged && changedCoords.Contains(otherCoord) == false)
+                {
+                    changedCoords.Push(otherCoord);
+                }
+            }
         }
+    }
+
+    public List<Vector3Int> GetValidDirections(Vector3Int coord)
+    {
+        List<Vector3Int> validDirections = new List<Vector3Int>();
+
+        if (coord.x > 0)
+        {
+            validDirections.Add(Vector3Int.left);
+        }
+
+        if (coord.x < size.x - 1)
+        {
+            validDirections.Add(Vector3Int.right);
+        }
+
+        if (coord.y > 0)
+        {
+            validDirections.Add(Vector3Int.down);
+        }
+
+        if (coord.y < size.y - 1)
+        {
+            validDirections.Add(Vector3Int.up);
+        }
+
+        if (coord.z > 0)
+        {
+            validDirections.Add(Vector3Int.back);
+        }
+
+        if (coord.z < size.z - 1)
+        {
+            validDirections.Add(Vector3Int.forward);
+        }
+
+        return validDirections;
+    }
+
+    public int GetNeighborDirectionIndex(Vector3Int dir)
+    {
+        int index = -1;
+        
+        var dirKeys = directionToIndex.Keys.ToList();
+        foreach (var dirKey in dirKeys)
+        {
+            if (dir.Equals(dirKey))
+            {
+                index = directionToIndex[dirKey];
+            }
+        }
+        
+        return index;
+    }
+
+    public List<int> GetPrototypeIndice(List<PrototypeInfo> prototypes)
+    {
+        List<int> prototypeIndice = new List<int>();
+        
+        foreach (var prototype in prototypes)
+        {
+            prototypeIndice.Add(prototype.index);
+        }
+
+        return prototypeIndice;
+    }
+
+    public List<int> GetAllPossibleNeighbors(List<PrototypeInfo> prototypes, int dirIndex)
+    {
+        List<int> allPossibleNeighbors = new List<int>();
+
+        foreach (var prototype in prototypes)
+        {
+            var neighbors = prototype.neighbors[dirIndex].neighborIndexOnOneFace;
+
+            foreach (var neighborIndex in neighbors)
+            {
+                if (allPossibleNeighbors.Contains(neighborIndex) == false)
+                {
+                    allPossibleNeighbors.Add(neighborIndex);
+                }
+            }
+        }
+
+        return allPossibleNeighbors;
+    }
+
+    private void CreateGridElement(int x, int y, int z)
+    {
+        var prototypeInfo = wfc[x][y][z][0];
+        GameObject element = new GameObject(x + ", " + y + ", " + z);
+        element.transform.parent = GameObject.Find("WfcGenerator").transform;
+        element.transform.position = new Vector3(blockSize * x + 1, blockSize * y + 1, blockSize * z + 1);
+
+        if (wfc[x][y][z][0].mesh == null)
+        {
+            return;
+        }
+
+        element.transform.Rotate(Vector3.up * 90f * prototypeInfo.rotation);
+        Debug.Log("rot: " + prototypeInfo.rotation + ", angle: " + element.transform.rotation.eulerAngles.y);
+
+        var meshFilter = element.AddComponent<MeshFilter>();
+        meshFilter.sharedMesh = wfc[x][y][z][0].mesh;
+        var submeshCount = meshFilter.sharedMesh.subMeshCount;
+
+        var meshRenderer = element.AddComponent<MeshRenderer>();
+        List<Material> materials = new List<Material>{};
+        for (int i = 0; i < submeshCount; ++i)
+        {
+            materials.Add(material);
+        }
+        meshRenderer.materials = materials.ToArray();
+    }
+
+    private void ResetGeneration()
+    {
+        transform.DeleteChildren();
     }
 }

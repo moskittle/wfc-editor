@@ -15,13 +15,151 @@ MonoBehaviour:
   prototypes: {fileID: 2426911292238799483, guid: 725cfe7c328a8444fb1799957e7dd5d2,
     type: 3}
   modules:
-  - name: Cube.013_0
+  - name: Empty_0
     index: 0
-    mesh: {fileID: 7807538432633192378, guid: c6274dac7dafcd34f8aa89502d3862e1, type: 3}
+    mesh: {fileID: 0}
+    rotation: 0
+    faceDetails:
+    - Walkable: 0
+      Connector: 0
+      ExcludedNeighbours: []
+      EnforceWalkableNeighbor: 0
+      IsOcclusionPortal: 0
+      Symmetric: 1
+      Flipped: 0
+      Invariant: 0
+      Rotation: 0
+    - Walkable: 0
+      Connector: 0
+      ExcludedNeighbours: []
+      EnforceWalkableNeighbor: 0
+      IsOcclusionPortal: 0
+      Symmetric: 1
+      Flipped: 0
+      Invariant: 0
+      Rotation: 0
+    - Walkable: 0
+      Connector: 0
+      ExcludedNeighbours: []
+      EnforceWalkableNeighbor: 0
+      IsOcclusionPortal: 0
+      Symmetric: 1
+      Flipped: 0
+      Invariant: 0
+      Rotation: 0
+    - Walkable: 0
+      Connector: 0
+      ExcludedNeighbours: []
+      EnforceWalkableNeighbor: 0
+      IsOcclusionPortal: 0
+      Symmetric: 1
+      Flipped: 0
+      Invariant: 0
+      Rotation: 0
+    - Walkable: 0
+      Connector: 0
+      ExcludedNeighbours: []
+      EnforceWalkableNeighbor: 0
+      IsOcclusionPortal: 0
+      Symmetric: 0
+      Flipped: 0
+      Invariant: 1
+      Rotation: 0
+    - Walkable: 0
+      Connector: 0
+      ExcludedNeighbours: []
+      EnforceWalkableNeighbor: 0
+      IsOcclusionPortal: 0
+      Symmetric: 0
+      Flipped: 0
+      Invariant: 1
+      Rotation: 0
+    neighbors:
+    - neighborIndexOnOneFace: 00000000020000000500000008000000090000000c000000
+    - neighborIndexOnOneFace: 00000000040000000500000007000000080000000b000000
+    - neighborIndexOnOneFace: 00000000030000000400000006000000070000000a000000
+    - neighborIndexOnOneFace: 00000000020000000300000006000000090000000d000000
+    - neighborIndexOnOneFace: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d000000
+    - neighborIndexOnOneFace: 0000000001000000
+    constraintTo: []
+    constraintFrom: []
+    weight: 1
+  - name: Cube_0
+    index: 1
+    mesh: {fileID: -5495902117074765545, guid: c6274dac7dafcd34f8aa89502d3862e1, type: 3}
     rotation: 0
     faceDetails:
     - Walkable: 0
       Connector: 1
+      ExcludedNeighbours: []
+      EnforceWalkableNeighbor: 0
+      IsOcclusionPortal: 0
+      Symmetric: 1
+      Flipped: 0
+      Invariant: 0
+      Rotation: 0
+    - Walkable: 0
+      Connector: 1
+      ExcludedNeighbours: []
+      EnforceWalkableNeighbor: 0
+      IsOcclusionPortal: 0
+      Symmetric: 1
+      Flipped: 0
+      Invariant: 0
+      Rotation: 0
+    - Walkable: 0
+      Connector: 1
+      ExcludedNeighbours: []
+      EnforceWalkableNeighbor: 0
+      IsOcclusionPortal: 0
+      Symmetric: 1
+      Flipped: 0
+      Invariant: 0
+      Rotation: 0
+    - Walkable: 0
+      Connector: 1
+      ExcludedNeighbours: []
+      EnforceWalkableNeighbor: 0
+      IsOcclusionPortal: 0
+      Symmetric: 1
+      Flipped: 0
+      Invariant: 0
+      Rotation: 0
+    - Walkable: 0
+      Connector: 0
+      ExcludedNeighbours: []
+      EnforceWalkableNeighbor: 0
+      IsOcclusionPortal: 0
+      Symmetric: 0
+      Flipped: 0
+      Invariant: 1
+      Rotation: 0
+    - Walkable: 0
+      Connector: 0
+      ExcludedNeighbours: []
+      EnforceWalkableNeighbor: 0
+      IsOcclusionPortal: 0
+      Symmetric: 0
+      Flipped: 0
+      Invariant: 1
+      Rotation: 0
+    neighbors:
+    - neighborIndexOnOneFace: 010000000a000000
+    - neighborIndexOnOneFace: 010000000d000000
+    - neighborIndexOnOneFace: 010000000c000000
+    - neighborIndexOnOneFace: 010000000b000000
+    - neighborIndexOnOneFace: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d000000
+    - neighborIndexOnOneFace: 0000000001000000
+    constraintTo: []
+    constraintFrom: []
+    weight: 1
+  - name: Cube.013_0
+    index: 2
+    mesh: {fileID: 7807538432633192378, guid: c6274dac7dafcd34f8aa89502d3862e1, type: 3}
+    rotation: 0
+    faceDetails:
+    - Walkable: 0
+      Connector: 2
       ExcludedNeighbours: []
       EnforceWalkableNeighbor: 0
       IsOcclusionPortal: 0
@@ -48,7 +186,7 @@ MonoBehaviour:
       Invariant: 0
       Rotation: 0
     - Walkable: 0
-      Connector: 1
+      Connector: 2
       ExcludedNeighbours: []
       EnforceWalkableNeighbor: 0
       IsOcclusionPortal: 0
@@ -75,17 +213,17 @@ MonoBehaviour:
       Invariant: 1
       Rotation: 0
     neighbors:
+    - neighborIndexOnOneFace: 030000000400000006000000070000000b0000000d000000
+    - neighborIndexOnOneFace: 00000000040000000500000007000000080000000b000000
+    - neighborIndexOnOneFace: 00000000030000000400000006000000070000000a000000
+    - neighborIndexOnOneFace: 040000000500000007000000080000000a0000000c000000
     - neighborIndexOnOneFace: 
-    - neighborIndexOnOneFace: 
-    - neighborIndexOnOneFace: 
-    - neighborIndexOnOneFace: 
-    - neighborIndexOnOneFace: 
-    - neighborIndexOnOneFace: 
+    - neighborIndexOnOneFace: 0000000001000000
     constraintTo: []
     constraintFrom: []
     weight: 1
   - name: Cube.013_1
-    index: 1
+    index: 3
     mesh: {fileID: 7807538432633192378, guid: c6274dac7dafcd34f8aa89502d3862e1, type: 3}
     rotation: 1
     faceDetails:
@@ -108,7 +246,7 @@ MonoBehaviour:
       Invariant: 0
       Rotation: 0
     - Walkable: 0
-      Connector: 1
+      Connector: 2
       ExcludedNeighbours: []
       EnforceWalkableNeighbor: 0
       IsOcclusionPortal: 0
@@ -117,7 +255,7 @@ MonoBehaviour:
       Invariant: 0
       Rotation: 0
     - Walkable: 0
-      Connector: 1
+      Connector: 2
       ExcludedNeighbours: []
       EnforceWalkableNeighbor: 0
       IsOcclusionPortal: 0
@@ -144,17 +282,17 @@ MonoBehaviour:
       Invariant: 1
       Rotation: 0
     neighbors:
-    - neighborIndexOnOneFace: 00000000
+    - neighborIndexOnOneFace: 00000000020000000500000008000000090000000c000000
+    - neighborIndexOnOneFace: 00000000040000000500000007000000080000000b000000
+    - neighborIndexOnOneFace: 020000000500000008000000090000000b0000000d000000
+    - neighborIndexOnOneFace: 040000000500000007000000080000000a0000000c000000
     - neighborIndexOnOneFace: 
-    - neighborIndexOnOneFace: 00000000
-    - neighborIndexOnOneFace: 
-    - neighborIndexOnOneFace: 
-    - neighborIndexOnOneFace: 
+    - neighborIndexOnOneFace: 0000000001000000
     constraintTo: []
     constraintFrom: []
     weight: 1
   - name: Cube.013_2
-    index: 2
+    index: 4
     mesh: {fileID: 7807538432633192378, guid: c6274dac7dafcd34f8aa89502d3862e1, type: 3}
     rotation: 2
     faceDetails:
@@ -168,7 +306,7 @@ MonoBehaviour:
       Invariant: 0
       Rotation: 0
     - Walkable: 0
-      Connector: 1
+      Connector: 2
       ExcludedNeighbours: []
       EnforceWalkableNeighbor: 0
       IsOcclusionPortal: 0
@@ -177,7 +315,7 @@ MonoBehaviour:
       Invariant: 0
       Rotation: 0
     - Walkable: 0
-      Connector: 1
+      Connector: 2
       ExcludedNeighbours: []
       EnforceWalkableNeighbor: 0
       IsOcclusionPortal: 0
@@ -213,22 +351,22 @@ MonoBehaviour:
       Invariant: 1
       Rotation: 0
     neighbors:
-    - neighborIndexOnOneFace: 00000000
-    - neighborIndexOnOneFace: 00000000
-    - neighborIndexOnOneFace: 00000000
-    - neighborIndexOnOneFace: 00000000
+    - neighborIndexOnOneFace: 00000000020000000500000008000000090000000c000000
+    - neighborIndexOnOneFace: 020000000300000006000000090000000a0000000c000000
+    - neighborIndexOnOneFace: 020000000500000008000000090000000b0000000d000000
+    - neighborIndexOnOneFace: 00000000020000000300000006000000090000000d000000
     - neighborIndexOnOneFace: 
-    - neighborIndexOnOneFace: 
+    - neighborIndexOnOneFace: 0000000001000000
     constraintTo: []
     constraintFrom: []
     weight: 1
   - name: Cube.013_3
-    index: 3
+    index: 5
     mesh: {fileID: 7807538432633192378, guid: c6274dac7dafcd34f8aa89502d3862e1, type: 3}
     rotation: 3
     faceDetails:
     - Walkable: 0
-      Connector: 1
+      Connector: 2
       ExcludedNeighbours: []
       EnforceWalkableNeighbor: 0
       IsOcclusionPortal: 0
@@ -237,7 +375,7 @@ MonoBehaviour:
       Invariant: 0
       Rotation: 0
     - Walkable: 0
-      Connector: 1
+      Connector: 2
       ExcludedNeighbours: []
       EnforceWalkableNeighbor: 0
       IsOcclusionPortal: 0
@@ -282,12 +420,564 @@ MonoBehaviour:
       Invariant: 1
       Rotation: 0
     neighbors:
+    - neighborIndexOnOneFace: 030000000400000006000000070000000b0000000d000000
+    - neighborIndexOnOneFace: 020000000300000006000000090000000a0000000c000000
+    - neighborIndexOnOneFace: 00000000030000000400000006000000070000000a000000
+    - neighborIndexOnOneFace: 00000000020000000300000006000000090000000d000000
     - neighborIndexOnOneFace: 
-    - neighborIndexOnOneFace: 00000000
+    - neighborIndexOnOneFace: 0000000001000000
+    constraintTo: []
+    constraintFrom: []
+    weight: 1
+  - name: Cube.014_0
+    index: 6
+    mesh: {fileID: -2865104911859505335, guid: c6274dac7dafcd34f8aa89502d3862e1, type: 3}
+    rotation: 0
+    faceDetails:
+    - Walkable: 0
+      Connector: 0
+      ExcludedNeighbours: []
+      EnforceWalkableNeighbor: 0
+      IsOcclusionPortal: 0
+      Symmetric: 1
+      Flipped: 0
+      Invariant: 0
+      Rotation: 0
+    - Walkable: 0
+      Connector: 0
+      ExcludedNeighbours: []
+      EnforceWalkableNeighbor: 0
+      IsOcclusionPortal: 0
+      Symmetric: 1
+      Flipped: 0
+      Invariant: 0
+      Rotation: 0
+    - Walkable: 0
+      Connector: 2
+      ExcludedNeighbours: []
+      EnforceWalkableNeighbor: 0
+      IsOcclusionPortal: 0
+      Symmetric: 0
+      Flipped: 1
+      Invariant: 0
+      Rotation: 0
+    - Walkable: 0
+      Connector: 2
+      ExcludedNeighbours: []
+      EnforceWalkableNeighbor: 0
+      IsOcclusionPortal: 0
+      Symmetric: 0
+      Flipped: 0
+      Invariant: 0
+      Rotation: 0
+    - Walkable: 0
+      Connector: 1
+      ExcludedNeighbours: []
+      EnforceWalkableNeighbor: 0
+      IsOcclusionPortal: 0
+      Symmetric: 0
+      Flipped: 0
+      Invariant: 0
+      Rotation: 1
+    - Walkable: 0
+      Connector: 0
+      ExcludedNeighbours: []
+      EnforceWalkableNeighbor: 0
+      IsOcclusionPortal: 0
+      Symmetric: 0
+      Flipped: 0
+      Invariant: 1
+      Rotation: 0
+    neighbors:
+    - neighborIndexOnOneFace: 00000000020000000500000008000000090000000c000000
+    - neighborIndexOnOneFace: 00000000040000000500000007000000080000000b000000
+    - neighborIndexOnOneFace: 020000000500000008000000090000000b0000000d000000
+    - neighborIndexOnOneFace: 040000000500000007000000080000000a0000000c000000
     - neighborIndexOnOneFace: 
-    - neighborIndexOnOneFace: 00000000
+    - neighborIndexOnOneFace: 0000000001000000
+    constraintTo: []
+    constraintFrom: []
+    weight: 1
+  - name: Cube.014_1
+    index: 7
+    mesh: {fileID: -2865104911859505335, guid: c6274dac7dafcd34f8aa89502d3862e1, type: 3}
+    rotation: 1
+    faceDetails:
+    - Walkable: 0
+      Connector: 0
+      ExcludedNeighbours: []
+      EnforceWalkableNeighbor: 0
+      IsOcclusionPortal: 0
+      Symmetric: 1
+      Flipped: 0
+      Invariant: 0
+      Rotation: 0
+    - Walkable: 0
+      Connector: 2
+      ExcludedNeighbours: []
+      EnforceWalkableNeighbor: 0
+      IsOcclusionPortal: 0
+      Symmetric: 0
+      Flipped: 1
+      Invariant: 0
+      Rotation: 0
+    - Walkable: 0
+      Connector: 2
+      ExcludedNeighbours: []
+      EnforceWalkableNeighbor: 0
+      IsOcclusionPortal: 0
+      Symmetric: 0
+      Flipped: 0
+      Invariant: 0
+      Rotation: 0
+    - Walkable: 0
+      Connector: 0
+      ExcludedNeighbours: []
+      EnforceWalkableNeighbor: 0
+      IsOcclusionPortal: 0
+      Symmetric: 1
+      Flipped: 0
+      Invariant: 0
+      Rotation: 0
+    - Walkable: 0
+      Connector: 1
+      ExcludedNeighbours: []
+      EnforceWalkableNeighbor: 0
+      IsOcclusionPortal: 0
+      Symmetric: 0
+      Flipped: 0
+      Invariant: 0
+      Rotation: 2
+    - Walkable: 0
+      Connector: 0
+      ExcludedNeighbours: []
+      EnforceWalkableNeighbor: 0
+      IsOcclusionPortal: 0
+      Symmetric: 0
+      Flipped: 0
+      Invariant: 1
+      Rotation: 0
+    neighbors:
+    - neighborIndexOnOneFace: 00000000020000000500000008000000090000000c000000
+    - neighborIndexOnOneFace: 020000000300000006000000090000000a0000000c000000
+    - neighborIndexOnOneFace: 020000000500000008000000090000000b0000000d000000
+    - neighborIndexOnOneFace: 00000000020000000300000006000000090000000d000000
     - neighborIndexOnOneFace: 
+    - neighborIndexOnOneFace: 0000000001000000
+    constraintTo: []
+    constraintFrom: []
+    weight: 1
+  - name: Cube.014_2
+    index: 8
+    mesh: {fileID: -2865104911859505335, guid: c6274dac7dafcd34f8aa89502d3862e1, type: 3}
+    rotation: 2
+    faceDetails:
+    - Walkable: 0
+      Connector: 2
+      ExcludedNeighbours: []
+      EnforceWalkableNeighbor: 0
+      IsOcclusionPortal: 0
+      Symmetric: 0
+      Flipped: 1
+      Invariant: 0
+      Rotation: 0
+    - Walkable: 0
+      Connector: 2
+      ExcludedNeighbours: []
+      EnforceWalkableNeighbor: 0
+      IsOcclusionPortal: 0
+      Symmetric: 0
+      Flipped: 0
+      Invariant: 0
+      Rotation: 0
+    - Walkable: 0
+      Connector: 0
+      ExcludedNeighbours: []
+      EnforceWalkableNeighbor: 0
+      IsOcclusionPortal: 0
+      Symmetric: 1
+      Flipped: 0
+      Invariant: 0
+      Rotation: 0
+    - Walkable: 0
+      Connector: 0
+      ExcludedNeighbours: []
+      EnforceWalkableNeighbor: 0
+      IsOcclusionPortal: 0
+      Symmetric: 1
+      Flipped: 0
+      Invariant: 0
+      Rotation: 0
+    - Walkable: 0
+      Connector: 1
+      ExcludedNeighbours: []
+      EnforceWalkableNeighbor: 0
+      IsOcclusionPortal: 0
+      Symmetric: 0
+      Flipped: 0
+      Invariant: 0
+      Rotation: 3
+    - Walkable: 0
+      Connector: 0
+      ExcludedNeighbours: []
+      EnforceWalkableNeighbor: 0
+      IsOcclusionPortal: 0
+      Symmetric: 0
+      Flipped: 0
+      Invariant: 1
+      Rotation: 0
+    neighbors:
+    - neighborIndexOnOneFace: 030000000400000006000000070000000b0000000d000000
+    - neighborIndexOnOneFace: 020000000300000006000000090000000a0000000c000000
+    - neighborIndexOnOneFace: 00000000030000000400000006000000070000000a000000
+    - neighborIndexOnOneFace: 00000000020000000300000006000000090000000d000000
     - neighborIndexOnOneFace: 
+    - neighborIndexOnOneFace: 0000000001000000
+    constraintTo: []
+    constraintFrom: []
+    weight: 1
+  - name: Cube.014_3
+    index: 9
+    mesh: {fileID: -2865104911859505335, guid: c6274dac7dafcd34f8aa89502d3862e1, type: 3}
+    rotation: 3
+    faceDetails:
+    - Walkable: 0
+      Connector: 2
+      ExcludedNeighbours: []
+      EnforceWalkableNeighbor: 0
+      IsOcclusionPortal: 0
+      Symmetric: 0
+      Flipped: 0
+      Invariant: 0
+      Rotation: 0
+    - Walkable: 0
+      Connector: 0
+      ExcludedNeighbours: []
+      EnforceWalkableNeighbor: 0
+      IsOcclusionPortal: 0
+      Symmetric: 1
+      Flipped: 0
+      Invariant: 0
+      Rotation: 0
+    - Walkable: 0
+      Connector: 0
+      ExcludedNeighbours: []
+      EnforceWalkableNeighbor: 0
+      IsOcclusionPortal: 0
+      Symmetric: 1
+      Flipped: 0
+      Invariant: 0
+      Rotation: 0
+    - Walkable: 0
+      Connector: 2
+      ExcludedNeighbours: []
+      EnforceWalkableNeighbor: 0
+      IsOcclusionPortal: 0
+      Symmetric: 0
+      Flipped: 1
+      Invariant: 0
+      Rotation: 0
+    - Walkable: 0
+      Connector: 1
+      ExcludedNeighbours: []
+      EnforceWalkableNeighbor: 0
+      IsOcclusionPortal: 0
+      Symmetric: 0
+      Flipped: 0
+      Invariant: 0
+      Rotation: 0
+    - Walkable: 0
+      Connector: 0
+      ExcludedNeighbours: []
+      EnforceWalkableNeighbor: 0
+      IsOcclusionPortal: 0
+      Symmetric: 0
+      Flipped: 0
+      Invariant: 1
+      Rotation: 0
+    neighbors:
+    - neighborIndexOnOneFace: 030000000400000006000000070000000b0000000d000000
+    - neighborIndexOnOneFace: 00000000040000000500000007000000080000000b000000
+    - neighborIndexOnOneFace: 00000000030000000400000006000000070000000a000000
+    - neighborIndexOnOneFace: 040000000500000007000000080000000a0000000c000000
+    - neighborIndexOnOneFace: 
+    - neighborIndexOnOneFace: 0000000001000000
+    constraintTo: []
+    constraintFrom: []
+    weight: 1
+  - name: Cube.015_0
+    index: 10
+    mesh: {fileID: -3537709356157935800, guid: c6274dac7dafcd34f8aa89502d3862e1, type: 3}
+    rotation: 0
+    faceDetails:
+    - Walkable: 0
+      Connector: 0
+      ExcludedNeighbours: []
+      EnforceWalkableNeighbor: 0
+      IsOcclusionPortal: 0
+      Symmetric: 1
+      Flipped: 0
+      Invariant: 0
+      Rotation: 0
+    - Walkable: 0
+      Connector: 2
+      ExcludedNeighbours: []
+      EnforceWalkableNeighbor: 0
+      IsOcclusionPortal: 0
+      Symmetric: 0
+      Flipped: 1
+      Invariant: 0
+      Rotation: 0
+    - Walkable: 0
+      Connector: 1
+      ExcludedNeighbours: []
+      EnforceWalkableNeighbor: 0
+      IsOcclusionPortal: 0
+      Symmetric: 1
+      Flipped: 0
+      Invariant: 0
+      Rotation: 0
+    - Walkable: 0
+      Connector: 2
+      ExcludedNeighbours: []
+      EnforceWalkableNeighbor: 0
+      IsOcclusionPortal: 0
+      Symmetric: 0
+      Flipped: 0
+      Invariant: 0
+      Rotation: 0
+    - Walkable: 0
+      Connector: 2
+      ExcludedNeighbours: []
+      EnforceWalkableNeighbor: 0
+      IsOcclusionPortal: 0
+      Symmetric: 0
+      Flipped: 0
+      Invariant: 0
+      Rotation: 0
+    - Walkable: 0
+      Connector: 0
+      ExcludedNeighbours: []
+      EnforceWalkableNeighbor: 0
+      IsOcclusionPortal: 0
+      Symmetric: 0
+      Flipped: 0
+      Invariant: 1
+      Rotation: 0
+    neighbors:
+    - neighborIndexOnOneFace: 00000000020000000500000008000000090000000c000000
+    - neighborIndexOnOneFace: 020000000300000006000000090000000a0000000c000000
+    - neighborIndexOnOneFace: 010000000c000000
+    - neighborIndexOnOneFace: 040000000500000007000000080000000a0000000c000000
+    - neighborIndexOnOneFace: 
+    - neighborIndexOnOneFace: 0000000001000000
+    constraintTo: []
+    constraintFrom: []
+    weight: 1
+  - name: Cube.015_1
+    index: 11
+    mesh: {fileID: -3537709356157935800, guid: c6274dac7dafcd34f8aa89502d3862e1, type: 3}
+    rotation: 1
+    faceDetails:
+    - Walkable: 0
+      Connector: 2
+      ExcludedNeighbours: []
+      EnforceWalkableNeighbor: 0
+      IsOcclusionPortal: 0
+      Symmetric: 0
+      Flipped: 1
+      Invariant: 0
+      Rotation: 0
+    - Walkable: 0
+      Connector: 1
+      ExcludedNeighbours: []
+      EnforceWalkableNeighbor: 0
+      IsOcclusionPortal: 0
+      Symmetric: 1
+      Flipped: 0
+      Invariant: 0
+      Rotation: 0
+    - Walkable: 0
+      Connector: 2
+      ExcludedNeighbours: []
+      EnforceWalkableNeighbor: 0
+      IsOcclusionPortal: 0
+      Symmetric: 0
+      Flipped: 0
+      Invariant: 0
+      Rotation: 0
+    - Walkable: 0
+      Connector: 0
+      ExcludedNeighbours: []
+      EnforceWalkableNeighbor: 0
+      IsOcclusionPortal: 0
+      Symmetric: 1
+      Flipped: 0
+      Invariant: 0
+      Rotation: 0
+    - Walkable: 0
+      Connector: 2
+      ExcludedNeighbours: []
+      EnforceWalkableNeighbor: 0
+      IsOcclusionPortal: 0
+      Symmetric: 0
+      Flipped: 0
+      Invariant: 0
+      Rotation: 1
+    - Walkable: 0
+      Connector: 0
+      ExcludedNeighbours: []
+      EnforceWalkableNeighbor: 0
+      IsOcclusionPortal: 0
+      Symmetric: 0
+      Flipped: 0
+      Invariant: 1
+      Rotation: 0
+    neighbors:
+    - neighborIndexOnOneFace: 030000000400000006000000070000000b0000000d000000
+    - neighborIndexOnOneFace: 010000000d000000
+    - neighborIndexOnOneFace: 020000000500000008000000090000000b0000000d000000
+    - neighborIndexOnOneFace: 00000000020000000300000006000000090000000d000000
+    - neighborIndexOnOneFace: 
+    - neighborIndexOnOneFace: 0000000001000000
+    constraintTo: []
+    constraintFrom: []
+    weight: 1
+  - name: Cube.015_2
+    index: 12
+    mesh: {fileID: -3537709356157935800, guid: c6274dac7dafcd34f8aa89502d3862e1, type: 3}
+    rotation: 2
+    faceDetails:
+    - Walkable: 0
+      Connector: 1
+      ExcludedNeighbours: []
+      EnforceWalkableNeighbor: 0
+      IsOcclusionPortal: 0
+      Symmetric: 1
+      Flipped: 0
+      Invariant: 0
+      Rotation: 0
+    - Walkable: 0
+      Connector: 2
+      ExcludedNeighbours: []
+      EnforceWalkableNeighbor: 0
+      IsOcclusionPortal: 0
+      Symmetric: 0
+      Flipped: 0
+      Invariant: 0
+      Rotation: 0
+    - Walkable: 0
+      Connector: 0
+      ExcludedNeighbours: []
+      EnforceWalkableNeighbor: 0
+      IsOcclusionPortal: 0
+      Symmetric: 1
+      Flipped: 0
+      Invariant: 0
+      Rotation: 0
+    - Walkable: 0
+      Connector: 2
+      ExcludedNeighbours: []
+      EnforceWalkableNeighbor: 0
+      IsOcclusionPortal: 0
+      Symmetric: 0
+      Flipped: 1
+      Invariant: 0
+      Rotation: 0
+    - Walkable: 0
+      Connector: 2
+      ExcludedNeighbours: []
+      EnforceWalkableNeighbor: 0
+      IsOcclusionPortal: 0
+      Symmetric: 0
+      Flipped: 0
+      Invariant: 0
+      Rotation: 2
+    - Walkable: 0
+      Connector: 0
+      ExcludedNeighbours: []
+      EnforceWalkableNeighbor: 0
+      IsOcclusionPortal: 0
+      Symmetric: 0
+      Flipped: 0
+      Invariant: 1
+      Rotation: 0
+    neighbors:
+    - neighborIndexOnOneFace: 010000000a000000
+    - neighborIndexOnOneFace: 020000000300000006000000090000000a0000000c000000
+    - neighborIndexOnOneFace: 00000000030000000400000006000000070000000a000000
+    - neighborIndexOnOneFace: 040000000500000007000000080000000a0000000c000000
+    - neighborIndexOnOneFace: 
+    - neighborIndexOnOneFace: 0000000001000000
+    constraintTo: []
+    constraintFrom: []
+    weight: 1
+  - name: Cube.015_3
+    index: 13
+    mesh: {fileID: -3537709356157935800, guid: c6274dac7dafcd34f8aa89502d3862e1, type: 3}
+    rotation: 3
+    faceDetails:
+    - Walkable: 0
+      Connector: 2
+      ExcludedNeighbours: []
+      EnforceWalkableNeighbor: 0
+      IsOcclusionPortal: 0
+      Symmetric: 0
+      Flipped: 0
+      Invariant: 0
+      Rotation: 0
+    - Walkable: 0
+      Connector: 0
+      ExcludedNeighbours: []
+      EnforceWalkableNeighbor: 0
+      IsOcclusionPortal: 0
+      Symmetric: 1
+      Flipped: 0
+      Invariant: 0
+      Rotation: 0
+    - Walkable: 0
+      Connector: 2
+      ExcludedNeighbours: []
+      EnforceWalkableNeighbor: 0
+      IsOcclusionPortal: 0
+      Symmetric: 0
+      Flipped: 1
+      Invariant: 0
+      Rotation: 0
+    - Walkable: 0
+      Connector: 1
+      ExcludedNeighbours: []
+      EnforceWalkableNeighbor: 0
+      IsOcclusionPortal: 0
+      Symmetric: 1
+      Flipped: 0
+      Invariant: 0
+      Rotation: 0
+    - Walkable: 0
+      Connector: 2
+      ExcludedNeighbours: []
+      EnforceWalkableNeighbor: 0
+      IsOcclusionPortal: 0
+      Symmetric: 0
+      Flipped: 0
+      Invariant: 0
+      Rotation: 3
+    - Walkable: 0
+      Connector: 0
+      ExcludedNeighbours: []
+      EnforceWalkableNeighbor: 0
+      IsOcclusionPortal: 0
+      Symmetric: 0
+      Flipped: 0
+      Invariant: 1
+      Rotation: 0
+    neighbors:
+    - neighborIndexOnOneFace: 030000000400000006000000070000000b0000000d000000
+    - neighborIndexOnOneFace: 00000000040000000500000007000000080000000b000000
+    - neighborIndexOnOneFace: 020000000500000008000000090000000b0000000d000000
+    - neighborIndexOnOneFace: 010000000b000000
+    - neighborIndexOnOneFace: 
+    - neighborIndexOnOneFace: 0000000001000000
     constraintTo: []
     constraintFrom: []
     weight: 1

@@ -343,7 +343,7 @@ public class WfcGenerator : MonoBehaviour
         }
 
         element.transform.Rotate(Vector3.up * 90f * prototypeInfo.rotation);
-        Debug.Log("rot: " + prototypeInfo.rotation + ", angle: " + element.transform.rotation.eulerAngles.y);
+        Debug.Log("rot: " + prototypeInfo.rotation + ", angle: " + element.transform.rotation.eulerAngles.y + " Grid Pos: (" + x + ", " + y + ", " + z + ")");
 
         var meshFilter = element.AddComponent<MeshFilter>();
         meshFilter.sharedMesh = wfc[x][y][z][0].mesh;

@@ -163,9 +163,9 @@ public class CustomModuleData : ScriptableObject, ISerializationCallbackReceiver
     {
         NeighborsIndexOnAllFaces neighbors = new NeighborsIndexOnAllFaces(6);
 
-        for (int i = 0; i < faceDetails.Count; ++i)
+        for (int currFaceIndex = 0; currFaceIndex < faceDetails.Count; ++currFaceIndex)
         {
-            var currentFace = faceDetails[i];
+            var currentFace = faceDetails[currFaceIndex];
             var neighborsIndexOnFace = new NeighborIndexListWrapper();
 
             for (int otherProtoIndex = 0; otherProtoIndex < prototypeMetaData.Count; ++otherProtoIndex)
@@ -173,30 +173,30 @@ public class CustomModuleData : ScriptableObject, ISerializationCallbackReceiver
                 var otherPrototype =  prototypeMetaData[otherProtoIndex];
                 List<FaceDetails> otherFaceDetails = new List<FaceDetails>
                 { 
-                    new FaceDetails(otherPrototype.faceDetails[0]),
-                    new FaceDetails(otherPrototype.faceDetails[1]),
-                    new FaceDetails(otherPrototype.faceDetails[2]),
-                    new FaceDetails(otherPrototype.faceDetails[3]),
-                    new FaceDetails(otherPrototype.faceDetails[4]),
-                    new FaceDetails(otherPrototype.faceDetails[5]),
+                    new FaceDetails(otherPrototype.faceDetails[0]),    // Left
+                    new FaceDetails(otherPrototype.faceDetails[1]),    // Back
+                    new FaceDetails(otherPrototype.faceDetails[2]),    // Right
+                    new FaceDetails(otherPrototype.faceDetails[3]),    // Forward
+                    new FaceDetails(otherPrototype.faceDetails[4]),    // Down
+                    new FaceDetails(otherPrototype.faceDetails[5]),    // Up
                 };
 
                 FaceDetails otherFace = new FaceDetails();
                 // compare opposing faces: Left <=> Right, Back <=> Up, Down <=> Forward
-                if (i < 4)
+                if (currFaceIndex < 4)
                 {
-                    otherFace = otherFaceDetails[(i + 2) % 4];
+                    otherFace = otherFaceDetails[(currFaceIndex + 2) % 4];
                 }
-                else if (i == 4)
+                else if (currFaceIndex == 4)
                 {
                     otherFace = otherFaceDetails[5];
                 }
-                else if (i == 5)
+                else if (currFaceIndex == 5)
                 {
                     otherFace = otherFaceDetails[4];
                 }
 
-                bool isValid = ValidateNeighbor(currentFace, otherFace);
+                bool isValid = ValidateNeighbor(currentFace, otherFace, currFaceIndex);
 
                 if (isValid)
                 {
@@ -215,47 +215,67 @@ public class CustomModuleData : ScriptableObject, ISerializationCallbackReceiver
         return neighbors;
     }
 
-    private bool ValidateNeighbor(FaceDetails currentFace, FaceDetails otherFace)
+    private bool ValidateNeighbor(FaceDetails currentFace, FaceDetails otherFace, int currFaceIndex)
     {
         if (currentFace.Connector == otherFace.Connector)
         {
-            bool symmetricMatch = currentFace.Symmetric && otherFace.Symmetric;
-            bool asymmetricMatch = (currentFace.Flipped && !otherFace.Flipped) || (!currentFace.Flipped && otherFace.Flipped);
-            bool invariantMatch = currentFace.Invariant && otherFace.Invariant;
-            bool variantMatch = (!currentFace.Invariant && !otherFace.Invariant) && currentFace.Rotation == otherFace.Rotation;
-            
-            if (symmetricMatch || asymmetricMatch || invariantMatch || variantMatch)
+            // Horizontal face
+            if (currFaceIndex < 4)
             {
-                return true;
+                bool symmetricMatch = currentFace.Symmetric && otherFace.Symmetric;
+                bool asymmetricMatch = (currentFace.Flipped && !otherFace.Flipped) || (!currentFace.Flipped && otherFace.Flipped);
+
+                if (symmetricMatch || asymmetricMatch)
+                {
+                    return true;
+                }
             }
+            // Vertical face
+            else
+            {
+                bool invariantMatch = currentFace.Invariant && otherFace.Invariant;
+                bool variantMatch = (!currentFace.Invariant && !otherFace.Invariant) && currentFace.Rotation == otherFace.Rotation;
+                
+                if (invariantMatch || variantMatch)
+                {
+                    return true;
+                }
+            }
+            
+
         }
 
-        // if (currentFace.Connector == 0 && otherFace.Connector == 0 && currentFace.Invariant && otherFace.Invariant)
-        // {
-        //     return true;
-        // }
-        // else if (currentFace.Flipped)
-        // {
-        //     if (currentFace.Connector == otherFace.Connector && otherFace.Flipped == false)
-        //     {
-        //         return true;
-        //     }
-        // }
-        // else if (otherFace.Flipped)
-        // {
-        //     if (currentFace.Connector == otherFace.Connector && currentFace.Flipped == false)
-        //     {
-        //         return true;
-        //     }
-        // }
-        // else if (currentFace.Connector == otherFace.Connector)
-        // {
-        //     if ((currentFace.Symmetric && otherFace.Symmetric) || (currentFace.Invariant && otherFace.Invariant)
-        //                                                        || (!currentFace.Invariant && !otherFace.Invariant && currentFace.Rotation == otherFace.Rotation))
-        //     {
-        //         return true;
-        //     }
-        // }
+
+        
+        
+        {
+            // if (currentFace.Connector == 0 && otherFace.Connector == 0 && currentFace.Invariant && otherFace.Invariant)
+            // {
+            //     return true;
+            // }
+            // else if (currentFace.Flipped)
+            // {
+            //     if (currentFace.Connector == otherFace.Connector && otherFace.Flipped == false)
+            //     {
+            //         return true;
+            //     }
+            // }
+            // else if (otherFace.Flipped)
+            // {
+            //     if (currentFace.Connector == otherFace.Connector && currentFace.Flipped == false)
+            //     {
+            //         return true;
+            //     }
+            // }
+            // else if (currentFace.Connector == otherFace.Connector)
+            // {
+            //     if ((currentFace.Symmetric && otherFace.Symmetric) || (currentFace.Invariant && otherFace.Invariant)
+            //                                                        || (!currentFace.Invariant && !otherFace.Invariant && currentFace.Rotation == otherFace.Rotation))
+            //     {
+            //         return true;
+            //     }
+            // }
+        }
 
         return false;
     }

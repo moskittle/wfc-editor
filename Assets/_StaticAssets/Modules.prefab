@@ -158,6 +158,9 @@ MonoBehaviour:
     Flipped: 1
     Invariant: 0
     Rotation: 0
+  constraintToTags:
+  - bot
+  constraintFromTags: []
 --- !u!1 &281386130255364056
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,6 +319,8 @@ MonoBehaviour:
     Flipped: 0
     Invariant: 0
     Rotation: 0
+  constraintToTags: []
+  constraintFromTags: []
 --- !u!1 &431321862472007751
 GameObject:
   m_ObjectHideFlags: 0
@@ -474,6 +479,8 @@ MonoBehaviour:
     Flipped: 0
     Invariant: 0
     Rotation: 0
+  constraintToTags: []
+  constraintFromTags: []
 --- !u!1 &443327847319714397
 GameObject:
   m_ObjectHideFlags: 0
@@ -569,7 +576,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50d74e57d446b974bbd4a945bcf152b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Probability: 1
+  Probability: 5
   Spawn: 1
   IsInterior: 0
   Left:
@@ -632,6 +639,8 @@ MonoBehaviour:
     Flipped: 0
     Invariant: 0
     Rotation: 0
+  constraintToTags: []
+  constraintFromTags: []
 --- !u!1 &577648919735374418
 GameObject:
   m_ObjectHideFlags: 0
@@ -790,6 +799,8 @@ MonoBehaviour:
     Flipped: 0
     Invariant: 0
     Rotation: 0
+  constraintToTags: []
+  constraintFromTags: []
 --- !u!1 &601978476784867303
 GameObject:
   m_ObjectHideFlags: 0
@@ -886,7 +897,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50d74e57d446b974bbd4a945bcf152b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Probability: 10
+  Probability: 50
   Spawn: 1
   IsInterior: 0
   Left:
@@ -949,6 +960,9 @@ MonoBehaviour:
     Flipped: 0
     Invariant: 0
     Rotation: 0
+  constraintToTags: []
+  constraintFromTags:
+  - bot
 --- !u!1 &1985358247315080886
 GameObject:
   m_ObjectHideFlags: 0
@@ -1107,6 +1121,8 @@ MonoBehaviour:
     Flipped: 0
     Invariant: 0
     Rotation: 0
+  constraintToTags: []
+  constraintFromTags: []
 --- !u!1 &2118584088275858371
 GameObject:
   m_ObjectHideFlags: 0
@@ -1265,6 +1281,8 @@ MonoBehaviour:
     Flipped: 1
     Invariant: 0
     Rotation: 0
+  constraintToTags: []
+  constraintFromTags: []
 --- !u!1 &2140773137586990596
 GameObject:
   m_ObjectHideFlags: 0
@@ -1422,6 +1440,8 @@ MonoBehaviour:
     Flipped: 0
     Invariant: 0
     Rotation: 0
+  constraintToTags: []
+  constraintFromTags: []
 --- !u!1 &2224573619322153064
 GameObject:
   m_ObjectHideFlags: 0
@@ -1579,6 +1599,8 @@ MonoBehaviour:
     Flipped: 0
     Invariant: 0
     Rotation: 0
+  constraintToTags: []
+  constraintFromTags: []
 --- !u!1 &2393752592493708799
 GameObject:
   m_ObjectHideFlags: 0
@@ -1737,6 +1759,8 @@ MonoBehaviour:
     Flipped: 1
     Invariant: 0
     Rotation: 0
+  constraintToTags: []
+  constraintFromTags: []
 --- !u!1 &2426911292238799483
 GameObject:
   m_ObjectHideFlags: 0
@@ -1982,6 +2006,8 @@ MonoBehaviour:
     Flipped: 0
     Invariant: 0
     Rotation: 0
+  constraintToTags: []
+  constraintFromTags: []
 --- !u!1 &2567659197668549437
 GameObject:
   m_ObjectHideFlags: 0
@@ -2139,6 +2165,8 @@ MonoBehaviour:
     Flipped: 0
     Invariant: 0
     Rotation: 0
+  constraintToTags: []
+  constraintFromTags: []
 --- !u!1 &3047440193682339225
 GameObject:
   m_ObjectHideFlags: 0
@@ -2297,6 +2325,8 @@ MonoBehaviour:
     Flipped: 0
     Invariant: 0
     Rotation: 0
+  constraintToTags: []
+  constraintFromTags: []
 --- !u!1 &3079049301530872944
 GameObject:
   m_ObjectHideFlags: 0
@@ -2455,6 +2485,8 @@ MonoBehaviour:
     Flipped: 0
     Invariant: 0
     Rotation: 0
+  constraintToTags: []
+  constraintFromTags: []
 --- !u!1 &3138599758876640522
 GameObject:
   m_ObjectHideFlags: 0
@@ -2613,6 +2645,8 @@ MonoBehaviour:
     Flipped: 0
     Invariant: 0
     Rotation: 0
+  constraintToTags: []
+  constraintFromTags: []
 --- !u!1 &3501126639629104974
 GameObject:
   m_ObjectHideFlags: 0
@@ -2771,6 +2805,8 @@ MonoBehaviour:
     Flipped: 0
     Invariant: 0
     Rotation: 0
+  constraintToTags: []
+  constraintFromTags: []
 --- !u!1 &3526141223222199469
 GameObject:
   m_ObjectHideFlags: 0
@@ -2866,7 +2902,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50d74e57d446b974bbd4a945bcf152b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Probability: 1
+  Probability: 5
   Spawn: 1
   IsInterior: 0
   Left:
@@ -2929,6 +2965,8 @@ MonoBehaviour:
     Flipped: 0
     Invariant: 0
     Rotation: 0
+  constraintToTags: []
+  constraintFromTags: []
 --- !u!1 &3788709414276901326
 GameObject:
   m_ObjectHideFlags: 0
@@ -3087,6 +3125,8 @@ MonoBehaviour:
     Flipped: 0
     Invariant: 0
     Rotation: 0
+  constraintToTags: []
+  constraintFromTags: []
 --- !u!1 &3812342709554007745
 GameObject:
   m_ObjectHideFlags: 0
@@ -3245,6 +3285,9 @@ MonoBehaviour:
     Flipped: 1
     Invariant: 0
     Rotation: 0
+  constraintToTags:
+  - bot
+  constraintFromTags: []
 --- !u!1 &3943049107719260919
 GameObject:
   m_ObjectHideFlags: 0
@@ -3404,6 +3447,9 @@ MonoBehaviour:
     Flipped: 0
     Invariant: 0
     Rotation: 0
+  constraintToTags:
+  - bot
+  constraintFromTags: []
 --- !u!1 &4018251983022303094
 GameObject:
   m_ObjectHideFlags: 0
@@ -3562,6 +3608,9 @@ MonoBehaviour:
     Flipped: 0
     Invariant: 0
     Rotation: 0
+  constraintToTags:
+  - bot
+  constraintFromTags: []
 --- !u!1 &4085003654513866024
 GameObject:
   m_ObjectHideFlags: 0
@@ -3720,6 +3769,8 @@ MonoBehaviour:
     Flipped: 0
     Invariant: 0
     Rotation: 0
+  constraintToTags: []
+  constraintFromTags: []
 --- !u!1 &4543714323382567187
 GameObject:
   m_ObjectHideFlags: 0
@@ -3815,7 +3866,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50d74e57d446b974bbd4a945bcf152b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Probability: 1
+  Probability: 6
   Spawn: 1
   IsInterior: 0
   Left:
@@ -3878,6 +3929,8 @@ MonoBehaviour:
     Flipped: 1
     Invariant: 0
     Rotation: 0
+  constraintToTags: []
+  constraintFromTags: []
 --- !u!1 &4651028682450536497
 GameObject:
   m_ObjectHideFlags: 0
@@ -4036,6 +4089,8 @@ MonoBehaviour:
     Flipped: 0
     Invariant: 0
     Rotation: 0
+  constraintToTags: []
+  constraintFromTags: []
 --- !u!1 &4723009420194118483
 GameObject:
   m_ObjectHideFlags: 0
@@ -4194,6 +4249,8 @@ MonoBehaviour:
     Flipped: 0
     Invariant: 0
     Rotation: 0
+  constraintToTags: []
+  constraintFromTags: []
 --- !u!1 &5022464884155166376
 GameObject:
   m_ObjectHideFlags: 0
@@ -4300,6 +4357,8 @@ MonoBehaviour:
     Flipped: 0
     Invariant: 0
     Rotation: 0
+  constraintToTags: []
+  constraintFromTags: []
 --- !u!1 &5036824337699640055
 GameObject:
   m_ObjectHideFlags: 0
@@ -4395,7 +4454,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50d74e57d446b974bbd4a945bcf152b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Probability: 1
+  Probability: 6
   Spawn: 1
   IsInterior: 0
   Left:
@@ -4458,6 +4517,8 @@ MonoBehaviour:
     Flipped: 0
     Invariant: 0
     Rotation: 0
+  constraintToTags: []
+  constraintFromTags: []
 --- !u!1 &5633281078243726686
 GameObject:
   m_ObjectHideFlags: 0
@@ -4616,6 +4677,9 @@ MonoBehaviour:
     Flipped: 0
     Invariant: 0
     Rotation: 0
+  constraintToTags:
+  - bot
+  constraintFromTags: []
 --- !u!1 &5640290045742393737
 GameObject:
   m_ObjectHideFlags: 0
@@ -4774,6 +4838,8 @@ MonoBehaviour:
     Flipped: 1
     Invariant: 0
     Rotation: 0
+  constraintToTags: []
+  constraintFromTags: []
 --- !u!1 &6129282477806719061
 GameObject:
   m_ObjectHideFlags: 0
@@ -4932,6 +4998,8 @@ MonoBehaviour:
     Flipped: 1
     Invariant: 0
     Rotation: 0
+  constraintToTags: []
+  constraintFromTags: []
 --- !u!1 &6131637552759886827
 GameObject:
   m_ObjectHideFlags: 0
@@ -5089,6 +5157,8 @@ MonoBehaviour:
     Flipped: 0
     Invariant: 0
     Rotation: 0
+  constraintToTags: []
+  constraintFromTags: []
 --- !u!1 &6329312317237941114
 GameObject:
   m_ObjectHideFlags: 0
@@ -5248,6 +5318,9 @@ MonoBehaviour:
     Flipped: 0
     Invariant: 0
     Rotation: 0
+  constraintToTags:
+  - bot
+  constraintFromTags: []
 --- !u!1 &6630038666292657627
 GameObject:
   m_ObjectHideFlags: 0
@@ -5405,6 +5478,8 @@ MonoBehaviour:
     Flipped: 0
     Invariant: 0
     Rotation: 0
+  constraintToTags: []
+  constraintFromTags: []
 --- !u!1 &6723827973746613425
 GameObject:
   m_ObjectHideFlags: 0
@@ -5564,6 +5639,9 @@ MonoBehaviour:
     Flipped: 0
     Invariant: 0
     Rotation: 0
+  constraintToTags:
+  - bot
+  constraintFromTags: []
 --- !u!1 &6835524600322283640
 GameObject:
   m_ObjectHideFlags: 0
@@ -5721,6 +5799,8 @@ MonoBehaviour:
     Flipped: 0
     Invariant: 0
     Rotation: 0
+  constraintToTags: []
+  constraintFromTags: []
 --- !u!1 &7310945826411000745
 GameObject:
   m_ObjectHideFlags: 0
@@ -5879,6 +5959,8 @@ MonoBehaviour:
     Flipped: 0
     Invariant: 0
     Rotation: 0
+  constraintToTags: []
+  constraintFromTags: []
 --- !u!1 &7486685839372656688
 GameObject:
   m_ObjectHideFlags: 0
@@ -6037,6 +6119,9 @@ MonoBehaviour:
     Flipped: 0
     Invariant: 0
     Rotation: 0
+  constraintToTags:
+  - bot
+  constraintFromTags: []
 --- !u!1 &7576874992359170124
 GameObject:
   m_ObjectHideFlags: 0
@@ -6195,6 +6280,8 @@ MonoBehaviour:
     Flipped: 0
     Invariant: 0
     Rotation: 0
+  constraintToTags: []
+  constraintFromTags: []
 --- !u!1 &7978024359035086869
 GameObject:
   m_ObjectHideFlags: 0
@@ -6353,6 +6440,8 @@ MonoBehaviour:
     Flipped: 0
     Invariant: 0
     Rotation: 0
+  constraintToTags: []
+  constraintFromTags: []
 --- !u!1 &8168110929263364646
 GameObject:
   m_ObjectHideFlags: 0
@@ -6512,6 +6601,9 @@ MonoBehaviour:
     Flipped: 1
     Invariant: 0
     Rotation: 0
+  constraintToTags:
+  - bot
+  constraintFromTags: []
 --- !u!1 &8723365217470373495
 GameObject:
   m_ObjectHideFlags: 0
@@ -6607,7 +6699,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50d74e57d446b974bbd4a945bcf152b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Probability: 1
+  Probability: 5
   Spawn: 1
   IsInterior: 0
   Left:
@@ -6670,3 +6762,5 @@ MonoBehaviour:
     Flipped: 1
     Invariant: 0
     Rotation: 0
+  constraintToTags: []
+  constraintFromTags: []

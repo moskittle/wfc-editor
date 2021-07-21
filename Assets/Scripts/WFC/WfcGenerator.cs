@@ -31,12 +31,11 @@ public class WfcGenerator : MonoBehaviour
         {Vector3Int.down, 4},      // FaceType.Down
         {Vector3Int.up, 5}         // FaceType.Up
     };
+    private enum FaceDir { Left = 0, Back = 1, Right = 2, Forward = 3, Down = 4, Up = 5 }
+    private Stack<Vector3Int> changedCoords = new Stack<Vector3Int>();
 
     [Header("Debug")]
     public bool pauseAfterGeneration = false;
-    
-    
-    
 
     public void Start()
     {
@@ -97,9 +96,11 @@ public class WfcGenerator : MonoBehaviour
         Stopwatch sw = new Stopwatch();
         sw.Start();
 
-
         ResetGeneration();
+
         InitGird3D();
+
+        ApplyCustomConstraints();
 
         // TODO: change to coroutine
         iteration = 0;
@@ -109,7 +110,6 @@ public class WfcGenerator : MonoBehaviour
             if (iteration++ > maxIteration) { Debug.LogError($"[MANUAL BREAK] Iteration over {maxIteration} Possible infinite loop."); break; }
             
             Iterate();
-            
         }
 
         bool isCollapsed = IsCollapsed();
@@ -125,9 +125,9 @@ public class WfcGenerator : MonoBehaviour
                 }
             }
         }
-        
+
         sw.Stop();
-        UnityEngine.Debug.Log($"Time: {sw.ElapsedMilliseconds / 1000f} sec    Iteration: {iteration}");
+        UnityEngine.Debug.Log($"Generation Complete. Time: {sw.ElapsedMilliseconds / 1000f} sec    Iteration: {iteration}");
         Profiler.EndSample();
         
         yield return new WaitForEndOfFrame();
@@ -218,7 +218,6 @@ public class WfcGenerator : MonoBehaviour
 
     private void PropagateAt(Vector3Int coord)
     {
-        Stack<Vector3Int> changedCoords = new Stack<Vector3Int>();
         changedCoords.Push(coord);
 
         while(changedCoords.Count > 0)
@@ -259,10 +258,13 @@ public class WfcGenerator : MonoBehaviour
 
     private int GetWeightedSelection(List<PrototypeInfo> prototypeInfos)
     {
-        List<int> indexPool = new List<int>(prototypeInfos.Count);
+        List<int> indexPool = new List<int>(prototypeInfos.Count * 3);
 
         for (int i = 0; i < prototypeInfos.Count; ++i)
         {
+            var faceDetails = prototypeInfos[i].faceDetails;
+            var isInvariant = faceDetails[4].Invariant && faceDetails[5].Invariant;    // Up and Down faces are both invariant
+            var extraCount = isInvariant ? prototypeInfos[i].probability * 4 : prototypeInfos[i].probability;
             for (int j = 0; j < prototypeInfos[i].probability; ++j)
             {
                 indexPool.Add(i);
@@ -272,6 +274,99 @@ public class WfcGenerator : MonoBehaviour
         var weightedSelection = Random.Range(0, indexPool.Count);
 
         return indexPool[weightedSelection];
+    }
+
+    private void ApplyCustomConstraints()
+    {
+        for (int x = 0; x < size.x; ++x)
+        {
+            for (int y = 0; y < size.y; ++y)
+            {
+                for (int z = 0; z < size.z; ++z)
+                {
+                    var possiblePrototypes = wfc[x][y][z];
+                    var coord = new Vector3Int(x, y, z);
+
+                    // 1. constrain bottom layer
+                    if (y == 0)
+                    {
+                        possiblePrototypes.RemoveAll(prototype => !(prototype.faceDetails[(int) FaceDir.Down].Connector == 0 
+                                                                       && prototype.faceDetails[(int) FaceDir.Down].Invariant)
+                                                                       || prototype.constraintFromTags.Contains("bot"));
+                        AddToPropagationStack(coord);
+                    }
+
+                    // 2. everything but bottom
+                    if (y > 0)
+                    {
+                        possiblePrototypes.RemoveAll(prototype => prototype.constraintToTags.Contains("bot"));
+                        AddToPropagationStack(coord);
+                    }
+                    
+                    // 3. constrain top layer to not contain uncapped prototypes
+                    if (y == size.y - 1)
+                    {
+                        possiblePrototypes.RemoveAll(
+                            prototype => !(prototype.faceDetails[(int) FaceDir.Up].Connector == 0 && prototype.faceDetails[(int) FaceDir.Up].Invariant
+                                || prototype.constraintToTags.Contains("bot"))
+                            );
+                        AddToPropagationStack(coord);
+                    }
+
+                    // 4. constrain left bound
+                    if (x == 0)
+                    {
+                        possiblePrototypes.RemoveAll(
+                            prototype => !(prototype.faceDetails[(int) FaceDir.Left].Connector == 0 && prototype.faceDetails[(int) FaceDir.Left].Symmetric)
+                            );
+                        AddToPropagationStack(coord);
+                    }
+                    
+                    // 5. constrain right bound
+                    if (x == size.x - 1)
+                    {
+                        possiblePrototypes.RemoveAll(
+                            prototype => !(prototype.faceDetails[(int) FaceDir.Right].Connector == 0 && prototype.faceDetails[(int) FaceDir.Right].Symmetric)
+                        );
+                        AddToPropagationStack(coord);
+                    }
+
+                    
+                    // 6. constrain back bound
+                    if (z == 0)
+                    {
+                        possiblePrototypes.RemoveAll(
+                            prototype => !(prototype.faceDetails[(int) FaceDir.Back].Connector == 0 && prototype.faceDetails[(int) FaceDir.Back].Symmetric)
+                        );
+                        AddToPropagationStack(coord);
+                    }
+
+                    // 7. constrain forward bound
+                    if (z == size.z - 1)
+                    {
+                        possiblePrototypes.RemoveAll(
+                            prototype => !(prototype.faceDetails[(int) FaceDir.Forward].Connector == 0 && prototype.faceDetails[(int) FaceDir.Forward].Symmetric)
+                        );
+                        AddToPropagationStack(coord);
+                    }
+
+                    // int edgeX = 1, edgeZ = 1;
+                    // // 8. remove gaps in the middle
+                    // if (x >= edgeX && x <= size.x - edgeX - 1 && z >= edgeZ && z <= size.z - edgeZ - 1 && y == 0)
+                    // {
+                    //     possiblePrototypes.RemoveAll(
+                    //         prototype => (prototype.faceDetails[(int) FaceDir.Left].Connector == 0)
+                    //         || (prototype.faceDetails[(int) FaceDir.Back].Connector == 0)
+                    //         || (prototype.faceDetails[(int) FaceDir.Right].Connector == 0)
+                    //         || (prototype.faceDetails[(int) FaceDir.Forward].Connector == 0)
+                    //     );
+                    // }
+ 
+                }
+            }
+        }
+        
+        
     }
 
     private List<Vector3Int> GetValidDirections(Vector3Int coord)
@@ -311,7 +406,7 @@ public class WfcGenerator : MonoBehaviour
         return validDirections;
     }
 
-    public int GetNeighborDirectionIndex(Vector3Int dir)
+    private int GetNeighborDirectionIndex(Vector3Int dir)
     {
         int index = -1;
         
@@ -327,7 +422,7 @@ public class WfcGenerator : MonoBehaviour
         return index;
     }
 
-    public List<int> GetPrototypeIndice(List<PrototypeInfo> prototypes)
+    private List<int> GetPrototypeIndice(List<PrototypeInfo> prototypes)
     {
         List<int> prototypeIndice = new List<int>();
         
@@ -339,7 +434,7 @@ public class WfcGenerator : MonoBehaviour
         return prototypeIndice;
     }
 
-    public List<int> GetAllPossibleNeighbors(List<PrototypeInfo> prototypes, int dirIndex)
+    private List<int> GetAllPossibleNeighbors(List<PrototypeInfo> prototypes, int dirIndex)
     {
         List<int> allPossibleNeighbors = new List<int>();
 
@@ -371,7 +466,8 @@ public class WfcGenerator : MonoBehaviour
             return;
         }
 
-        element.transform.Rotate(Vector3.up * 90f * prototypeInfo.rotation);
+        var rotation = Vector3.up * (90f * prototypeInfo.rotation);
+        element.transform.Rotate(rotation);
 
         var meshFilter = element.AddComponent<MeshFilter>();
         meshFilter.sharedMesh = wfc[x][y][z][0].mesh;
@@ -389,6 +485,16 @@ public class WfcGenerator : MonoBehaviour
     private void ResetGeneration()
     {
         transform.DeleteChildren();
+        changedCoords.Clear();
         airPrototype = null;
     }
+
+    private void AddToPropagationStack(Vector3Int coord)
+    {
+        if (!changedCoords.Contains(coord))
+        {
+            changedCoords.Push(coord);
+        }
+    }
+    
 }

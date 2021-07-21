@@ -132,6 +132,9 @@ public class ModulePrototype : MonoBehaviour {
 		}
 	}
 
+	public List<string> constraintToTags = new List<string>();
+	public List<string> constraintFromTags = new List<string>();
+	
 	public ModulePrototype() {}
 	
 	public ModulePrototype(ModulePrototype other)
@@ -145,6 +148,8 @@ public class ModulePrototype : MonoBehaviour {
 		Back = new HorizontalFaceDetails(other.Back); 
 		Up = new VerticalFaceDetails(other.Up); 
 		Forward = new HorizontalFaceDetails(other.Forward);
+		constraintToTags = other.constraintToTags;
+		constraintFromTags = other.constraintFromTags;
 	}
 
 	public Mesh GetMesh(bool createEmptyFallbackMesh = true) {

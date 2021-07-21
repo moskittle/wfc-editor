@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using NaughtyAttributes;
 using UnityEditor;
@@ -40,15 +39,14 @@ public class CustomModuleData : ScriptableObject, ISerializationCallbackReceiver
         public int rotation;
         public List<FaceDetails> faceDetails; 
         public NeighborsIndexOnAllFaces neighbors;
-        public List<FaceDetails> constraintTo;
-        public List<FaceDetails> constraintFrom;
         public float probability = 1;
+        public List<string> constraintToTags = new List<string>();
+        public List<string> constraintFromTags = new List<string>();
 
         // Constructors
         public PrototypeInfo(){}
         public PrototypeInfo(string _name, int _index, Mesh _mesh, int _rotation, List<FaceDetails> _faceDetails = null,
-            NeighborsIndexOnAllFaces _neighbors = null, List<FaceDetails> _constraintTo = null,
-            List<FaceDetails> _constraintFrom = null, float _probability = 1)
+            NeighborsIndexOnAllFaces _neighbors = null, float _probability = 1, List<string> _constraintToTags = null, List<string> _constraintFromTags = null)
         {
             name = _name;
             index = _index;
@@ -56,9 +54,9 @@ public class CustomModuleData : ScriptableObject, ISerializationCallbackReceiver
             rotation = _rotation;
             faceDetails = _faceDetails;
             neighbors = _neighbors;
-            constraintTo = _constraintTo;
-            constraintFrom = _constraintFrom;
             probability = _probability;
+            constraintToTags = _constraintToTags;
+            constraintFromTags = _constraintFromTags;
         }
 
         public PrototypeInfo(PrototypeInfo other)
@@ -69,9 +67,9 @@ public class CustomModuleData : ScriptableObject, ISerializationCallbackReceiver
             rotation = other.rotation;
             faceDetails = other.faceDetails.Select(otherFaceDetail => new FaceDetails(otherFaceDetail)).ToList();
             neighbors = other.neighbors.Select(otherNeighbor => new NeighborIndexListWrapper(otherNeighbor)).ToList();
-            constraintTo = other.constraintTo.Select(otherConstraintTo => new FaceDetails(otherConstraintTo)).ToList();
-            constraintFrom = other.constraintFrom.Select(otherConstraintFrom => new FaceDetails(otherConstraintFrom)).ToList();
             probability = other.probability;
+            constraintToTags = other.constraintToTags;
+            constraintFromTags = other.constraintFromTags;
         }
     }
     
@@ -137,11 +135,10 @@ public class CustomModuleData : ScriptableObject, ISerializationCallbackReceiver
                     
                     var neighbors = new NeighborsIndexOnAllFaces();
 
-                    // TODO: implement extra constraints
-                    List<FaceDetails> constraintsTo = new List<FaceDetails>();
-                    List<FaceDetails> constraintsFrom = new List<FaceDetails>();
+                    List<string> constraintToTags = mp.constraintToTags;
+                    List<string> constraintFromTags = mp.constraintFromTags;
 
-                    var prototypeInfo = new PrototypeInfo(name, index++, mesh, rotation, newFaceDetails, neighbors, constraintsTo, constraintsFrom, probability);
+                    var prototypeInfo = new PrototypeInfo(name, index++, mesh, rotation, newFaceDetails, neighbors,  probability, constraintToTags, constraintFromTags);
 
                     prototypeMetaData.Add(prototypeInfo);
                 }

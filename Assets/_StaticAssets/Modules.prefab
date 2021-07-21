@@ -886,7 +886,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50d74e57d446b974bbd4a945bcf152b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Probability: 1
+  Probability: 10
   Spawn: 1
   IsInterior: 0
   Left:

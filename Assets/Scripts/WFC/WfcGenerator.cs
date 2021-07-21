@@ -1,8 +1,12 @@
+using System.Collections;
 using NaughtyAttributes;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using UnityEditor;
 using UnityEngine;
-
+using UnityEngine.Profiling;
+using Debug = UnityEngine.Debug;
 using PrototypeInfo = CustomModuleData.PrototypeInfo;
 
 // a 3D list which represents grid3D[x][y][z] = List<Possible Prototypes>
@@ -28,29 +32,31 @@ public class WfcGenerator : MonoBehaviour
         {Vector3Int.up, 5}         // FaceType.Up
     };
 
+    [Header("Debug")]
+    public bool pauseAfterGeneration = false;
+    
+    
+    
+
     public void Start()
     {
-        Init();
+        GenerateTerrain();
     }
 
     private void Update()
     {
         
     }
+    
 
-    private void Init()
+    public void InitGird3D()
     {
         bool zeroSize = size.x == 0 || size.y == 0 || size.z == 0;
         if (moduleData == null || zeroSize)
         {
             Debug.Log("No terrain generated. Module data is missing, or size is 0.");
         }
-
-        InitGird3D();
-    }
-
-    public void InitGird3D()
-    {
+        
         wfc = new Grid3D(new List<List<List<PrototypeInfo>>>[size.x]);
         for (int x = 0; x < size.x; ++x)
         {
@@ -74,38 +80,39 @@ public class WfcGenerator : MonoBehaviour
         }
     }
     
-    static int a = 0;
     [Button("Generate WFC Terrain")]
     public void GenerateTerrain()
     {
+        StartCoroutine(GenerateTerrainCoroutine());
+
+#if UNITY_EDITOR
+        EditorApplication.isPaused = pauseAfterGeneration;
+#endif
+    }
+    
+    static int iteration = 0;
+    public IEnumerator GenerateTerrainCoroutine()
+    {
+        Profiler.BeginSample("WFC Terrain Generation");
+        Stopwatch sw = new Stopwatch();
+        sw.Start();
+
+
         ResetGeneration();
-        
         InitGird3D();
 
-        a = 0;
+        // TODO: change to coroutine
+        iteration = 0;
+        int maxIteration = 10000;
         while(IsCollapsed() == false)
         {
-            if (a++ > 10000) { Debug.Log("Manual break"); break; }
+            if (iteration++ > maxIteration) { Debug.LogError($"[MANUAL BREAK] Iteration over {maxIteration} Possible infinite loop."); break; }
             
             Iterate();
+            
         }
 
         bool isCollapsed = IsCollapsed();
-
-        // Debug
-        var sum = 0;
-        for (int x = 0; x < size.x; ++x)
-        {
-            for (int y = 0; y < size.y; ++y)
-            {
-                for (int z = 0; z < size.z; ++z)
-                {
-                    sum += wfc[x][y][z].Count;
-                }
-            }
-        }
-
-        Debug.Log("is collapsed: " + isCollapsed + ", iterations: " + a + ", count; " + sum);
 
         // Create game objects on each grid
         for (int x = 0; x < size.x; ++x)
@@ -118,7 +125,12 @@ public class WfcGenerator : MonoBehaviour
                 }
             }
         }
-
+        
+        sw.Stop();
+        UnityEngine.Debug.Log($"Time: {sw.ElapsedMilliseconds / 1000f} sec    Iteration: {iteration}");
+        Profiler.EndSample();
+        
+        yield return new WaitForEndOfFrame();
     }
 
     private bool IsCollapsed()
@@ -196,10 +208,10 @@ public class WfcGenerator : MonoBehaviour
     private void CollapseAt(Vector3Int coord)
     {
         var possiblePrototypes = wfc[coord.x][coord.y][coord.z];
-        
+
         // narrow possible prototypes down to 1
-        var selection = Random.Range(0, possiblePrototypes.Count);  // TODO: weighted selection
-        var chosenPrototype = new PrototypeInfo(possiblePrototypes[selection]); // TODO: real deep copy 
+        var weightedSelection = GetWeightedSelection(possiblePrototypes);
+        var chosenPrototype = new PrototypeInfo(possiblePrototypes[weightedSelection]);
         possiblePrototypes.Clear();
         possiblePrototypes.Add(chosenPrototype);
     }
@@ -245,7 +257,24 @@ public class WfcGenerator : MonoBehaviour
         }
     }
 
-    public List<Vector3Int> GetValidDirections(Vector3Int coord)
+    private int GetWeightedSelection(List<PrototypeInfo> prototypeInfos)
+    {
+        List<int> indexPool = new List<int>(prototypeInfos.Count);
+
+        for (int i = 0; i < prototypeInfos.Count; ++i)
+        {
+            for (int j = 0; j < prototypeInfos[i].probability; ++j)
+            {
+                indexPool.Add(i);
+            }
+        }
+
+        var weightedSelection = Random.Range(0, indexPool.Count);
+
+        return indexPool[weightedSelection];
+    }
+
+    private List<Vector3Int> GetValidDirections(Vector3Int coord)
     {
         List<Vector3Int> validDirections = new List<Vector3Int>();
 
@@ -343,7 +372,6 @@ public class WfcGenerator : MonoBehaviour
         }
 
         element.transform.Rotate(Vector3.up * 90f * prototypeInfo.rotation);
-        Debug.Log("rot: " + prototypeInfo.rotation + ", angle: " + element.transform.rotation.eulerAngles.y + " Grid Pos: (" + x + ", " + y + ", " + z + ")");
 
         var meshFilter = element.AddComponent<MeshFilter>();
         meshFilter.sharedMesh = wfc[x][y][z][0].mesh;
@@ -361,5 +389,6 @@ public class WfcGenerator : MonoBehaviour
     private void ResetGeneration()
     {
         transform.DeleteChildren();
+        airPrototype = null;
     }
 }

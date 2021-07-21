@@ -42,13 +42,13 @@ public class CustomModuleData : ScriptableObject, ISerializationCallbackReceiver
         public NeighborsIndexOnAllFaces neighbors;
         public List<FaceDetails> constraintTo;
         public List<FaceDetails> constraintFrom;
-        public int weight = 1;
+        public float probability = 1;
 
         // Constructors
         public PrototypeInfo(){}
         public PrototypeInfo(string _name, int _index, Mesh _mesh, int _rotation, List<FaceDetails> _faceDetails = null,
             NeighborsIndexOnAllFaces _neighbors = null, List<FaceDetails> _constraintTo = null,
-            List<FaceDetails> _constraintFrom = null, int _weight = 1)
+            List<FaceDetails> _constraintFrom = null, float _probability = 1)
         {
             name = _name;
             index = _index;
@@ -58,7 +58,7 @@ public class CustomModuleData : ScriptableObject, ISerializationCallbackReceiver
             neighbors = _neighbors;
             constraintTo = _constraintTo;
             constraintFrom = _constraintFrom;
-            weight = _weight;
+            probability = _probability;
         }
 
         public PrototypeInfo(PrototypeInfo other)
@@ -71,7 +71,7 @@ public class CustomModuleData : ScriptableObject, ISerializationCallbackReceiver
             neighbors = other.neighbors.Select(otherNeighbor => new NeighborIndexListWrapper(otherNeighbor)).ToList();
             constraintTo = other.constraintTo.Select(otherConstraintTo => new FaceDetails(otherConstraintTo)).ToList();
             constraintFrom = other.constraintFrom.Select(otherConstraintFrom => new FaceDetails(otherConstraintFrom)).ToList();
-            weight = other.weight;
+            probability = other.probability;
         }
     }
     
@@ -104,7 +104,7 @@ public class CustomModuleData : ScriptableObject, ISerializationCallbackReceiver
         {
             var meshFilter = mp.GetComponent<MeshFilter>();
             Mesh mesh = meshFilter ? meshFilter.sharedMesh : null;
-            int weight = 1;
+            float probability = mp.Probability;
 
 
             // add prototypes with rotation variants to array
@@ -141,7 +141,7 @@ public class CustomModuleData : ScriptableObject, ISerializationCallbackReceiver
                     List<FaceDetails> constraintsTo = new List<FaceDetails>();
                     List<FaceDetails> constraintsFrom = new List<FaceDetails>();
 
-                    var prototypeInfo = new PrototypeInfo(name, index++, mesh, rotation, newFaceDetails, neighbors, constraintsTo, constraintsFrom, weight);
+                    var prototypeInfo = new PrototypeInfo(name, index++, mesh, rotation, newFaceDetails, neighbors, constraintsTo, constraintsFrom, probability);
 
                     prototypeMetaData.Add(prototypeInfo);
                 }
@@ -151,7 +151,7 @@ public class CustomModuleData : ScriptableObject, ISerializationCallbackReceiver
         // seperate loop to add face details and neighbor details (after all variants are added to modules)
         foreach (var prototypeInfo in prototypeMetaData)
         {
-            prototypeInfo.neighbors =  CreateNeighborsOnAllFaces(prototypeInfo.faceDetails, prototypeMetaData);;
+            prototypeInfo.neighbors =  CreateNeighborsOnAllFaces(prototypeInfo.faceDetails, prototypeMetaData);
         }
         
         this.modules = prototypeMetaData;
@@ -204,11 +204,6 @@ public class CustomModuleData : ScriptableObject, ISerializationCallbackReceiver
                 }
             }
 
-            // if (neighborsIndexOnFace.neighborIndexOnOneFace.Count == 0)
-            // {
-            //     neighborsIndexOnFace.neighborIndexOnOneFace = new List<int> { 0 };    // add air
-            // }
-            
             neighbors.Add(neighborsIndexOnFace);
         }
 
@@ -243,38 +238,6 @@ public class CustomModuleData : ScriptableObject, ISerializationCallbackReceiver
             }
             
 
-        }
-
-
-        
-        
-        {
-            // if (currentFace.Connector == 0 && otherFace.Connector == 0 && currentFace.Invariant && otherFace.Invariant)
-            // {
-            //     return true;
-            // }
-            // else if (currentFace.Flipped)
-            // {
-            //     if (currentFace.Connector == otherFace.Connector && otherFace.Flipped == false)
-            //     {
-            //         return true;
-            //     }
-            // }
-            // else if (otherFace.Flipped)
-            // {
-            //     if (currentFace.Connector == otherFace.Connector && currentFace.Flipped == false)
-            //     {
-            //         return true;
-            //     }
-            // }
-            // else if (currentFace.Connector == otherFace.Connector)
-            // {
-            //     if ((currentFace.Symmetric && otherFace.Symmetric) || (currentFace.Invariant && otherFace.Invariant)
-            //                                                        || (!currentFace.Invariant && !otherFace.Invariant && currentFace.Rotation == otherFace.Rotation))
-            //     {
-            //         return true;
-            //     }
-            // }
         }
 
         return false;

@@ -22,6 +22,7 @@ public class WfcGenerator : MonoBehaviour
     private Grid3D wfc;
     private PrototypeInfo airPrototype;
     private const float blockSize = 2f;
+    private int airCount = 0;
     private readonly Dictionary<Vector3Int, int> directionToIndex = new Dictionary<Vector3Int, int>
     {
         {Vector3Int.left, 0},      // FaceType.Left
@@ -82,6 +83,7 @@ public class WfcGenerator : MonoBehaviour
     [Button("Generate WFC Terrain")]
     public void GenerateTerrain()
     {
+
         StartCoroutine(GenerateTerrainCoroutine());
 
 #if UNITY_EDITOR
@@ -111,8 +113,6 @@ public class WfcGenerator : MonoBehaviour
             
             Iterate();
         }
-
-        bool isCollapsed = IsCollapsed();
 
         // Create game objects on each grid
         for (int x = 0; x < size.x; ++x)
@@ -214,6 +214,11 @@ public class WfcGenerator : MonoBehaviour
         var chosenPrototype = new PrototypeInfo(possiblePrototypes[weightedSelection]);
         possiblePrototypes.Clear();
         possiblePrototypes.Add(chosenPrototype);
+
+        if (chosenPrototype.mesh == null)
+        {
+            airCount++;
+        }
     }
 
     private void PropagateAt(Vector3Int coord)
@@ -258,22 +263,30 @@ public class WfcGenerator : MonoBehaviour
 
     private int GetWeightedSelection(List<PrototypeInfo> prototypeInfos)
     {
-        List<int> indexPool = new List<int>(prototypeInfos.Count * 3);
+        float sum = 0;
+        int selection = 0;
 
-        for (int i = 0; i < prototypeInfos.Count; ++i)
+        foreach (var prototype in prototypeInfos)
         {
-            var faceDetails = prototypeInfos[i].faceDetails;
-            var isInvariant = faceDetails[4].Invariant && faceDetails[5].Invariant;    // Up and Down faces are both invariant
-            var extraCount = isInvariant ? prototypeInfos[i].probability * 4 : prototypeInfos[i].probability;
-            for (int j = 0; j < prototypeInfos[i].probability; ++j)
-            {
-                indexPool.Add(i);
-            }
+            sum += prototype.probability;
         }
 
-        var weightedSelection = Random.Range(0, indexPool.Count);
+        var weightedSelection = Random.Range(0, sum);
 
-        return indexPool[weightedSelection];
+        sum = 0;
+        foreach (var prototype in prototypeInfos)
+        {
+            sum += prototype.probability;
+
+            if (sum > weightedSelection)
+            {
+                break;
+            }
+            
+            selection++;
+        }
+
+        return selection;
     }
 
     private void ApplyCustomConstraints()
@@ -308,7 +321,7 @@ public class WfcGenerator : MonoBehaviour
                     {
                         possiblePrototypes.RemoveAll(
                             prototype => !(prototype.faceDetails[(int) FaceDir.Up].Connector == 0 && prototype.faceDetails[(int) FaceDir.Up].Invariant
-                                || prototype.constraintToTags.Contains("bot"))
+                                || prototype.constraintToTags.Contains("top"))
                             );
                         AddToPropagationStack(coord);
                     }
@@ -349,19 +362,35 @@ public class WfcGenerator : MonoBehaviour
                         );
                         AddToPropagationStack(coord);
                     }
-
-                    // int edgeX = 1, edgeZ = 1;
+                    
                     // // 8. remove gaps in the middle
+                    // int edgeX = 3, edgeZ = 3;
                     // if (x >= edgeX && x <= size.x - edgeX - 1 && z >= edgeZ && z <= size.z - edgeZ - 1 && y == 0)
                     // {
                     //     possiblePrototypes.RemoveAll(
+                    //         // prototype => prototype.constraintToTags.Contains("bot")
+                    //         
                     //         prototype => (prototype.faceDetails[(int) FaceDir.Left].Connector == 0)
                     //         || (prototype.faceDetails[(int) FaceDir.Back].Connector == 0)
                     //         || (prototype.faceDetails[(int) FaceDir.Right].Connector == 0)
                     //         || (prototype.faceDetails[(int) FaceDir.Forward].Connector == 0)
                     //     );
                     // }
- 
+
+
+                    // List<float> edges = new List<float>{0.2f, 0.25f, 0.3f};
+                    // for (int i = 0; i < edges.Count; ++i)
+                    // {
+                    //     if (y == i)
+                    //     {
+                    //         if (x > size.x * edges[i] && x <= size.x * (1 - edges[i]) && z > size.z * edges[i] && z <= size.z * (1 - edges[i]))
+                    //         {
+                    //             possiblePrototypes.RemoveAll(
+                    //                 prototype => prototype.constraintToTags.Contains("edge")
+                    //             );
+                    //         }
+                    //     }
+                    // }
                 }
             }
         }
@@ -486,6 +515,7 @@ public class WfcGenerator : MonoBehaviour
     {
         transform.DeleteChildren();
         changedCoords.Clear();
+        airCount = 0;
         airPrototype = null;
     }
 

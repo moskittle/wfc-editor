@@ -160,6 +160,7 @@ MonoBehaviour:
     Rotation: 0
   constraintToTags:
   - bot
+  - edge
   constraintFromTags: []
 --- !u!1 &281386130255364056
 GameObject:
@@ -576,7 +577,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50d74e57d446b974bbd4a945bcf152b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Probability: 5
+  Probability: 10
   Spawn: 1
   IsInterior: 0
   Left:
@@ -639,7 +640,8 @@ MonoBehaviour:
     Flipped: 0
     Invariant: 0
     Rotation: 0
-  constraintToTags: []
+  constraintToTags:
+  - edge
   constraintFromTags: []
 --- !u!1 &577648919735374418
 GameObject:
@@ -659,7 +661,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7345968737067514557
 Transform:
   m_ObjectHideFlags: 0
@@ -897,7 +899,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50d74e57d446b974bbd4a945bcf152b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Probability: 50
+  Probability: 20
   Spawn: 1
   IsInterior: 0
   Left:
@@ -1536,7 +1538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50d74e57d446b974bbd4a945bcf152b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Probability: 1
+  Probability: 10
   Spawn: 1
   IsInterior: 0
   Left:
@@ -1866,7 +1868,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &813522056864589757
 Transform:
   m_ObjectHideFlags: 0
@@ -2262,7 +2264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50d74e57d446b974bbd4a945bcf152b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Probability: 1
+  Probability: 10
   Spawn: 1
   IsInterior: 0
   Left:
@@ -2325,7 +2327,8 @@ MonoBehaviour:
     Flipped: 0
     Invariant: 0
     Rotation: 0
-  constraintToTags: []
+  constraintToTags:
+  - edge
   constraintFromTags: []
 --- !u!1 &3079049301530872944
 GameObject:
@@ -3222,7 +3225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50d74e57d446b974bbd4a945bcf152b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Probability: 1
+  Probability: 20
   Spawn: 1
   IsInterior: 0
   Left:
@@ -3287,6 +3290,7 @@ MonoBehaviour:
     Rotation: 0
   constraintToTags:
   - bot
+  - edge
   constraintFromTags: []
 --- !u!1 &3943049107719260919
 GameObject:
@@ -3306,7 +3310,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &412652176633701007
 Transform:
   m_ObjectHideFlags: 0
@@ -3468,7 +3472,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &764222716653439458
 Transform:
   m_ObjectHideFlags: 0
@@ -4109,7 +4113,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5837017604021721348
 Transform:
   m_ObjectHideFlags: 0
@@ -4517,7 +4521,8 @@ MonoBehaviour:
     Flipped: 0
     Invariant: 0
     Rotation: 0
-  constraintToTags: []
+  constraintToTags:
+  - edge
   constraintFromTags: []
 --- !u!1 &5633281078243726686
 GameObject:
@@ -4679,6 +4684,7 @@ MonoBehaviour:
     Rotation: 0
   constraintToTags:
   - bot
+  - edge
   constraintFromTags: []
 --- !u!1 &5640290045742393737
 GameObject:
@@ -4838,7 +4844,8 @@ MonoBehaviour:
     Flipped: 1
     Invariant: 0
     Rotation: 0
-  constraintToTags: []
+  constraintToTags:
+  - edge
   constraintFromTags: []
 --- !u!1 &6129282477806719061
 GameObject:
@@ -5320,6 +5327,7 @@ MonoBehaviour:
     Rotation: 0
   constraintToTags:
   - bot
+  - edge
   constraintFromTags: []
 --- !u!1 &6630038666292657627
 GameObject:
@@ -5641,6 +5649,7 @@ MonoBehaviour:
     Rotation: 0
   constraintToTags:
   - bot
+  - edge
   constraintFromTags: []
 --- !u!1 &6835524600322283640
 GameObject:
@@ -5736,7 +5745,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50d74e57d446b974bbd4a945bcf152b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Probability: 1
+  Probability: 10
   Spawn: 1
   IsInterior: 0
   Left:
@@ -6121,6 +6130,7 @@ MonoBehaviour:
     Rotation: 0
   constraintToTags:
   - bot
+  - edge
   constraintFromTags: []
 --- !u!1 &7576874992359170124
 GameObject:
@@ -6300,7 +6310,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6737233339777469670
 Transform:
   m_ObjectHideFlags: 0
@@ -6699,7 +6709,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50d74e57d446b974bbd4a945bcf152b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Probability: 5
+  Probability: 10
   Spawn: 1
   IsInterior: 0
   Left:

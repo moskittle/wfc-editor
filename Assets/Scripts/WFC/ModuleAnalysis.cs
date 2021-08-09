@@ -1,22 +1,16 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using NaughtyAttributes;
 using UnityEditor;
 using UnityEngine;
-using NaughtyAttributes;
 
 using HorizontalFaceDetails = ModulePrototype.HorizontalFaceDetails;
 using VerticalFaceDetails = ModulePrototype.VerticalFaceDetails;
 
 
 public class ModuleAnalysis : MonoBehaviour {
-#if UNITY_EDITOR
-    public int digit = 4;
-    public float vertexSize = 0.03f;
-
-    private GameObject gGameObject = null;
-    private Dictionary<FaceType, List<Vector3>> gVertsGroup = new Dictionary<FaceType, List<Vector3>>();
-
+    public const float BLOCK_SIZE = 4f;
     public enum FaceType {
         Up,
         Down,
@@ -25,6 +19,12 @@ public class ModuleAnalysis : MonoBehaviour {
         Forward,
         Back
     }
+#if UNITY_EDITOR
+    public int digit = 4;
+    public float vertexSize = 0.03f;
+    private GameObject gGameObject = null;
+    private Dictionary<FaceType, List<Vector3>> gVertsGroup = new Dictionary<FaceType, List<Vector3>>();
+
 
     [Button]
     public void CheckModulePrototype() {
@@ -114,13 +114,13 @@ public class ModuleAnalysis : MonoBehaviour {
             {
                 var vertexFixed = vertex.FixedVector3(digit);
 
-                RoundVertexOnFace(vertex.x, -AbstractMap.BLOCK_SIZE / 2, FaceType.Left, vertexFixed, vertsOnHorizontalFace);
-                RoundVertexOnFace(vertex.x, AbstractMap.BLOCK_SIZE / 2, FaceType.Right, vertexFixed, vertsOnHorizontalFace);
-                RoundVertexOnFace(vertex.z, -AbstractMap.BLOCK_SIZE / 2, FaceType.Back, vertexFixed, vertsOnHorizontalFace);
-                RoundVertexOnFace(vertex.z, AbstractMap.BLOCK_SIZE / 2, FaceType.Forward, vertexFixed, vertsOnHorizontalFace);
+                RoundVertexOnFace(vertex.x, -BLOCK_SIZE / 2, FaceType.Left, vertexFixed, vertsOnHorizontalFace);
+                RoundVertexOnFace(vertex.x, BLOCK_SIZE / 2, FaceType.Right, vertexFixed, vertsOnHorizontalFace);
+                RoundVertexOnFace(vertex.z, -BLOCK_SIZE / 2, FaceType.Back, vertexFixed, vertsOnHorizontalFace);
+                RoundVertexOnFace(vertex.z, BLOCK_SIZE / 2, FaceType.Forward, vertexFixed, vertsOnHorizontalFace);
                 
-                RoundVertexOnFace(vertex.y, -AbstractMap.BLOCK_SIZE / 2, FaceType.Down, vertexFixed, vertsOnVerticalFaces);
-                RoundVertexOnFace(vertex.y, AbstractMap.BLOCK_SIZE / 2, FaceType.Up, vertexFixed, vertsOnVerticalFaces);
+                RoundVertexOnFace(vertex.y, -BLOCK_SIZE / 2, FaceType.Down, vertexFixed, vertsOnVerticalFaces);
+                RoundVertexOnFace(vertex.y, BLOCK_SIZE / 2, FaceType.Up, vertexFixed, vertsOnVerticalFaces);
             }
 
             // --------------------------------------------Horizontal-------------------------------
@@ -399,27 +399,27 @@ public class ModuleAnalysis : MonoBehaviour {
                             };
 
                             foreach (var v in verts) {
-                                if (InDeviation(v.x, -AbstractMap.BLOCK_SIZE / 2)) {
+                                if (InDeviation(v.x, -BLOCK_SIZE / 2)) {
                                     vertsGroup[FaceType.Left].Add(v.FixedVector3(digit));
                                 }
 
-                                if (InDeviation(v.y, -AbstractMap.BLOCK_SIZE / 2)) {
+                                if (InDeviation(v.y, -BLOCK_SIZE / 2)) {
                                     vertsGroup[FaceType.Down].Add(v.FixedVector3(digit));
                                 }
 
-                                if (InDeviation(v.z, -AbstractMap.BLOCK_SIZE / 2)) {
+                                if (InDeviation(v.z, -BLOCK_SIZE / 2)) {
                                     vertsGroup[FaceType.Back].Add(v.FixedVector3(digit));
                                 }
 
-                                if (InDeviation(v.x, AbstractMap.BLOCK_SIZE / 2)) {
+                                if (InDeviation(v.x, BLOCK_SIZE / 2)) {
                                     vertsGroup[FaceType.Right].Add(v.FixedVector3(digit));
                                 }
 
-                                if (InDeviation(v.y, AbstractMap.BLOCK_SIZE / 2)) {
+                                if (InDeviation(v.y, BLOCK_SIZE / 2)) {
                                     vertsGroup[FaceType.Up].Add(v.FixedVector3(digit));
                                 }
 
-                                if (InDeviation(v.z, AbstractMap.BLOCK_SIZE / 2)) {
+                                if (InDeviation(v.z, BLOCK_SIZE / 2)) {
                                     vertsGroup[FaceType.Forward].Add(v.FixedVector3(digit));
                                 }
                             }

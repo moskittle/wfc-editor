@@ -26,12 +26,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 82288182824926750}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 72}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: -0.00000004371139}
+  m_LocalPosition: {x: 0, y: 0, z: 160}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3091103608858966209}
-  m_RootOrder: 18
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6891490527851874098
 MeshFilter:
@@ -101,7 +101,7 @@ MonoBehaviour:
   Left:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -111,7 +111,7 @@ MonoBehaviour:
   Down:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -121,7 +121,7 @@ MonoBehaviour:
   Back:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -131,7 +131,7 @@ MonoBehaviour:
   Right:
     Walkable: 0
     Connector: 3
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -141,7 +141,7 @@ MonoBehaviour:
   Up:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -151,7 +151,7 @@ MonoBehaviour:
   Forward:
     Walkable: 0
     Connector: 3
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -188,12 +188,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 281386130255364056}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 80}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 170}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3091103608858966209}
-  m_RootOrder: 20
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7314566079862352325
 MeshFilter:
@@ -263,7 +263,7 @@ MonoBehaviour:
   Left:
     Walkable: 0
     Connector: 1
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -273,7 +273,7 @@ MonoBehaviour:
   Down:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -283,7 +283,7 @@ MonoBehaviour:
   Back:
     Walkable: 0
     Connector: 15
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -293,7 +293,7 @@ MonoBehaviour:
   Right:
     Walkable: 0
     Connector: 15
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -303,7 +303,7 @@ MonoBehaviour:
   Up:
     Walkable: 0
     Connector: 1
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -313,7 +313,7 @@ MonoBehaviour:
   Forward:
     Walkable: 0
     Connector: 1
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -349,11 +349,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 431321862472007751}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 48}
+  m_LocalPosition: {x: 0, y: 0, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3091103608858966209}
-  m_RootOrder: 12
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2298014327270438607
 MeshFilter:
@@ -423,7 +423,7 @@ MonoBehaviour:
   Left:
     Walkable: 0
     Connector: 1
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -433,7 +433,7 @@ MonoBehaviour:
   Down:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -443,7 +443,7 @@ MonoBehaviour:
   Back:
     Walkable: 0
     Connector: 10
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -453,7 +453,7 @@ MonoBehaviour:
   Right:
     Walkable: 0
     Connector: 11
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -463,7 +463,7 @@ MonoBehaviour:
   Up:
     Walkable: 0
     Connector: 7
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -473,7 +473,7 @@ MonoBehaviour:
   Forward:
     Walkable: 0
     Connector: 1
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -508,12 +508,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 443327847319714397}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 16}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: -0.00000004371139}
+  m_LocalPosition: {x: 0, y: 0, z: 30}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3091103608858966209}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6619477032017459984
 MeshFilter:
@@ -583,7 +583,7 @@ MonoBehaviour:
   Left:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -593,7 +593,7 @@ MonoBehaviour:
   Down:
     Walkable: 0
     Connector: 2
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -603,7 +603,7 @@ MonoBehaviour:
   Back:
     Walkable: 0
     Connector: 2
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -613,7 +613,7 @@ MonoBehaviour:
   Right:
     Walkable: 0
     Connector: 1
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -623,7 +623,7 @@ MonoBehaviour:
   Up:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -633,7 +633,7 @@ MonoBehaviour:
   Forward:
     Walkable: 0
     Connector: 2
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -642,166 +642,6 @@ MonoBehaviour:
     Rotation: 0
   constraintToTags:
   - edge
-  constraintFromTags: []
---- !u!1 &577648919735374418
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7345968737067514557}
-  - component: {fileID: 8364594111234316019}
-  - component: {fileID: 357503282112040398}
-  - component: {fileID: 6770261227514119484}
-  m_Layer: 0
-  m_Name: wfc_module_0.001
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &7345968737067514557
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 577648919735374418}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 152}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 3091103608858966209}
-  m_RootOrder: 38
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &8364594111234316019
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 577648919735374418}
-  m_Mesh: {fileID: 3184678384338731172, guid: c6274dac7dafcd34f8aa89502d3862e1, type: 3}
---- !u!23 &357503282112040398
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 577648919735374418}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 3986188387995331715, guid: c6274dac7dafcd34f8aa89502d3862e1, type: 3}
-  - {fileID: -3035101939719975992, guid: c6274dac7dafcd34f8aa89502d3862e1, type: 3}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &6770261227514119484
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 577648919735374418}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50d74e57d446b974bbd4a945bcf152b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Probability: 1
-  Spawn: 1
-  IsInterior: 0
-  Left:
-    Walkable: 0
-    Connector: 2
-    ExcludedNeighbours: []
-    EnforceWalkableNeighbor: 0
-    IsOcclusionPortal: 0
-    Symmetric: 0
-    Flipped: 1
-    Invariant: 0
-    Rotation: 0
-  Down:
-    Walkable: 0
-    Connector: 6
-    ExcludedNeighbours: []
-    EnforceWalkableNeighbor: 0
-    IsOcclusionPortal: 0
-    Symmetric: 0
-    Flipped: 0
-    Invariant: 0
-    Rotation: 0
-  Back:
-    Walkable: 0
-    Connector: 1
-    ExcludedNeighbours: []
-    EnforceWalkableNeighbor: 0
-    IsOcclusionPortal: 0
-    Symmetric: 1
-    Flipped: 0
-    Invariant: 0
-    Rotation: 0
-  Right:
-    Walkable: 0
-    Connector: 9
-    ExcludedNeighbours: []
-    EnforceWalkableNeighbor: 0
-    IsOcclusionPortal: 0
-    Symmetric: 0
-    Flipped: 0
-    Invariant: 0
-    Rotation: 0
-  Up:
-    Walkable: 0
-    Connector: 0
-    ExcludedNeighbours: []
-    EnforceWalkableNeighbor: 0
-    IsOcclusionPortal: 0
-    Symmetric: 0
-    Flipped: 0
-    Invariant: 1
-    Rotation: 0
-  Forward:
-    Walkable: 0
-    Connector: 0
-    ExcludedNeighbours: []
-    EnforceWalkableNeighbor: 0
-    IsOcclusionPortal: 0
-    Symmetric: 1
-    Flipped: 0
-    Invariant: 0
-    Rotation: 0
-  constraintToTags: []
   constraintFromTags: []
 --- !u!1 &601978476784867303
 GameObject:
@@ -829,12 +669,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 601978476784867303}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 68}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 150}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3091103608858966209}
-  m_RootOrder: 17
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3053115344077466934
 MeshFilter:
@@ -899,13 +739,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50d74e57d446b974bbd4a945bcf152b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Probability: 20
+  Probability: 1
   Spawn: 1
   IsInterior: 0
   Left:
     Walkable: 0
     Connector: 1
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -915,7 +755,7 @@ MonoBehaviour:
   Down:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -925,7 +765,7 @@ MonoBehaviour:
   Back:
     Walkable: 0
     Connector: 1
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -935,7 +775,7 @@ MonoBehaviour:
   Right:
     Walkable: 0
     Connector: 1
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -945,7 +785,7 @@ MonoBehaviour:
   Up:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -955,7 +795,7 @@ MonoBehaviour:
   Forward:
     Walkable: 0
     Connector: 1
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -991,12 +831,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1985358247315080886}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 56}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 120}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3091103608858966209}
-  m_RootOrder: 14
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3032521771495969282
 MeshFilter:
@@ -1066,7 +906,7 @@ MonoBehaviour:
   Left:
     Walkable: 0
     Connector: 15
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -1076,7 +916,7 @@ MonoBehaviour:
   Down:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -1086,7 +926,7 @@ MonoBehaviour:
   Back:
     Walkable: 0
     Connector: 1
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -1096,7 +936,7 @@ MonoBehaviour:
   Right:
     Walkable: 0
     Connector: 15
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -1106,7 +946,7 @@ MonoBehaviour:
   Up:
     Walkable: 0
     Connector: 2
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -1116,7 +956,7 @@ MonoBehaviour:
   Forward:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -1152,11 +992,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2118584088275858371}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 160}
+  m_LocalPosition: {x: 0, y: 0, z: 340}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3091103608858966209}
-  m_RootOrder: 40
+  m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8812065235004909012
 MeshFilter:
@@ -1226,7 +1066,7 @@ MonoBehaviour:
   Left:
     Walkable: 0
     Connector: 15
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -1236,7 +1076,7 @@ MonoBehaviour:
   Down:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -1246,7 +1086,7 @@ MonoBehaviour:
   Back:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -1256,7 +1096,7 @@ MonoBehaviour:
   Right:
     Walkable: 0
     Connector: 18
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -1266,7 +1106,7 @@ MonoBehaviour:
   Up:
     Walkable: 0
     Connector: 11
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -1276,7 +1116,7 @@ MonoBehaviour:
   Forward:
     Walkable: 0
     Connector: 10
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -1311,12 +1151,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2140773137586990596}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 20}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 40}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3091103608858966209}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5662468200344797680
 MeshFilter:
@@ -1385,7 +1225,7 @@ MonoBehaviour:
   Left:
     Walkable: 0
     Connector: 1
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -1395,7 +1235,7 @@ MonoBehaviour:
   Down:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -1405,7 +1245,7 @@ MonoBehaviour:
   Back:
     Walkable: 0
     Connector: 1
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -1415,7 +1255,7 @@ MonoBehaviour:
   Right:
     Walkable: 0
     Connector: 1
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -1425,7 +1265,7 @@ MonoBehaviour:
   Up:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -1435,7 +1275,7 @@ MonoBehaviour:
   Forward:
     Walkable: 0
     Connector: 1
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -1471,11 +1311,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2224573619322153064}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 36}
+  m_LocalPosition: {x: 0, y: 0, z: 70}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3091103608858966209}
-  m_RootOrder: 9
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5260289124924203479
 MeshFilter:
@@ -1544,7 +1384,7 @@ MonoBehaviour:
   Left:
     Walkable: 0
     Connector: 5
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -1554,7 +1394,7 @@ MonoBehaviour:
   Down:
     Walkable: 0
     Connector: 4
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -1564,7 +1404,7 @@ MonoBehaviour:
   Back:
     Walkable: 0
     Connector: 1
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -1574,7 +1414,7 @@ MonoBehaviour:
   Right:
     Walkable: 0
     Connector: 5
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -1584,7 +1424,7 @@ MonoBehaviour:
   Up:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -1594,171 +1434,11 @@ MonoBehaviour:
   Forward:
     Walkable: 0
     Connector: 7
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
     Flipped: 0
-    Invariant: 0
-    Rotation: 0
-  constraintToTags: []
-  constraintFromTags: []
---- !u!1 &2393752592493708799
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4203075598414547757}
-  - component: {fileID: 7369267223579083894}
-  - component: {fileID: 7226993482770836676}
-  - component: {fileID: 6794396570946982965}
-  m_Layer: 0
-  m_Name: wfc_module_1.002
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4203075598414547757
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2393752592493708799}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 164}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 3091103608858966209}
-  m_RootOrder: 41
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &7369267223579083894
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2393752592493708799}
-  m_Mesh: {fileID: 8663182892475615234, guid: c6274dac7dafcd34f8aa89502d3862e1, type: 3}
---- !u!23 &7226993482770836676
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2393752592493708799}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: -3035101939719975992, guid: c6274dac7dafcd34f8aa89502d3862e1, type: 3}
-  - {fileID: 3986188387995331715, guid: c6274dac7dafcd34f8aa89502d3862e1, type: 3}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &6794396570946982965
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2393752592493708799}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50d74e57d446b974bbd4a945bcf152b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Probability: 1
-  Spawn: 1
-  IsInterior: 0
-  Left:
-    Walkable: 0
-    Connector: 15
-    ExcludedNeighbours: []
-    EnforceWalkableNeighbor: 0
-    IsOcclusionPortal: 0
-    Symmetric: 0
-    Flipped: 1
-    Invariant: 0
-    Rotation: 0
-  Down:
-    Walkable: 0
-    Connector: 0
-    ExcludedNeighbours: []
-    EnforceWalkableNeighbor: 0
-    IsOcclusionPortal: 0
-    Symmetric: 0
-    Flipped: 0
-    Invariant: 1
-    Rotation: 0
-  Back:
-    Walkable: 0
-    Connector: 0
-    ExcludedNeighbours: []
-    EnforceWalkableNeighbor: 0
-    IsOcclusionPortal: 0
-    Symmetric: 1
-    Flipped: 0
-    Invariant: 0
-    Rotation: 0
-  Right:
-    Walkable: 0
-    Connector: 18
-    ExcludedNeighbours: []
-    EnforceWalkableNeighbor: 0
-    IsOcclusionPortal: 0
-    Symmetric: 0
-    Flipped: 0
-    Invariant: 0
-    Rotation: 0
-  Up:
-    Walkable: 0
-    Connector: 11
-    ExcludedNeighbours: []
-    EnforceWalkableNeighbor: 0
-    IsOcclusionPortal: 0
-    Symmetric: 0
-    Flipped: 0
-    Invariant: 0
-    Rotation: 0
-  Forward:
-    Walkable: 0
-    Connector: 10
-    ExcludedNeighbours: []
-    EnforceWalkableNeighbor: 0
-    IsOcclusionPortal: 0
-    Symmetric: 0
-    Flipped: 1
     Invariant: 0
     Rotation: 0
   constraintToTags: []
@@ -1788,18 +1468,16 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2426911292238799483}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.9, y: 0, z: -0.92}
+  m_LocalPosition: {x: 102.8, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2323581616179619411}
   - {fileID: 7398241056432920210}
   - {fileID: 9037000775968277981}
-  - {fileID: 5837017604021721348}
   - {fileID: 7921051139315812048}
   - {fileID: 5534512704657566525}
   - {fileID: 5173702378812063103}
   - {fileID: 7790862731468722005}
-  - {fileID: 6737233339777469670}
   - {fileID: 1099897978348388402}
   - {fileID: 552995341323694843}
   - {fileID: 2396997263939685927}
@@ -1810,7 +1488,6 @@ Transform:
   - {fileID: 4281313095609337711}
   - {fileID: 6601377384095537606}
   - {fileID: 4971847623136044841}
-  - {fileID: 764222716653439458}
   - {fileID: 6493512703299226307}
   - {fileID: 5603611585081573748}
   - {fileID: 174808374838718792}
@@ -1827,12 +1504,8 @@ Transform:
   - {fileID: 8550099697466519441}
   - {fileID: 2024235880105814895}
   - {fileID: 2266831843078022762}
-  - {fileID: 412652176633701007}
   - {fileID: 7984151908864751594}
-  - {fileID: 7345968737067514557}
-  - {fileID: 813522056864589757}
   - {fileID: 2042544087054036642}
-  - {fileID: 4203075598414547757}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1850,166 +1523,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   digit: 1
   vertexSize: 0.03
---- !u!1 &2484643289854600051
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 813522056864589757}
-  - component: {fileID: 4999450094920921978}
-  - component: {fileID: 712022859717045243}
-  - component: {fileID: 1864730602139967269}
-  m_Layer: 0
-  m_Name: wfc_module_0.002
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &813522056864589757
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2484643289854600051}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 156}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 3091103608858966209}
-  m_RootOrder: 39
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &4999450094920921978
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2484643289854600051}
-  m_Mesh: {fileID: 2294212901078221725, guid: c6274dac7dafcd34f8aa89502d3862e1, type: 3}
---- !u!23 &712022859717045243
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2484643289854600051}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 3986188387995331715, guid: c6274dac7dafcd34f8aa89502d3862e1, type: 3}
-  - {fileID: -3035101939719975992, guid: c6274dac7dafcd34f8aa89502d3862e1, type: 3}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1864730602139967269
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2484643289854600051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50d74e57d446b974bbd4a945bcf152b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Probability: 1
-  Spawn: 1
-  IsInterior: 0
-  Left:
-    Walkable: 0
-    Connector: 2
-    ExcludedNeighbours: []
-    EnforceWalkableNeighbor: 0
-    IsOcclusionPortal: 0
-    Symmetric: 0
-    Flipped: 1
-    Invariant: 0
-    Rotation: 0
-  Down:
-    Walkable: 0
-    Connector: 6
-    ExcludedNeighbours: []
-    EnforceWalkableNeighbor: 0
-    IsOcclusionPortal: 0
-    Symmetric: 0
-    Flipped: 0
-    Invariant: 0
-    Rotation: 0
-  Back:
-    Walkable: 0
-    Connector: 1
-    ExcludedNeighbours: []
-    EnforceWalkableNeighbor: 0
-    IsOcclusionPortal: 0
-    Symmetric: 1
-    Flipped: 0
-    Invariant: 0
-    Rotation: 0
-  Right:
-    Walkable: 0
-    Connector: 9
-    ExcludedNeighbours: []
-    EnforceWalkableNeighbor: 0
-    IsOcclusionPortal: 0
-    Symmetric: 0
-    Flipped: 0
-    Invariant: 0
-    Rotation: 0
-  Up:
-    Walkable: 0
-    Connector: 0
-    ExcludedNeighbours: []
-    EnforceWalkableNeighbor: 0
-    IsOcclusionPortal: 0
-    Symmetric: 0
-    Flipped: 0
-    Invariant: 1
-    Rotation: 0
-  Forward:
-    Walkable: 0
-    Connector: 0
-    ExcludedNeighbours: []
-    EnforceWalkableNeighbor: 0
-    IsOcclusionPortal: 0
-    Symmetric: 1
-    Flipped: 0
-    Invariant: 0
-    Rotation: 0
-  constraintToTags: []
-  constraintFromTags: []
 --- !u!1 &2567659197668549437
 GameObject:
   m_ObjectHideFlags: 0
@@ -2037,11 +1550,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2567659197668549437}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 92}
+  m_LocalPosition: {x: 0, y: 0, z: 200}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3091103608858966209}
-  m_RootOrder: 23
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &127014636968936168
 MeshFilter:
@@ -2110,7 +1623,7 @@ MonoBehaviour:
   Left:
     Walkable: 0
     Connector: 14
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -2120,7 +1633,7 @@ MonoBehaviour:
   Down:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -2130,7 +1643,7 @@ MonoBehaviour:
   Back:
     Walkable: 0
     Connector: 17
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -2140,7 +1653,7 @@ MonoBehaviour:
   Right:
     Walkable: 0
     Connector: 14
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -2150,7 +1663,7 @@ MonoBehaviour:
   Up:
     Walkable: 0
     Connector: 4
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -2160,7 +1673,7 @@ MonoBehaviour:
   Forward:
     Walkable: 0
     Connector: 1
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -2195,12 +1708,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3047440193682339225}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 132}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 300}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3091103608858966209}
-  m_RootOrder: 33
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5764249697427571355
 MeshFilter:
@@ -2270,7 +1783,7 @@ MonoBehaviour:
   Left:
     Walkable: 0
     Connector: 2
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -2280,7 +1793,7 @@ MonoBehaviour:
   Down:
     Walkable: 0
     Connector: 9
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -2290,7 +1803,7 @@ MonoBehaviour:
   Back:
     Walkable: 0
     Connector: 2
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -2300,7 +1813,7 @@ MonoBehaviour:
   Right:
     Walkable: 0
     Connector: 1
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -2310,7 +1823,7 @@ MonoBehaviour:
   Up:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -2320,7 +1833,7 @@ MonoBehaviour:
   Forward:
     Walkable: 0
     Connector: 1
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -2357,11 +1870,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3079049301530872944}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 44}
+  m_LocalPosition: {x: 0, y: 0, z: 90}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3091103608858966209}
-  m_RootOrder: 11
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8948240236452976965
 MeshFilter:
@@ -2431,7 +1944,7 @@ MonoBehaviour:
   Left:
     Walkable: 0
     Connector: 2
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -2441,7 +1954,7 @@ MonoBehaviour:
   Down:
     Walkable: 0
     Connector: 6
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -2451,7 +1964,7 @@ MonoBehaviour:
   Back:
     Walkable: 0
     Connector: 1
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -2461,7 +1974,7 @@ MonoBehaviour:
   Right:
     Walkable: 0
     Connector: 9
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -2471,7 +1984,7 @@ MonoBehaviour:
   Up:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -2481,7 +1994,7 @@ MonoBehaviour:
   Forward:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -2517,11 +2030,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3138599758876640522}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 40}
+  m_LocalPosition: {x: 0, y: 0, z: 80}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3091103608858966209}
-  m_RootOrder: 10
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6130740946257626670
 MeshFilter:
@@ -2591,7 +2104,7 @@ MonoBehaviour:
   Left:
     Walkable: 0
     Connector: 5
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -2601,7 +2114,7 @@ MonoBehaviour:
   Down:
     Walkable: 0
     Connector: 5
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -2611,7 +2124,7 @@ MonoBehaviour:
   Back:
     Walkable: 0
     Connector: 1
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -2621,7 +2134,7 @@ MonoBehaviour:
   Right:
     Walkable: 0
     Connector: 4
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -2631,7 +2144,7 @@ MonoBehaviour:
   Up:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -2641,7 +2154,7 @@ MonoBehaviour:
   Forward:
     Walkable: 0
     Connector: 8
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -2676,12 +2189,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3501126639629104974}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 88}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 190}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3091103608858966209}
-  m_RootOrder: 22
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7167148009416316058
 MeshFilter:
@@ -2751,7 +2264,7 @@ MonoBehaviour:
   Left:
     Walkable: 0
     Connector: 15
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -2761,7 +2274,7 @@ MonoBehaviour:
   Down:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -2771,7 +2284,7 @@ MonoBehaviour:
   Back:
     Walkable: 0
     Connector: 15
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -2781,7 +2294,7 @@ MonoBehaviour:
   Right:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -2791,7 +2304,7 @@ MonoBehaviour:
   Up:
     Walkable: 0
     Connector: 9
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -2801,7 +2314,7 @@ MonoBehaviour:
   Forward:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -2836,12 +2349,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3526141223222199469}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 84}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 180}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3091103608858966209}
-  m_RootOrder: 21
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4451011926172205004
 MeshFilter:
@@ -2911,7 +2424,7 @@ MonoBehaviour:
   Left:
     Walkable: 0
     Connector: 1
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -2921,7 +2434,7 @@ MonoBehaviour:
   Down:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -2931,7 +2444,7 @@ MonoBehaviour:
   Back:
     Walkable: 0
     Connector: 15
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -2941,7 +2454,7 @@ MonoBehaviour:
   Right:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -2951,7 +2464,7 @@ MonoBehaviour:
   Up:
     Walkable: 0
     Connector: 2
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -2961,7 +2474,7 @@ MonoBehaviour:
   Forward:
     Walkable: 0
     Connector: 15
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -2997,11 +2510,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3788709414276901326}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 112}
+  m_LocalPosition: {x: 0, y: 0, z: 250}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3091103608858966209}
-  m_RootOrder: 28
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &929687073095209571
 MeshFilter:
@@ -3071,7 +2584,7 @@ MonoBehaviour:
   Left:
     Walkable: 0
     Connector: 18
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -3081,7 +2594,7 @@ MonoBehaviour:
   Down:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -3091,7 +2604,7 @@ MonoBehaviour:
   Back:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -3101,7 +2614,7 @@ MonoBehaviour:
   Right:
     Walkable: 0
     Connector: 15
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -3111,7 +2624,7 @@ MonoBehaviour:
   Up:
     Walkable: 0
     Connector: 13
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -3121,7 +2634,7 @@ MonoBehaviour:
   Forward:
     Walkable: 0
     Connector: 10
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -3156,12 +2669,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3812342709554007745}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 24}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 50}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3091103608858966209}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1640842529672653512
 MeshFilter:
@@ -3231,7 +2744,7 @@ MonoBehaviour:
   Left:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -3241,7 +2754,7 @@ MonoBehaviour:
   Down:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -3251,7 +2764,7 @@ MonoBehaviour:
   Back:
     Walkable: 0
     Connector: 3
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -3261,7 +2774,7 @@ MonoBehaviour:
   Right:
     Walkable: 0
     Connector: 1
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -3271,7 +2784,7 @@ MonoBehaviour:
   Up:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -3281,7 +2794,7 @@ MonoBehaviour:
   Forward:
     Walkable: 0
     Connector: 3
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -3291,329 +2804,6 @@ MonoBehaviour:
   constraintToTags:
   - bot
   - edge
-  constraintFromTags: []
---- !u!1 &3943049107719260919
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 412652176633701007}
-  - component: {fileID: 6537833721239967505}
-  - component: {fileID: 23858918694079220}
-  - component: {fileID: 6667349576522514772}
-  m_Layer: 0
-  m_Name: Cube.068
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &412652176633701007
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3943049107719260919}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 144}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 3091103608858966209}
-  m_RootOrder: 36
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &6537833721239967505
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3943049107719260919}
-  m_Mesh: {fileID: -6421927161762930362, guid: c6274dac7dafcd34f8aa89502d3862e1, type: 3}
---- !u!23 &23858918694079220
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3943049107719260919}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 3986188387995331715, guid: c6274dac7dafcd34f8aa89502d3862e1, type: 3}
-  - {fileID: -3035101939719975992, guid: c6274dac7dafcd34f8aa89502d3862e1, type: 3}
-  - {fileID: 5219994001965915643, guid: c6274dac7dafcd34f8aa89502d3862e1, type: 3}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &6667349576522514772
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3943049107719260919}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50d74e57d446b974bbd4a945bcf152b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Probability: 1
-  Spawn: 1
-  IsInterior: 0
-  Left:
-    Walkable: 0
-    Connector: 3
-    ExcludedNeighbours: []
-    EnforceWalkableNeighbor: 0
-    IsOcclusionPortal: 0
-    Symmetric: 0
-    Flipped: 1
-    Invariant: 0
-    Rotation: 0
-  Down:
-    Walkable: 0
-    Connector: 0
-    ExcludedNeighbours: []
-    EnforceWalkableNeighbor: 0
-    IsOcclusionPortal: 0
-    Symmetric: 0
-    Flipped: 0
-    Invariant: 1
-    Rotation: 0
-  Back:
-    Walkable: 0
-    Connector: 3
-    ExcludedNeighbours: []
-    EnforceWalkableNeighbor: 0
-    IsOcclusionPortal: 0
-    Symmetric: 0
-    Flipped: 0
-    Invariant: 0
-    Rotation: 0
-  Right:
-    Walkable: 0
-    Connector: 15
-    ExcludedNeighbours: []
-    EnforceWalkableNeighbor: 0
-    IsOcclusionPortal: 0
-    Symmetric: 0
-    Flipped: 1
-    Invariant: 0
-    Rotation: 0
-  Up:
-    Walkable: 0
-    Connector: 1
-    ExcludedNeighbours: []
-    EnforceWalkableNeighbor: 0
-    IsOcclusionPortal: 0
-    Symmetric: 0
-    Flipped: 0
-    Invariant: 0
-    Rotation: 1
-  Forward:
-    Walkable: 0
-    Connector: 15
-    ExcludedNeighbours: []
-    EnforceWalkableNeighbor: 0
-    IsOcclusionPortal: 0
-    Symmetric: 0
-    Flipped: 0
-    Invariant: 0
-    Rotation: 0
-  constraintToTags:
-  - bot
-  constraintFromTags: []
---- !u!1 &4018251983022303094
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 764222716653439458}
-  - component: {fileID: 5797032002722395339}
-  - component: {fileID: 9074802192932178474}
-  - component: {fileID: 8975445957280153127}
-  m_Layer: 0
-  m_Name: Cube.038
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &764222716653439458
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4018251983022303094}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 76}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 3091103608858966209}
-  m_RootOrder: 19
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &5797032002722395339
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4018251983022303094}
-  m_Mesh: {fileID: 4583407886439279732, guid: c6274dac7dafcd34f8aa89502d3862e1, type: 3}
---- !u!23 &9074802192932178474
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4018251983022303094}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 5219994001965915643, guid: c6274dac7dafcd34f8aa89502d3862e1, type: 3}
-  - {fileID: -3035101939719975992, guid: c6274dac7dafcd34f8aa89502d3862e1, type: 3}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &8975445957280153127
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4018251983022303094}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50d74e57d446b974bbd4a945bcf152b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Probability: 1
-  Spawn: 1
-  IsInterior: 0
-  Left:
-    Walkable: 0
-    Connector: 3
-    ExcludedNeighbours: []
-    EnforceWalkableNeighbor: 0
-    IsOcclusionPortal: 0
-    Symmetric: 0
-    Flipped: 1
-    Invariant: 0
-    Rotation: 0
-  Down:
-    Walkable: 0
-    Connector: 0
-    ExcludedNeighbours: []
-    EnforceWalkableNeighbor: 0
-    IsOcclusionPortal: 0
-    Symmetric: 0
-    Flipped: 0
-    Invariant: 1
-    Rotation: 0
-  Back:
-    Walkable: 0
-    Connector: 3
-    ExcludedNeighbours: []
-    EnforceWalkableNeighbor: 0
-    IsOcclusionPortal: 0
-    Symmetric: 0
-    Flipped: 0
-    Invariant: 0
-    Rotation: 0
-  Right:
-    Walkable: 0
-    Connector: 1
-    ExcludedNeighbours: []
-    EnforceWalkableNeighbor: 0
-    IsOcclusionPortal: 0
-    Symmetric: 1
-    Flipped: 0
-    Invariant: 0
-    Rotation: 0
-  Up:
-    Walkable: 0
-    Connector: 0
-    ExcludedNeighbours: []
-    EnforceWalkableNeighbor: 0
-    IsOcclusionPortal: 0
-    Symmetric: 0
-    Flipped: 0
-    Invariant: 1
-    Rotation: 0
-  Forward:
-    Walkable: 0
-    Connector: 1
-    ExcludedNeighbours: []
-    EnforceWalkableNeighbor: 0
-    IsOcclusionPortal: 0
-    Symmetric: 1
-    Flipped: 0
-    Invariant: 0
-    Rotation: 0
-  constraintToTags:
-  - bot
   constraintFromTags: []
 --- !u!1 &4085003654513866024
 GameObject:
@@ -3642,11 +2832,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4085003654513866024}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 104}
+  m_LocalPosition: {x: 0, y: 0, z: 230}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3091103608858966209}
-  m_RootOrder: 26
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6610511863705401031
 MeshFilter:
@@ -3716,7 +2906,7 @@ MonoBehaviour:
   Left:
     Walkable: 0
     Connector: 14
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -3726,7 +2916,7 @@ MonoBehaviour:
   Down:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -3736,7 +2926,7 @@ MonoBehaviour:
   Back:
     Walkable: 0
     Connector: 19
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -3746,7 +2936,7 @@ MonoBehaviour:
   Right:
     Walkable: 0
     Connector: 12
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -3756,7 +2946,7 @@ MonoBehaviour:
   Up:
     Walkable: 0
     Connector: 12
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -3766,7 +2956,7 @@ MonoBehaviour:
   Forward:
     Walkable: 0
     Connector: 1
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -3801,12 +2991,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4543714323382567187}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 64}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: -0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 140}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3091103608858966209}
-  m_RootOrder: 16
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2583838873622123992
 MeshFilter:
@@ -3876,7 +3066,7 @@ MonoBehaviour:
   Left:
     Walkable: 0
     Connector: 16
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -3886,7 +3076,7 @@ MonoBehaviour:
   Down:
     Walkable: 0
     Connector: 2
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -3896,7 +3086,7 @@ MonoBehaviour:
   Back:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -3906,7 +3096,7 @@ MonoBehaviour:
   Right:
     Walkable: 0
     Connector: 2
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -3916,7 +3106,7 @@ MonoBehaviour:
   Up:
     Walkable: 0
     Connector: 1
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -3926,7 +3116,7 @@ MonoBehaviour:
   Forward:
     Walkable: 0
     Connector: 15
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -3962,11 +3152,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4651028682450536497}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 96}
+  m_LocalPosition: {x: 0, y: 0, z: 210}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3091103608858966209}
-  m_RootOrder: 24
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8800082284740821457
 MeshFilter:
@@ -4036,7 +3226,7 @@ MonoBehaviour:
   Left:
     Walkable: 0
     Connector: 9
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -4046,7 +3236,7 @@ MonoBehaviour:
   Down:
     Walkable: 0
     Connector: 10
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -4056,7 +3246,7 @@ MonoBehaviour:
   Back:
     Walkable: 0
     Connector: 1
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -4066,7 +3256,7 @@ MonoBehaviour:
   Right:
     Walkable: 0
     Connector: 2
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -4076,7 +3266,7 @@ MonoBehaviour:
   Up:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -4086,170 +3276,10 @@ MonoBehaviour:
   Forward:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
-    Flipped: 0
-    Invariant: 0
-    Rotation: 0
-  constraintToTags: []
-  constraintFromTags: []
---- !u!1 &4723009420194118483
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5837017604021721348}
-  - component: {fileID: 2274387751116059498}
-  - component: {fileID: 5897811294389995950}
-  - component: {fileID: 8114997033898571348}
-  m_Layer: 0
-  m_Name: Cube.014
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &5837017604021721348
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4723009420194118483}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 12}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 3091103608858966209}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &2274387751116059498
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4723009420194118483}
-  m_Mesh: {fileID: -2865104911859505335, guid: c6274dac7dafcd34f8aa89502d3862e1, type: 3}
---- !u!23 &5897811294389995950
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4723009420194118483}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: -3035101939719975992, guid: c6274dac7dafcd34f8aa89502d3862e1, type: 3}
-  - {fileID: 3986188387995331715, guid: c6274dac7dafcd34f8aa89502d3862e1, type: 3}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &8114997033898571348
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4723009420194118483}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50d74e57d446b974bbd4a945bcf152b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Probability: 1
-  Spawn: 1
-  IsInterior: 0
-  Left:
-    Walkable: 0
-    Connector: 0
-    ExcludedNeighbours: []
-    EnforceWalkableNeighbor: 0
-    IsOcclusionPortal: 0
-    Symmetric: 1
-    Flipped: 0
-    Invariant: 0
-    Rotation: 0
-  Down:
-    Walkable: 0
-    Connector: 1
-    ExcludedNeighbours: []
-    EnforceWalkableNeighbor: 0
-    IsOcclusionPortal: 0
-    Symmetric: 0
-    Flipped: 0
-    Invariant: 0
-    Rotation: 1
-  Back:
-    Walkable: 0
-    Connector: 0
-    ExcludedNeighbours: []
-    EnforceWalkableNeighbor: 0
-    IsOcclusionPortal: 0
-    Symmetric: 1
-    Flipped: 0
-    Invariant: 0
-    Rotation: 0
-  Right:
-    Walkable: 0
-    Connector: 2
-    ExcludedNeighbours: []
-    EnforceWalkableNeighbor: 0
-    IsOcclusionPortal: 0
-    Symmetric: 0
-    Flipped: 1
-    Invariant: 0
-    Rotation: 0
-  Up:
-    Walkable: 0
-    Connector: 0
-    ExcludedNeighbours: []
-    EnforceWalkableNeighbor: 0
-    IsOcclusionPortal: 0
-    Symmetric: 0
-    Flipped: 0
-    Invariant: 1
-    Rotation: 0
-  Forward:
-    Walkable: 0
-    Connector: 2
-    ExcludedNeighbours: []
-    EnforceWalkableNeighbor: 0
-    IsOcclusionPortal: 0
-    Symmetric: 0
     Flipped: 0
     Invariant: 0
     Rotation: 0
@@ -4304,7 +3334,7 @@ MonoBehaviour:
   Left:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -4314,7 +3344,7 @@ MonoBehaviour:
   Down:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -4324,7 +3354,7 @@ MonoBehaviour:
   Back:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -4334,7 +3364,7 @@ MonoBehaviour:
   Right:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -4344,7 +3374,7 @@ MonoBehaviour:
   Up:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -4354,7 +3384,7 @@ MonoBehaviour:
   Forward:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -4389,12 +3419,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5036824337699640055}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 140}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: -0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 320}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3091103608858966209}
-  m_RootOrder: 35
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8468873620910109039
 MeshFilter:
@@ -4464,7 +3494,7 @@ MonoBehaviour:
   Left:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -4474,7 +3504,7 @@ MonoBehaviour:
   Down:
     Walkable: 0
     Connector: 2
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -4484,7 +3514,7 @@ MonoBehaviour:
   Back:
     Walkable: 0
     Connector: 16
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -4494,7 +3524,7 @@ MonoBehaviour:
   Right:
     Walkable: 0
     Connector: 15
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -4504,7 +3534,7 @@ MonoBehaviour:
   Up:
     Walkable: 0
     Connector: 1
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -4514,7 +3544,7 @@ MonoBehaviour:
   Forward:
     Walkable: 0
     Connector: 2
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -4550,12 +3580,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5633281078243726686}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 148}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 330}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3091103608858966209}
-  m_RootOrder: 37
+  m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4090543306490300140
 MeshFilter:
@@ -4625,7 +3655,7 @@ MonoBehaviour:
   Left:
     Walkable: 0
     Connector: 21
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -4635,7 +3665,7 @@ MonoBehaviour:
   Down:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -4645,7 +3675,7 @@ MonoBehaviour:
   Back:
     Walkable: 0
     Connector: 21
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -4655,7 +3685,7 @@ MonoBehaviour:
   Right:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -4665,7 +3695,7 @@ MonoBehaviour:
   Up:
     Walkable: 0
     Connector: 9
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -4675,7 +3705,7 @@ MonoBehaviour:
   Forward:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -4712,8 +3742,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5640290045742393737}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 8}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: -0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3091103608858966209}
@@ -4787,7 +3817,7 @@ MonoBehaviour:
   Left:
     Walkable: 0
     Connector: 2
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -4797,7 +3827,7 @@ MonoBehaviour:
   Down:
     Walkable: 0
     Connector: 1
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -4807,7 +3837,7 @@ MonoBehaviour:
   Back:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -4817,7 +3847,7 @@ MonoBehaviour:
   Right:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -4827,7 +3857,7 @@ MonoBehaviour:
   Up:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -4837,7 +3867,7 @@ MonoBehaviour:
   Forward:
     Walkable: 0
     Connector: 2
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -4874,11 +3904,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6129282477806719061}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 100}
+  m_LocalPosition: {x: 0, y: 0, z: 220}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3091103608858966209}
-  m_RootOrder: 25
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3955482787667001362
 MeshFilter:
@@ -4942,13 +3972,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50d74e57d446b974bbd4a945bcf152b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Probability: 1
+  Probability: 10
   Spawn: 1
   IsInterior: 0
   Left:
     Walkable: 0
     Connector: 15
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -4958,7 +3988,7 @@ MonoBehaviour:
   Down:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -4968,7 +3998,7 @@ MonoBehaviour:
   Back:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -4978,7 +4008,7 @@ MonoBehaviour:
   Right:
     Walkable: 0
     Connector: 18
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -4988,7 +4018,7 @@ MonoBehaviour:
   Up:
     Walkable: 0
     Connector: 11
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -4998,7 +4028,7 @@ MonoBehaviour:
   Forward:
     Walkable: 0
     Connector: 10
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -5033,12 +4063,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6131637552759886827}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 116}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: -0.00000004371139}
+  m_LocalPosition: {x: 0, y: 0, z: 260}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3091103608858966209}
-  m_RootOrder: 29
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &9101595140591261950
 MeshFilter:
@@ -5107,7 +4137,7 @@ MonoBehaviour:
   Left:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -5117,7 +4147,7 @@ MonoBehaviour:
   Down:
     Walkable: 0
     Connector: 1
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -5127,7 +4157,7 @@ MonoBehaviour:
   Back:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -5137,7 +4167,7 @@ MonoBehaviour:
   Right:
     Walkable: 0
     Connector: 16
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -5147,7 +4177,7 @@ MonoBehaviour:
   Up:
     Walkable: 0
     Connector: 1
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -5157,7 +4187,7 @@ MonoBehaviour:
   Forward:
     Walkable: 0
     Connector: 16
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -5192,12 +4222,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6329312317237941114}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 128}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: -0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 290}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3091103608858966209}
-  m_RootOrder: 32
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &506050617803833080
 MeshFilter:
@@ -5268,7 +4298,7 @@ MonoBehaviour:
   Left:
     Walkable: 0
     Connector: 3
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -5278,7 +4308,7 @@ MonoBehaviour:
   Down:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -5288,7 +4318,7 @@ MonoBehaviour:
   Back:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -5298,7 +4328,7 @@ MonoBehaviour:
   Right:
     Walkable: 0
     Connector: 21
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -5308,7 +4338,7 @@ MonoBehaviour:
   Up:
     Walkable: 0
     Connector: 1
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -5318,7 +4348,7 @@ MonoBehaviour:
   Forward:
     Walkable: 0
     Connector: 15
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -5355,12 +4385,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6630038666292657627}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 60}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: -0.00000004371139}
+  m_LocalPosition: {x: 0, y: 0, z: 130}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3091103608858966209}
-  m_RootOrder: 15
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7592785439385244591
 MeshFilter:
@@ -5429,7 +4459,7 @@ MonoBehaviour:
   Left:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -5439,7 +4469,7 @@ MonoBehaviour:
   Down:
     Walkable: 0
     Connector: 2
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -5449,7 +4479,7 @@ MonoBehaviour:
   Back:
     Walkable: 0
     Connector: 16
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -5459,7 +4489,7 @@ MonoBehaviour:
   Right:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -5469,7 +4499,7 @@ MonoBehaviour:
   Up:
     Walkable: 0
     Connector: 2
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -5479,7 +4509,7 @@ MonoBehaviour:
   Forward:
     Walkable: 0
     Connector: 16
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -5514,12 +4544,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6723827973746613425}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 124}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: -0.00000004371139}
+  m_LocalPosition: {x: 0, y: 0, z: 280}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3091103608858966209}
-  m_RootOrder: 31
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7031500215051144678
 MeshFilter:
@@ -5590,7 +4620,7 @@ MonoBehaviour:
   Left:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -5600,7 +4630,7 @@ MonoBehaviour:
   Down:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -5610,7 +4640,7 @@ MonoBehaviour:
   Back:
     Walkable: 0
     Connector: 3
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -5620,7 +4650,7 @@ MonoBehaviour:
   Right:
     Walkable: 0
     Connector: 15
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -5630,7 +4660,7 @@ MonoBehaviour:
   Up:
     Walkable: 0
     Connector: 1
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -5640,7 +4670,7 @@ MonoBehaviour:
   Forward:
     Walkable: 0
     Connector: 21
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -5677,8 +4707,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6835524600322283640}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 4}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3091103608858966209}
@@ -5751,7 +4781,7 @@ MonoBehaviour:
   Left:
     Walkable: 0
     Connector: 1
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -5761,7 +4791,7 @@ MonoBehaviour:
   Down:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -5771,7 +4801,7 @@ MonoBehaviour:
   Back:
     Walkable: 0
     Connector: 1
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -5781,7 +4811,7 @@ MonoBehaviour:
   Right:
     Walkable: 0
     Connector: 1
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -5791,7 +4821,7 @@ MonoBehaviour:
   Up:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -5801,7 +4831,7 @@ MonoBehaviour:
   Forward:
     Walkable: 0
     Connector: 1
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -5837,11 +4867,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7310945826411000745}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 52}
+  m_LocalPosition: {x: 0, y: 0, z: 110}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3091103608858966209}
-  m_RootOrder: 13
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &9076132430632682965
 MeshFilter:
@@ -5911,7 +4941,7 @@ MonoBehaviour:
   Left:
     Walkable: 0
     Connector: 12
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -5921,7 +4951,7 @@ MonoBehaviour:
   Down:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -5931,7 +4961,7 @@ MonoBehaviour:
   Back:
     Walkable: 0
     Connector: 13
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -5941,7 +4971,7 @@ MonoBehaviour:
   Right:
     Walkable: 0
     Connector: 14
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -5951,7 +4981,7 @@ MonoBehaviour:
   Up:
     Walkable: 0
     Connector: 8
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -5961,7 +4991,7 @@ MonoBehaviour:
   Forward:
     Walkable: 0
     Connector: 1
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -5996,12 +5026,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7486685839372656688}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 120}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: -0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 270}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3091103608858966209}
-  m_RootOrder: 30
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6605295434907699783
 MeshFilter:
@@ -6071,7 +5101,7 @@ MonoBehaviour:
   Left:
     Walkable: 0
     Connector: 21
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -6081,7 +5111,7 @@ MonoBehaviour:
   Down:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -6091,7 +5121,7 @@ MonoBehaviour:
   Back:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -6101,7 +5131,7 @@ MonoBehaviour:
   Right:
     Walkable: 0
     Connector: 21
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -6111,7 +5141,7 @@ MonoBehaviour:
   Up:
     Walkable: 0
     Connector: 2
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -6121,7 +5151,7 @@ MonoBehaviour:
   Forward:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -6159,11 +5189,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7576874992359170124}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 28}
+  m_LocalPosition: {x: 0, y: 0, z: 60}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3091103608858966209}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5475502073924837461
 MeshFilter:
@@ -6233,7 +5263,7 @@ MonoBehaviour:
   Left:
     Walkable: 0
     Connector: 4
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -6243,7 +5273,7 @@ MonoBehaviour:
   Down:
     Walkable: 0
     Connector: 3
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -6253,7 +5283,7 @@ MonoBehaviour:
   Back:
     Walkable: 0
     Connector: 1
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -6263,7 +5293,7 @@ MonoBehaviour:
   Right:
     Walkable: 0
     Connector: 5
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -6273,7 +5303,7 @@ MonoBehaviour:
   Up:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -6283,170 +5313,10 @@ MonoBehaviour:
   Forward:
     Walkable: 0
     Connector: 6
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
-    Flipped: 0
-    Invariant: 0
-    Rotation: 0
-  constraintToTags: []
-  constraintFromTags: []
---- !u!1 &7978024359035086869
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6737233339777469670}
-  - component: {fileID: 625704228674614212}
-  - component: {fileID: 5747433271816290577}
-  - component: {fileID: 644289346450314193}
-  m_Layer: 0
-  m_Name: Cube.019
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &6737233339777469670
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7978024359035086869}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 32}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 3091103608858966209}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &625704228674614212
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7978024359035086869}
-  m_Mesh: {fileID: -3541629673168548286, guid: c6274dac7dafcd34f8aa89502d3862e1, type: 3}
---- !u!23 &5747433271816290577
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7978024359035086869}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: -3035101939719975992, guid: c6274dac7dafcd34f8aa89502d3862e1, type: 3}
-  - {fileID: 3986188387995331715, guid: c6274dac7dafcd34f8aa89502d3862e1, type: 3}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &644289346450314193
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7978024359035086869}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50d74e57d446b974bbd4a945bcf152b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Probability: 1
-  Spawn: 1
-  IsInterior: 0
-  Left:
-    Walkable: 0
-    Connector: 0
-    ExcludedNeighbours: []
-    EnforceWalkableNeighbor: 0
-    IsOcclusionPortal: 0
-    Symmetric: 1
-    Flipped: 0
-    Invariant: 0
-    Rotation: 0
-  Down:
-    Walkable: 0
-    Connector: 1
-    ExcludedNeighbours: []
-    EnforceWalkableNeighbor: 0
-    IsOcclusionPortal: 0
-    Symmetric: 0
-    Flipped: 0
-    Invariant: 0
-    Rotation: 2
-  Back:
-    Walkable: 0
-    Connector: 2
-    ExcludedNeighbours: []
-    EnforceWalkableNeighbor: 0
-    IsOcclusionPortal: 0
-    Symmetric: 0
-    Flipped: 1
-    Invariant: 0
-    Rotation: 0
-  Right:
-    Walkable: 0
-    Connector: 2
-    ExcludedNeighbours: []
-    EnforceWalkableNeighbor: 0
-    IsOcclusionPortal: 0
-    Symmetric: 0
-    Flipped: 0
-    Invariant: 0
-    Rotation: 0
-  Up:
-    Walkable: 0
-    Connector: 0
-    ExcludedNeighbours: []
-    EnforceWalkableNeighbor: 0
-    IsOcclusionPortal: 0
-    Symmetric: 0
-    Flipped: 0
-    Invariant: 1
-    Rotation: 0
-  Forward:
-    Walkable: 0
-    Connector: 0
-    ExcludedNeighbours: []
-    EnforceWalkableNeighbor: 0
-    IsOcclusionPortal: 0
-    Symmetric: 1
     Flipped: 0
     Invariant: 0
     Rotation: 0
@@ -6479,11 +5349,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8168110929263364646}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 108}
+  m_LocalPosition: {x: 0, y: 0, z: 240}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3091103608858966209}
-  m_RootOrder: 27
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &737571613333778189
 MeshFilter:
@@ -6554,7 +5424,7 @@ MonoBehaviour:
   Left:
     Walkable: 0
     Connector: 11
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -6564,7 +5434,7 @@ MonoBehaviour:
   Down:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -6574,7 +5444,7 @@ MonoBehaviour:
   Back:
     Walkable: 0
     Connector: 10
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -6584,7 +5454,7 @@ MonoBehaviour:
   Right:
     Walkable: 0
     Connector: 20
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -6594,7 +5464,7 @@ MonoBehaviour:
   Up:
     Walkable: 0
     Connector: 7
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -6604,7 +5474,7 @@ MonoBehaviour:
   Forward:
     Walkable: 0
     Connector: 20
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -6640,12 +5510,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8723365217470373495}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 136}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: -0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 310}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3091103608858966209}
-  m_RootOrder: 34
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4804215140203823841
 MeshFilter:
@@ -6715,7 +5585,7 @@ MonoBehaviour:
   Left:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -6725,7 +5595,7 @@ MonoBehaviour:
   Down:
     Walkable: 0
     Connector: 0
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -6735,7 +5605,7 @@ MonoBehaviour:
   Back:
     Walkable: 0
     Connector: 15
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -6745,7 +5615,7 @@ MonoBehaviour:
   Right:
     Walkable: 0
     Connector: 1
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 1
@@ -6755,7 +5625,7 @@ MonoBehaviour:
   Up:
     Walkable: 0
     Connector: 2
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0
@@ -6765,7 +5635,7 @@ MonoBehaviour:
   Forward:
     Walkable: 0
     Connector: 15
-    ExcludedNeighbours: []
+    ExcludedNeighbours: 
     EnforceWalkableNeighbor: 0
     IsOcclusionPortal: 0
     Symmetric: 0

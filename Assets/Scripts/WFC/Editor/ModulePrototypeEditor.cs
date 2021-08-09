@@ -12,7 +12,7 @@ public class ModulePrototypeEditor : Editor {
 		if (GUILayout.Button("Distribute")) {
 			int i = 0;
 			foreach (Transform transform in modulePrototype.transform.parent) {
-				transform.localPosition = Vector3.forward * i * InfiniteMap.BLOCK_SIZE * 2f;
+				transform.localPosition = Vector3.forward * i * ModuleAnalysis.BLOCK_SIZE * 2f;
 				i++;
 			}
 		}
@@ -21,7 +21,7 @@ public class ModulePrototypeEditor : Editor {
 			int w = Mathf.FloorToInt(Mathf.Sqrt(modulePrototype.transform.parent.childCount));
 			int i = 0;
 			foreach (Transform transform in modulePrototype.transform.parent) {
-				transform.localPosition = Vector3.forward * (i / w) * AbstractMap.BLOCK_SIZE * 1.4f + Vector3.right * (i % w) * AbstractMap.BLOCK_SIZE * 1.4f;
+				transform.localPosition = Vector3.forward * (i / w) * ModuleAnalysis.BLOCK_SIZE * 1.4f + Vector3.right * (i % w) * ModuleAnalysis.BLOCK_SIZE * 1.4f;
 				i++;
 			}
 		}
@@ -38,7 +38,7 @@ public class ModulePrototypeEditor : Editor {
 		if (GUILayout.Button("Reset exlusion rules in all prototypes")) {
 			foreach (var prototype in modulePrototype.transform.parent.GetComponentsInChildren<ModulePrototype>()) {
 				foreach (var face in prototype.Faces) {
-					face.ExcludedNeighbours = new ModulePrototype[0];
+					face.ExcludedNeighbours = new int[0];
 				}
 			}
 		}

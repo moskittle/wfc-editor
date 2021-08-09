@@ -41,14 +41,14 @@ public class ModulePrototypeEditorData {
 			var horizontalFace = face as ModulePrototype.HorizontalFaceDetails;
 			
 			foreach (var prototype in this.prototypes) {
-				if (prototype == this.ModulePrototype || face.ExcludedNeighbours.Contains(prototype)) {
+				if (prototype == this.ModulePrototype) {
 					continue;
 				}
 				for (int rotation = 0; rotation < 4; rotation++) {
 					var otherFace = prototype.Faces[Orientations.Rotate(direction, rotation + 2)] as ModulePrototype.HorizontalFaceDetails;
-					if (otherFace.ExcludedNeighbours.Contains(this.ModulePrototype)) {
-						continue;
-					}
+					// if (otherFace.ExcludedNeighbours.Contains(this.ModulePrototype)) {
+					// 	continue;
+					// }
 					if (otherFace.Connector == face.Connector && ((horizontalFace.Symmetric && otherFace.Symmetric) || otherFace.Flipped != horizontalFace.Flipped)) {
 						return new ConnectorHint(rotation, this.getMesh(prototype));
 					}
@@ -60,11 +60,11 @@ public class ModulePrototypeEditorData {
 			var verticalFace = face as ModulePrototype.VerticalFaceDetails;
 
 			foreach (var prototype in this.prototypes) {
-				if (prototype == this.ModulePrototype || face.ExcludedNeighbours.Contains(prototype)) {
+				if (prototype == this.ModulePrototype) {
 					continue;
 				}
 				var otherFace = prototype.Faces[(direction + 3) % 6] as ModulePrototype.VerticalFaceDetails;
-				if (otherFace.ExcludedNeighbours.Contains(this.ModulePrototype) || otherFace.Connector != face.Connector) {
+				if (otherFace.Connector != face.Connector) {
 					continue;
 				}
 

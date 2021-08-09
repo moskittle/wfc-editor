@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 using System.Linq;
 using System;
 
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 public class ModulePrototype : MonoBehaviour {
 	[System.Serializable]
 	public  class FaceDetails {
@@ -12,7 +14,7 @@ public class ModulePrototype : MonoBehaviour {
 
 		public int Connector;
 
-		public ModulePrototype[] ExcludedNeighbours;
+		public int[] ExcludedNeighbours;
 
 		public bool EnforceWalkableNeighbor = false;
 
@@ -28,7 +30,7 @@ public class ModulePrototype : MonoBehaviour {
 		{
 			Walkable = other.Walkable;
 			Connector = other.Connector;
-			ExcludedNeighbours = new List<ModulePrototype>(other.ExcludedNeighbours).ToArray();
+			ExcludedNeighbours = other.ExcludedNeighbours.ToArray();
 
 			EnforceWalkableNeighbor = other.EnforceWalkableNeighbor;
 			IsOcclusionPortal = other.IsOcclusionPortal;
@@ -52,7 +54,7 @@ public class ModulePrototype : MonoBehaviour {
 		{
 			Walkable = other.Walkable;
 			Connector = other.Connector;
-			ExcludedNeighbours = new List<ModulePrototype>(other.ExcludedNeighbours).ToArray();
+			ExcludedNeighbours = other.ExcludedNeighbours.ToArray();
 
 			EnforceWalkableNeighbor = other.EnforceWalkableNeighbor;
 			IsOcclusionPortal = other.IsOcclusionPortal;
@@ -86,7 +88,7 @@ public class ModulePrototype : MonoBehaviour {
 		{
 			Walkable = other.Walkable;
 			Connector = other.Connector;
-			ExcludedNeighbours = new List<ModulePrototype>(other.ExcludedNeighbours).ToArray();
+			ExcludedNeighbours = other.ExcludedNeighbours.ToArray();
 
 			EnforceWalkableNeighbor = other.EnforceWalkableNeighbor;
 			IsOcclusionPortal = other.IsOcclusionPortal;
@@ -184,7 +186,7 @@ public class ModulePrototype : MonoBehaviour {
 				var hint = ModulePrototype.editorData.GetConnectorHint(i);
 				if (hint.Mesh != null) {
 					Gizmos.DrawMesh(hint.Mesh,
-						position + rotation * Orientations.Direction[i].ToVector3() * AbstractMap.BLOCK_SIZE,
+						position + rotation * Orientations.Direction[i].ToVector3() * ModuleAnalysis.BLOCK_SIZE,
 						rotation * Quaternion.Euler(Vector3.up * 90f * hint.Rotation));
 				}
 			}
@@ -192,13 +194,13 @@ public class ModulePrototype : MonoBehaviour {
 		for (int i = 0; i < 6; i++) {	
 			if (modulePrototype.Faces[i].Walkable) {
 				Gizmos.color = Color.red;
-				Gizmos.DrawLine(position + Vector3.down * 0.1f, position + rotation * Orientations.Rotations[i] * Vector3.forward * AbstractMap.BLOCK_SIZE * 0.5f + Vector3.down * 0.1f);
+				Gizmos.DrawLine(position + Vector3.down * 0.1f, position + rotation * Orientations.Rotations[i] * Vector3.forward * ModuleAnalysis.BLOCK_SIZE * 0.5f + Vector3.down * 0.1f);
 			}
 			if (modulePrototype.Faces[i].IsOcclusionPortal) {
 				Gizmos.color = Color.blue;
 
 				var dir = rotation * Orientations.Rotations[i] * Vector3.forward;
-				Gizmos.DrawWireCube(position + dir, (Vector3.one - new Vector3(Mathf.Abs(dir.x), Mathf.Abs(dir.y), Mathf.Abs(dir.z))) * AbstractMap.BLOCK_SIZE);
+				Gizmos.DrawWireCube(position + dir, (Vector3.one - new Vector3(Mathf.Abs(dir.x), Mathf.Abs(dir.y), Mathf.Abs(dir.z))) * ModuleAnalysis.BLOCK_SIZE);
 			}			
 		}
 
@@ -211,7 +213,7 @@ public class ModulePrototype : MonoBehaviour {
 		for (int i = 0; i < 6; i++) {
 			var face = modulePrototype.Faces[i];
 			style.normal.textColor = i == 1 || i == 4 ? Color.cyan : Color.black;
-			Handles.Label(position + rotation * Orientations.Rotations[i] * Vector3.forward * InfiniteMap.BLOCK_SIZE / 2f, face.ToString(), ModulePrototype.style);
+			Handles.Label(position + rotation * Orientations.Rotations[i] * Vector3.forward * ModuleAnalysis.BLOCK_SIZE / 2f, face.ToString(), ModulePrototype.style);
 		}
 	}
 #endif
@@ -248,7 +250,7 @@ public class ModulePrototype : MonoBehaviour {
 		this.Back = new HorizontalFaceDetails();
 
 		foreach (var face in this.Faces) {
-			face.ExcludedNeighbours = new ModulePrototype[] { };
+			face.ExcludedNeighbours = new int[0];
 		}
 	}
 }
